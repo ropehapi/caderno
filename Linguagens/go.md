@@ -1,8 +1,8 @@
 # Go
-Antes de mais nada: Tem um levantamento do porque eu escolhi estudar a linguagem Go no meu [Notion]("https://marked-bakery-837.notion.site/An-lise-Node-x-Golang-219f881022c94a06ad11cf81e4d6a2cf")
+Antes de mais nada: Tem um levantamento do porque eu escolhi estudar a linguagem Go no meu [Notion](https://marked-bakery-837.notion.site/An-lise-Node-x-Golang-219f881022c94a06ad11cf81e4d6a2cf)
 
 ## Introdução
-A linguagem [Go]("https://go.dev"), também conhecida como GoLang, é uma linguagem open source que foi criada pelo Google em 2007, e desde então é utilizada para a construção de produtos e serviços de grande escala. Atualmente a linguagem é utilizada por diversas empresas, como Uber, Twitch, Medium e Mercado livre.
+A linguagem [Go](https://go.dev), também conhecida como GoLang, é uma linguagem open source que foi criada pelo Google em 2007, e desde então é utilizada para a construção de produtos e serviços de grande escala. Atualmente a linguagem é utilizada por diversas empresas, como Uber, Twitch, Medium e Mercado livre.
 
 Go é uma linguagem simples e produtiva de se utilizar, com foco no desenvolvimento de aplicações que necessitam de alta performance.
 
@@ -13,22 +13,21 @@ Go é uma linguagem simples e produtiva de se utilizar, com foco no desenvolvime
 - Única e exclusivamente Backend
 
 ## Instalação
-[Documentação de instalação da linguagem]("https://go.dev/doc/install")
+[Documentação de instalação da linguagem](https://go.dev/doc/install)
 
 ### Ubuntu
 1. Faça o download do arquivo `.tar` do Go e navegue com o terminal até a pasta aonde o arquivo foi baixado. Use o comando abaixo para extraí-lo em sua pasta `/usr/local`:
-    > $ `sudo tar -C /usr/local -xzf nome-arquivo`
+    > $ sudo tar -C /usr/local -xzf nome-arquivo
 
 2. Em seguida precisamos adicionar o caminho `/usr/local/go/bin` no `PATH` do sistema. Você pode fazer isto adicionando uma linha extra no arquivo `/etc/profile`, por exemplo com o editor de textos gedit. Abra o arquivo `/etc/profile` com o gedit utilizando o comando abaixo:
-    > $ `sudo gedit /etc/profile`
+    > $ sudo gedit /etc/profile
 
-3. E em seguida adicione a seguinte linha no final do arquivo:
-    > `export PATH=$PATH:/usr/local/go/bin` 
+3. Adicione `export PATH=$PATH:/usr/local/go/bin` ao final do arquivo.
 
 4. Salve a alteração e feche o editor.
 
 5. Agora utilize o comando:
-    > $ `source /etc/profile`
+    > $ source /etc/profile
 
 O Go já deve estar funcionando com sucesso! Faça o teste em seu terminal com o comando go version e veja se a versão e os comandos do Go foram exibidos corretamente.
 
@@ -69,8 +68,8 @@ Se queremos imprimir uma mensagem, devemos utilizar a função `Println`, mas pa
 
     import "fmt"
 
-    func main("Hello world") {
-
+    func main() {
+        fmt.Println("Hello World")
     }
 
 O fato da função `Println` estar com a primeira letra maiúscula pode causar uma estranheza para quem vem de uma outra linguagem de programação. Quando estamos trabalhando com Go, a função que vem de um pacote externo, ou seja, uma função que não está declarada no nosso arquivo, é utilizada com a primeira letra maiúscula. Nós chamamos o pacote externo (no nosso caso, o `fmt`), e a função com a primeira letra maiúscula (no nosso caso, `Println`). Isso é uma convenção da linguagem, que faz com que saibamos que a função veio de um pacote externo.
@@ -79,13 +78,61 @@ O fato da função `Println` estar com a primeira letra maiúscula pode causar u
 Como Go é uma linguagem compilada, para executar um programa seu, devemos compilá-lo para um executável, e para isso, nós devemos utilizar o terminal/linha de comando.
 
 Nele, nós entramos dentro da pasta `go/src/` e executamos o comando go build seguido do nome do programa que queremos executar:
-> $ `go build programa.go`
+> $ go build programa.go
 
 Se não obtivermos nenhum erro na compilação, um executável será criado. Para executa-lo, basta rodar um:
-> $ `./programa`
+> $ ./programa
 
 Toda vez que alterarmos o nosso código, devemos compilá-lo para depois executá-lo, mas o Go é uma linguagem que facilita muita coisa para nós, e isso inclui o processo de compilação. Em vez de executar o `go build`, para depois rodar o executável gerado, podemos executar o comando `go run` seguido do nome do programa que queremos executar:
-> $ `go run programa.go`
+> $ go run programa.go
 
+## Declarando uma variável em Go
+Para declarar uma variável em Go, utilizamos a palavra `var` seguida do nome da variável mais o seu tipo. Como é um texto, o seu tipo será `string`, e vamos logo inicializá-la:
+    
+    var nome string = "Pedro"
 
+Agora, para concatenar a frase com a variável, passamos a mesma para a função Println, separando os elementos por vírgula:
 
+    package main
+
+    import "fmt"
+
+    func main() {
+        var nome string = "Pedro"
+        var versao float32 = 1.2
+        var idade int
+
+        fmt.Println("Olá sr.", nome)
+        fmt.Println("Seu programa está na versão", versao)
+    }
+
+<center style="color:salmon">*Notemos que ; são facultativos no Go</center>
+
+### Variável sem valor atribuído
+
+No Go, quando não atribuímos um valor a uma variável, ela assume um valor zerado, ou seja, se for um inteiro, seu valor será 0, se for um número flutuante, seu valor será 0.0, e se for uma string, seu valor será uma string vazia.
+
+### Não utilização de uma variável
+Outra característica do Go é não podermos declarar uma variável e não utilizá-la. Por exemplo, se removermos a impressão da idade, teremos um erro na saída. Essa é mais uma convenção do Go, temos sempre que utilizar as variáveis que declaramos. Até por que, se não estamos utilizando a variável, não tem motivo dela estar ali.
+
+### Inferindo os tipos das variáveis
+o Go consegue inferir o tipo dessas variáveis. Ele consegue entender que, se a variável começa e termina com aspas, ela é uma string. Da mesma forma, se temos um número inteiro, sem casa decimal, o Go entenderá que a variável é do tipo inteiro.
+
+Para saber se o Go conseguir inferir corretamente o tipo das variáveis, podemos descobri-los, importando o pacote reflect e chamando a sua função TypeOf, passando para ela a variável que queremos saber o tipo:
+
+    package main
+
+    import "fmt"
+    import "reflect"
+
+    func main() {
+        var nome = "Douglas"
+
+        fmt.Println("O tipo da variável nome é", reflect.TypeOf(nome))
+    }
+
+### Declaração curta de variáveis
+Para deixar o nosso código mais limpo ainda, podemos remover a palavra `var` das variáveis. Podemos fazer isso pois o Go possui um segundo operador de atribuição de variáveis, um mais "curto", que é o `:=`. Quando utilizamos esse operador, estamos dizendo ao Go que estamos declarando uma variável e atribuindo um valor a ela:
+
+    nome := "Douglas"
+    idade := 24
