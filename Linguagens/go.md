@@ -126,7 +126,7 @@ Para saber se o Go conseguir inferir corretamente o tipo das variáveis, podemos
     import "reflect"
 
     func main() {
-        var nome = "Douglas"
+        var nome = "Pedro"
 
         fmt.Println("O tipo da variável nome é", reflect.TypeOf(nome))
     }
@@ -134,5 +134,5 @@ Para saber se o Go conseguir inferir corretamente o tipo das variáveis, podemos
 ### Declaração curta de variáveis
 Para deixar o nosso código mais limpo ainda, podemos remover a palavra `var` das variáveis. Podemos fazer isso pois o Go possui um segundo operador de atribuição de variáveis, um mais "curto", que é o `:=`. Quando utilizamos esse operador, estamos dizendo ao Go que estamos declarando uma variável e atribuindo um valor a ela:
 
-    nome := "Douglas"
+    nome := "Pedro"
     idade := 24
