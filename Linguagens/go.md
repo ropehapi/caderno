@@ -106,7 +106,7 @@ Agora, para concatenar a frase com a variável, passamos a mesma para a função
         fmt.Println("Seu programa está na versão", versao)
     }
 
-<center style="color:salmon">*Notemos que ; são facultativos no Go</center>
+Notemos que ; são facultativos no Go
 
 ### Variável sem valor atribuído
 
@@ -136,3 +136,36 @@ Para deixar o nosso código mais limpo ainda, podemos remover a palavra `var` da
 
     nome := "Pedro"
     idade := 24
+
+### Descobrindo o tipo de variáveis
+Ao passar para a função TypeOf do pacote reflect uma variável, nós obtemos o tipo daquela variável.
+
+    import "reflect"
+
+    func main(){
+        reflect.TypeOf(nome)
+    }
+
+## Capturando a entrada do usuário
+
+Para capturar o que o usuário escrever, existe a função `Scanf`, também do pacote `fmt`. Ela recebe dois argumentos, um modificador (o que queremos receber como entrada, um inteiro, string, etc) e um ponteiro para a variável que guardará a entrada do usuário.
+
+    var comando int
+    fmt.Scanf("%d", &comando)
+
+o valor `"%d"`, que significa que esperamos receber um número inteiro, e a variável comando.
+
+Se printarmos a variável `comando`, teremos o valor digitado.
+
+### Entendendo o ponteiro
+
+Sobre o `&` visto antes, ele significa o endereço da variável que queremos salvar a entrada, pois a função `Scanf` não espera uma variável, e sim o seu endereço, um ponteiro para a variável.
+
+A variável nada mais é do que uma "caixa", onde guardamos dados. Essa "caixa" está em algum lugar da memória do nosso computador, e esse lugar, o endereço da nossa "caixa", é o que chamamos de ponteiro.
+
+Para descobrir o endereço da variável, basta colocar o `&` à frente dela.
+
+### Devemos especificar o que esperamos ser digitado?
+A variável comando é do tipo inteiro, logo, só pode receber números inteiros. Se sabemos disso, por que devemos especificar que esperamos receber um número inteiro na função `Scanf`, através do modificador `"%d"`? Na verdade, nós não precisamos.
+
+Alguém do Go também pensou nisso, por isso criou a função `Scan` (sem a letra f). Nela, nós não precisamos especificar o modificador que esperamos.
