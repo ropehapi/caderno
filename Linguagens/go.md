@@ -169,3 +169,13 @@ Para descobrir o endereço da variável, basta colocar o `&` à frente dela.
 A variável comando é do tipo inteiro, logo, só pode receber números inteiros. Se sabemos disso, por que devemos especificar que esperamos receber um número inteiro na função `Scanf`, através do modificador `"%d"`? Na verdade, nós não precisamos.
 
 Alguém do Go também pensou nisso, por isso criou a função `Scan` (sem a letra f). Nela, nós não precisamos especificar o modificador que esperamos.
+
+## Controlando o fluxo do script
+### Controle de fluxo com if
+A condição do if, no Go, não fica entre parênteses, como já é prática de outras linguagens, e a condição deve sempre retornar um booleano, ou seja, true ou false.
+    
+    if comando == 1 {
+
+    }
+
+### Controle de fluxo com switch
