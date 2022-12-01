@@ -289,4 +289,35 @@ Em outras linguagens de programação, poderíamos utilizar o `while`, mas ele n
             os.Exit(-1)
         }
 
+## **Arrays em go**
+Primeiramente, vamos criar um array com a estrutura clássica, com o `var`. Para isso, além do `var`, nós devemos informar o nome do array, colchetes e o tipo de dados que ele guardará. Além disso, dentro dos colchetes, devemos informar o tamanho do array.
+Para colocar um valor no array, não há mistério, basta atribuir um valor a algum dos seus índices.
 
+    var sites [4]string
+    sites[0] = "https://random-status-code.herokuapp.com/"
+    sites[1] = "https://www.alura.com.br"
+    sites[2] = "https://www.caelum.com.br"
+
+É importante nos atentar ao tipo de dados do array, não há espaço entre ele e os colchetes, na hora da declaração do array.
+
+Mas o fato do array ter um tamanho fixo, nos limita um pouco, pois se quisermos adicionar 5 itens no array, teremos que alterar o seu tamanho na sua declaração. Por isso, em Go, geralmente não trabalhamos com arrays, e sim com uma outra estrutura de dados, chamada `slice`, que funciona em cima do array, mas não tem tamanho fixo.
+
+## **Slices**
+Para entendermos como funciona os `slices`, essas abstrações do array em Go, vamos criar um, para aprendermos fazendo.
+
+A primeira grande vantagem dele, é que, como foi falado no vídeo anterior, seu tamanho não é fixo, é dinâmico, indeterminado.
+
+Para criar um slice, podemos utilizar a declaração curta de variáveis. Sua declaração é bem parecida com a de um array. Além disso, já na sua declaração, podemos preencher os seus dados, passando-os dentro de chaves, separados por vírgula.
+
+    func exibeNomes() {
+        nomes := []string{"Douglas", "Daniel", "Bernardo"}
+    }
+
+Podemos adicionar itens no slice, através da função `append`, que recebe o slice e o item a ser adicionado.
+
+     nomes = append(nomes, "Aparecida")
+
+O slice infere o seu tamanho de acordo com a sua quantidade de elementos. Podemos verificar isso imprimindo a quantidade de itens contidos nele, através da função `len`, e a capacidade através da função `cap`.
+
+    fmt.Println("O meu slice tem", len(nomes), "itens")
+    fmt.Println("O meu slice tem capacidade para", cap(nomes), "itens")
