@@ -321,3 +321,22 @@ O slice infere o seu tamanho de acordo com a sua quantidade de elementos. Podemo
 
     fmt.Println("O meu slice tem", len(nomes), "itens")
     fmt.Println("O meu slice tem capacidade para", cap(nomes), "itens")
+
+## **A instrução for**
+ Como no Go não existe outra estrutura de repetição além do `for`, então vamos utilizá-lo para percorrer os itens do slice de sites.
+
+Vimos o `for` infinito, que faz com o que o código seja repetido para sempre, mas também podemos utilizar o `for` "tradicional", onde declaramos uma variável e vamos incrementado-a até o tamanho de itens do slice, por exemplo:
+
+    sites := []string{"https://random-status-code.herokuapp.com/", 
+        "https://www.alura.com.br", "https://www.caelum.com.br"}
+
+    for i := 0; i < len(sites); i++ {
+        fmt.Println(sites[i])
+    }
+
+Mas há uma forma mais enxuta de fazer isso nem Go, utilizando o `range`. Ela é como se fosse um operador de iteração do Go, nos dando acesso a cada item do array, ou do slice, e ele nos retorna dos valores, a posição do item iterado e o próprio item daquela posição.
+
+    for i, site := range sites {
+        fmt.Println("Estou passando na posição", i,
+            "do meu slice e essa posição tem o site", site)
+    }
