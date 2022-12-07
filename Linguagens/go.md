@@ -340,3 +340,88 @@ Mas há uma forma mais enxuta de fazer isso nem Go, utilizando o `range`. Ela é
         fmt.Println("Estou passando na posição", i,
             "do meu slice e essa posição tem o site", site)
     }
+
+## **A função sleep**
+Por diversas razões, podemos querer que nosso script espere um pouco para a execução do próximo trecho de código. 
+Fazemos isso utilizando a função `Sleep`, do pacote `time`, passando para ela o quanto de tempo queremos esperar. Representamos o tempo através de constantes da própria biblioteca, como `Second`, `Minute`, entre outras.
+
+    time.Sleep(5 * time.Minute)
+
+## **Criando constantes**
+As constantes em Go, como em qualquer outra linguagem de programação, são variáveis constantes definidas no escopo geral da classe, que não podem ter seus valores alterados durante a execução do script. 
+
+Para cria as constantes, basta defini-las abaixo dos imports.
+
+    const monitoramentos = 3
+    const delay = 5
+
+## **Abrindo um arquivo**
+Para abrir um arquivo em Go, precisamos pedir ao sistema operacional que abra o arquivo para nós. E quem é o representante do sistema operacional em Go? O pacote `os`, que já trabalhamos anteriormente. Nele, há a função `Open`, que abre o arquivo e nos retorna a sua representação em memória e um possível erro que possa ocorrer.
+
+    arquivo, _ := os.Open("sites.txt")
+
+## **Tratamento de erros**
+Para tratar os erros, primeiramente devemos substituir o operador de identificador em branco (`_`) pela variável `err`, padrão para os erros em Go. E agora, se err não for nulo, significa que houve um erro, então vamos imprimi-lo.
+
+     arquivo, err := os.Open("sites.txt")
+
+    if err != nil {
+        fmt.Println("Ocorreu um erro:", err)
+    }
+
+Notemos que em Go, identificamos se uma variável é `null` através do `nil`.
+
+## **Lendo dados de um arquivo**
+Através do pacote `io/ioutil`, chamamos a função `ReadFile`, para ler o arquivo passado.
+Essa função nos retorna o arquivo em um array de bytes, então basta convertê-los para uma string através da função `string`.
+
+    arquivo, err := ioutil.ReadFile("sites.txt")
+
+    fmt.Println(string(arquivo))
+
+Ao executar o programa, vemos o conteúdo do arquivo sendo impresso no console! Mas esse é um jeito bom para quem quer exibir o conteúdo todo do arquivo, o que não é muito útil para nós, já que queremos ler cada site de uma vez, para salvar cada um dentro do slice.
+
+### **Lendo a primeira linha do arquivo**
+Para ler o arquivo linha a linha, vamos ver uma terceira forma de ler arquivos em Go, utilizando o pacote `bufio`. Para isso, vamos voltar à primeira leitura do arquivo, utilizando `os.Open`.
+
+E com o `bufio`, nós criamos um leitor através da função `NewReader`, que recebe o arquivo a ser lido.
+
+Com esse leitor, temos funções que nos ajudam a ler o arquivo, lendo linha a linha, como por exemplo a `ReadString`, que lê uma linha do arquivo e nos retorna em forma de string. Essa função deve receber um byte delimitador, para saber até onde queremos ler a linha.
+
+No nosso caso, queremos ler a linha inteiro, ou seja, até a quebra de linha, que é representada pelo `\n`. Como queremos representar um byte, utilizaremos aspas simples.
+
+    arquivo, err := os.Open("sites.txt")
+    leitor := bufio.NewReader(arquivo)
+    linha, err := leitor.ReadString('\n')
+
+    fmt.Println(linha)
+
+### **Lendo múltiplas linhas**
+Se queremos que o nosso programa leia além da primeira linha do arquivo, o código responsável por fazer a leitura deve ser executado mais de uma vez. Então, o que vamos fazer é colocar esse código dentro de um `for`, até dar um erro específico, o erro de `EOF` **(End Of File)**, que acontece quando não há mais linha a serem lidas.
+
+Mas como saímos do `for`? Se houver o erro, que já estamos verificando, nós damos um `break`, que faz com que o código saia do loop.
+
+    arquivo, err := os.Open("sites.txt")
+    leitor := bufio.NewReader(arquivo)
+
+    for {
+        linha, err := leitor.ReadString('\n')
+        fmt.Println(linha)
+        if err == io.EOF {
+            break
+        }
+    }
+
+## **Fechando um arquivo**
+Por último, devemos ser educados com o sistema operacional, se abrimos um arquivo com `os.Open`, após lê-lo, é uma boa prática fechá-lo com a função `Close`.
+
+    arquivo.Close()
+
+## **Limpando strings**
+Algumas vezes, nós vamos querer ler strings limpas, sem espaços em branco, quebras de linha e afins.
+
+Para isso, existe a função `TrimSpace`, do pacotes `strings`, que remove as quebras de linha e espaços ao final de uma string.
+
+    linha = strings.TrimSpace(linha)
+
+
