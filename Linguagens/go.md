@@ -480,3 +480,15 @@ Falta ajustar a hora, vamos utilizar o `stdHour`, representado pelo `15`, `stdZe
 
     arquivo.WriteString(time.Now().Format("02/01/2006 15:04:05") + " - " + site + 
         " - online: " + strconv.FormatBool(status) + "\n")
+
+## **Convertendo um tipo string para int**
+A linguagem Go nos fornece um meio de conversão entre diferentes tipos compatíveis, por exemplo strings para inteiro. Essas conversões são feitas pelo pacote [strconv](https://pkg.go.dev/strconv).
+
+Para um tipo string para um tipo int, usamos o método `Atoi` do pacote `strconv` da seguinte forma:
+
+    salarioConvertido, err := strconv.Atoi(salario)
+
+### **E o contrário?**
+Nesse caso, utilizamos outra função do mesmo pacote chamada `strconv.Itoa`, conforme o exemplo abaixo:
+
+    salarioConvertido, err := strconv.Itoa(novoSalarioInt)
