@@ -424,4 +424,20 @@ Para isso, existe a função `TrimSpace`, do pacotes `strings`, que remove as qu
 
     linha = strings.TrimSpace(linha)
 
+## **Criando um arquivo**
+Para o Go criar um arquivo, podemos utilizar a função `OpenFile`, também do pacote `os`. Ela recebe o nome do arquivo, uma flag para representar o que fazer com o arquivo, e o seu tipo de permissão. Há diversas flags* que podemos utilizar, elas podem ser vistas [aqui](https://pkg.go.dev/os#pkg-constants).
+
+No nosso caso, se o arquivo não existir, queremos criá-lo, então vamos utilizar a flag `O_CREATE` ou `O_RDWR`, para ler e escrever no arquivo. Além disso, vamos dar a permissão `0666` para ele.
+
+
+    func registraLog(site string, status bool) {
+
+        arquivo, err := os.OpenFile("log.txt", os.O_CREATE|os.O_RDWR, 0666)
+
+        if err != nil {
+            fmt.Println("Ocorreu um erro:", err)
+        }
+
+        fmt.Println(arquivo)
+    }
 
