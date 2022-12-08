@@ -441,3 +441,42 @@ No nosso caso, se o arquivo não existir, queremos criá-lo, então vamos utiliz
         fmt.Println(arquivo)
     }
 
+## **Escrevendo no arquivo**
+Para escrever no arquivo, ele possui a função `WriteString`, ou seja, basta passar o texto para essa função, que ela o escreve dentro do arquivo.
+
+    func registraLog(site string, status bool) {
+
+    arquivo, err := os.OpenFile("log.txt", os.O_CREATE|os.O_RDWR, 0666)
+
+    if err != nil {
+        fmt.Println("Ocorreu um erro:", err)
+    }
+
+    arquivo.WriteString(site + " - online: " + status + "\n")
+
+    arquivo.Close()
+    }
+
+Mas o Go irá reclamar, isso acontece pois a função `WriteString` recebe uma string, e nós estamos tentando concatenar com um booleano, então precisamos convertê-lo com a função strings. Para converter um tipo booleano em uma string, vamos utilizar o pacote `strconv`, que possui a função `FormatBool`.
+
+    arquivo.WriteString(site + " - online: " + strconv.FormatBool(status) + "\n")
+
+Ao iniciar o monitoramento e ficar verificando o arquivo de logs, vemos que as linhas são sobrescritas a cada site novo monitorado. Isso acontece porque por padrão, quando escrevemos em um arquivo, é sempre escrito do seu começo. Para isso, na hora de abrir o arquivo, existe a flag `O_APPEND`, que faz com que o texto seja escrito ao final do arquivo.
+
+    arquivo, err := os.OpenFile("log.txt", os.O_CREATE|os.O_RDWR|os.O_APPEND, 0666)
+
+## **Formatando tempo**
+Queremos imprimir a data no log no seguinte formato:
+
+    05/06/2017 10:50:06 - https://www.alura.com.br - online: true
+
+Para trabalhar com tempo em Go, vamos utilizar o já conhecido pacote `time`. Para pegar o tempo atual, ele possui a função `Now`, que nos retorna um objeto, portanto vamos formatá-lo, com a função `format`.
+
+Para formatar a data, essa função utiliza diversas constantes, que podem ser consultadas no seu [código fonte](https://golang.org/src/time/format.go).
+
+Como queremos representar dia, mês e ano no formato numérico, vamos utilizar o `stdZeroDay`, representado pelo `02`, `stdZeroMonth`, representado pelo `01` e `stdLongYear`, representado pelo `2006`.
+
+Falta ajustar a hora, vamos utilizar o `stdHour`, representado pelo `15`, `stdZeroMinute`, representado pelo `04`, e `stdZeroSecond`, representado pelo `05`.
+
+    arquivo.WriteString(time.Now().Format("02/01/2006 15:04:05") + " - " + site + 
+        " - online: " + strconv.FormatBool(status) + "\n")
