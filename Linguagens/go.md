@@ -492,3 +492,62 @@ Para um tipo string para um tipo int, usamos o método `Atoi` do pacote `strconv
 Nesse caso, utilizamos outra função do mesmo pacote chamada `strconv.Itoa`, conforme o exemplo abaixo:
 
     salarioConvertido, err := strconv.Itoa(novoSalarioInt)
+
+# **Go Orientado a Objetos**
+## **Structs**
+### **Definindo uma struct**
+No Go, damos às classes o nome de `structs`, que devem ser definidas da seguinte maneira, por exemplo:
+
+    type ContaCorrente struct {
+        var titular       string
+        var numeroAgencia int
+        var numeroConta   int
+        var saldo         float64
+    }
+
+Notemos que a palavra `var` não será necessária nesse contexto, pois não precisamos identificar que os campos são variáveis.
+
+### **Instanciando uma struct**
+Para instanciar uma classe, podemos faze-la de duas maneiras, preenchendo os valores da `struct` através de um "array associativo" ou através do preenchimento de todas as variáveis da `struct` em ordem.
+
+    contaDoGuilherme := ContaCorrente{
+        titular: "Guilherme",
+        numeroAgencia: 589,
+        numeroConta: 123456, 
+        saldo: 125.5
+    }
+
+    contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200}
+
+### **Inicialização zero e nil**
+Mesmo não provendo nenhum valor, o Go garante inicializar todas as variáveis. Por exemplo, um bool não definido, vira false. Um int e um float não definidos, viram 0, uma string não definida, vira uma string vazia, e assim por diante.
+
+Porém, em muitas linguagens existe uma maneira de denotar um ponteiro nulo que, essencialmente, não aponta para nenhum lugar. Por exemplo: em C é NULL, em Python é None e em java é null. Em Go, temos o `nil`.
+
+#### **Nil e inferência**
+Observe o seguinte exemplo:
+    
+    a := nil
+    fmt.Println(a)
+    
+Será que vai compilar? Não, não vai. O compilador imprimirá o seguinte erro: use of untyped nil, que significa uso não tipado do nil.
+
+Aqui estamos tentando atribuir um valor nil apontando para algum lugar sem fornecer seu tipo e esperamos que o compilador deduza isso. O compilador não sabe se esta variável é um inteiro, uma string, um array ou uma structure.
+
+#### **Nil com um tipo definido**
+Sabendo disso, observe o exemplo abaixo onde apontamos para um tipo definido:
+
+    var s *string = nil
+    fmt.Println(s)
+
+Neste caso, o programa compila e retorna `<nil>` como esperado.
+
+### **Comparando zero value**
+Para finalizar, observe o seguinte programa, no qual criamos duas variáveis: uma `float64` e uma `int`, sem atribuir valor, e as comparamos:
+
+    var f float64
+    var i int 
+
+    fmt.Println(f==i)
+
+Recebemos uma mensagem com um erro informando que os tipos são incompatíveis. Não podemos comparar o valor atribuído pela inicialização zero se temos tipos diferentes. Portanto, por mais que o Go garanta a inicialização zero de diferentes tipos, devemos ficar atentos com os tipos que estamos trabalhando.
