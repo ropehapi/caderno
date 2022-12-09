@@ -68,7 +68,7 @@ Para finalizar, observe o seguinte programa, no qual criamos duas variáveis: um
 Recebemos uma mensagem com um erro informando que os tipos são incompatíveis. Não podemos comparar o valor atribuído pela inicialização zero se temos tipos diferentes. Portanto, por mais que o Go garanta a inicialização zero de diferentes tipos, devemos ficar atentos com os tipos que estamos trabalhando.
 
 ## **New e Ponteiros**
-Antes de mais nada: Encontrei um [artigo](https://dev.to/wnqueiroz/drops-04-desmistificando-ponteiros-no-golang-3kj9) que explica muito melhor o que são ponteiros e endereços.
+*Antes de mais nada: Encontrei esse [artigo](https://dev.to/wnqueiroz/drops-04-desmistificando-ponteiros-no-golang-3kj9) que explica muito melhor o que são ponteiros e endereços.*
 
 Vimos duas formas de utilizar a struct, a primeira passando o campo e o valor que queremos armazenar dentro dessas variáveis e a segunda passando o conteúdo sem especificar os campos, desde que eles estejam na ordem em que foram declarados.
 
@@ -290,3 +290,139 @@ No momento, as propriedades da nossa struct se encontram privadas, isso porque q
     }
 
 Agora, basta chamar tais propriedades com a letra maiúscula no nosso pacote principal e voila.
+
+## **Getters**
+Outra funcionalidade com a qual precisamos nos preocupar é que as pessoas que tem uma conta corrente devem poder ter acesso ao valor do saldo delas. Precisamos pensar numa forma de obter esse valor de saldo. Para resolver esse problema podemos criar outra função que aponta para a conta corrente que está chamando e aponta o valor do saldo dela.
+
+Chamaremos a função de `ObterSaldo()` e ela apontará para a conta sendo invocada por meio de `(c *ContaCorrente)` vindo antes da função. Retornaremos um valor `float64` . Dentro do corpo da função o return será `c.saldo`, ou seja, visualizaremos o saldo da conta que chamou a função.
+
+    func (c *ContaCorrente) ObterSaldo() float64 {
+        return c.saldo
+    }
+
+Salvaremos e agora vamos para a função `main()` para visualizar apenas o valor do saldo. Vamos passar a função para obter o saldo na impressão.
+
+    func main() (
+        contaExemplo := contas.ContaCorrente{}
+        contaExemplo.Depositar(100)
+
+        fmt.Println(contaExemplo.ObterSaldo())
+    }
+
+## **Passando um valor ou cópia**
+Métodos são definidos de maneira parecida com funções, mas de uma maneira diferente. Existe um `(p *Pessoa)` que se refere a um ponteiro para a instância criada da estrutura, conforme o exemplo abaixo:
+
+    package main
+
+    import (
+        "fmt"
+    )
+
+    type Pessoa struct {
+        nome, sobrenome string
+    }
+
+    func (p *Pessoa) ExibirNomeCompleto() string {
+        nomeCompleto := p.nome + " " + p.sobrenome
+        return nomeCompleto
+    }
+
+    func main() {
+        p1 := Pessoa{"Guilherme", "Lima"}
+        fmt.Println(p1.ExibirNomeCompleto())
+    }
+
+Ao executar este código, temos a saída esperada, pois nesse caso, passamos para o método o valor encontrado neste ponteiro através do `(p *Pessoa)`.
+
+> Guilherme Lima
+
+### **Passando uma cópia**
+Também é possível passar um valor removendo a assinatura do ponteiro `(p *Pessoa)` para `(p Pessoa)`.
+
+Nesse caso, uma cópia do valor de Pessoa é passada para a função, sem alterar o valor do ponteiro. Portanto, precisamos ficar atentos, já que qualquer alteração que você faça em `p` se passar por valor não será refletida na fonte `p`.
+
+Observe este exemplo:
+
+    package main
+
+    import (
+        "fmt"
+    )
+
+    type Pessoa struct {
+        nome, sobrenome string
+    }
+
+    func (p Pessoa) ExibirNomeCompleto() string {
+        p.sobrenome = "Silva"
+        nomeCompleto := p.nome + " " + p.sobrenome
+        return nomeCompleto
+    }
+
+    func main() {
+        p1 := Pessoa{"Guilherme", "Lima"}
+
+        fmt.Println(p1.ExibirNomeCompleto())
+        fmt.Println(p1.nome, p1.sobrenome)
+}
+
+Nossa saída será:
+
+>Guilherme Silva
+
+>Guilherme Lima
+
+Observe que alteramos o sobrenome de `p` no método `ExibirNomeCompleto`, mas não foi alterado o valor armazenado no ponteiro. Sendo assim, quando não precisamos alterar o conteúdo de um ponteiro, podemos passar apenas uma cópia.
+
+
+## **Interfaces**
+*Antes de mais nada, encontrei um [vídeo no youtube](https://www.youtube.com/watch?v=iY2xSN2_OlA) explicando muito bem como utilizar interfaces em Go.*
+
+Criar uma interface em Go é muito simples. Não cabe a mim entrar no mérito de explicar o que é uma interface, tendo em vista que estou partindo do pressuposto de que você já seja introduzido à OO.
+
+    type UsersInterface interface {
+        Show() string
+    }
+
+    type User struct {
+        name     string
+        username string
+        online   bool
+    }
+
+    type Admin struct {
+        User
+        age int
+    }
+
+    func (u User) Show() string {
+        return fmt.Sprintf("Hello, my name is %s, and my username is %s.", u.name, u.username)
+    }
+
+    func (u Admin) Show() string {
+        return fmt.Sprintf("Hello, my name is %s, and my username is %s. I`m a Adm!!!", u.name, u.username)
+    }
+
+    func ShowUserInfo(u UsersInterface) {
+        fmt.Println(u.Show())
+    }
+
+    func main() {
+        u := User{
+            "Eliseu",
+            "zeucxb",
+            true,
+        }
+
+        adm := Admin{
+            User{
+                "Roberto",
+                "ro<3",
+                true,
+            },
+            19,
+        }
+
+        ShowUserInfo(u)
+        ShowUserInfo(adm)
+    }
