@@ -103,3 +103,74 @@ Quando desejarmos renderizar em nossas views algum objeto de forma dinâmica, co
             </tr>
             {{end}}
         </tbody>
+
+## **Conectando aplicação com banco de dados**
+Antes de mais nada 1: Como não é o intuito desses estudos, vou me abster de ter que explicar sobre o banco de dados, queries entre outros.
+
+Antes de mais nada 2: Encontrei no youtube [esse vídeo](https://www.youtube.com/watch?v=ngv64-mN1Hw) do HunCoding explicando como conectar a aplicação a um banco MySQL.
+
+Para conectarmos nossa aplicação a um banco, vamos precisar importar o pacote `database/sql`, e um driver para o MySQL, no caso, o pacote [go-sql-driver/mysql](https://pkg.go.dev/github.com/go-sql-driver/mysql), que tem seu guia de uso na documentação, mas ainda assim eu explicarei o básico aqui.
+
+Para termos uma instância global do banco, criaremos uma variável que aponta para um ponteiro de DB, e uma variável para os erros:
+
+    db *sql.DB
+	err error
+
+Assim, para abrirmos uma conexão com o banco, basta usar a função `sql.Open()`, passando os dados da conexão da seguinte forma por exemplo:
+
+    db, err = sql.Open("mysql", "user:senha@tcp(ip:porta)/banco")
+
+## **Inserindo registros no banco**
+Para que possamos inserir registros no banco, podemos criar por exemplo uma função `insertProduto` que armazenará um produto no banco, da seguinte maneira:
+
+    func insertProduto(produto Produto) error{
+        _, err := db.Exec(fmt.Sprintf("INSERT INTO produto (nome, descricao, preco, quantidade) VALUES ('%s','%s',%f,%d)", produto.Nome, produto.Descricao, produto.Preco, produto.Quantidade))
+
+        if(err != nil){
+            return err
+        }
+
+        fmt.Println("Produto cadastrado com sucesso.")
+
+        return nil
+    }
+
+Explicando: Temos uma função `insertProduto` que recebe como parâmetro um produto, e devolve apenas erros.
+
+Dentro dessa função, chamamos a função `db.Exec()`, que executa uma query no nosso banco.
+
+Caso essa execução seja bem sucedida, retornaremos `nil`, afirmando que não houveram erros. Caso haja algum problema na execução do SQL, retornaremos a variável `err`, que deverá ser tratada onde chamamos a função `insertProduto`.
+
+    if inserterror := insertProduto(produto); inserterror != nil {
+		fmt.Println(inserterror)
+		panic(err)
+	}
+
+## **Lendo registros do banco**
+Para lermos os registros do banco, devemos usar a função `db.Query()`, que é difere da função `db.Exec()` pois é a função que usaremos quando quisermos obter alguma resposta vinda do banco, diferente da `Exec` que só executa a query.
+
+    res, err := db.Query("SELECT * FROM produto")
+
+Feitos os tratamentos de erro rotineiros, vamos criar um array de produtos que será iterado a cada registro de produto encontrado na nessa query, e o retornaremos, deixando a função assim:
+
+    func getProdutos() ([]*Produto, error){
+        res, err := db.Query("SELECT * FROM produto")
+
+        if err != nil {
+            return nil, err
+        }
+
+        produtos := []*Produto{}
+        for res.Next(){
+            var produto Produto
+            if err := res.Scan(&produto.Id ,&produto.Nome, &produto.Descricao, &produto.Preco, &produto.Quantidade); err != nil{
+                return nil, err
+            }
+
+            produtos = append(produtos, &produto)
+        }
+
+        return produtos, nil
+    }
+
+No código acima, temos a função `.Next()`, que é responsável por percorrer os registros e pular para o próximo, e a função `.Scan()`, que é responsável por ler registro por registro, e atribuir seus valores a variáveis que usaremos para montar nosso objeto produto.
