@@ -376,7 +376,7 @@ Observe que alteramos o sobrenome de `p` no método `ExibirNomeCompleto`, mas n�
 
 
 ## **Interfaces**
-*Antes de mais nada, encontrei um [vídeo no youtube](https://www.youtube.com/watch?v=iY2xSN2_OlA) explicando muito bem como utilizar interfaces em Go.*
+*Antes de mais nada: encontrei um [vídeo no youtube](https://www.youtube.com/watch?v=iY2xSN2_OlA) explicando muito bem como utilizar interfaces em Go.*
 
 Criar uma interface em Go é muito simples. Não cabe a mim entrar no mérito de explicar o que é uma interface, tendo em vista que estou partindo do pressuposto de que você já seja introduzido à OO.
 
