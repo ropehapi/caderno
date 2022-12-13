@@ -29,6 +29,35 @@ Por úlltimo, basta que adicionemos uma flag no nosso arquivo html para que poss
         Corpo HTML
     {{end}}
 
+### **Passando e utilizando objetos na view**
+Quando desejarmos renderizar em nossas views algum objeto de forma dinâmica, como por exemplo uma lista de produtos, basta que passemos o objeto como parâmetro na função `ExecuteTemplate`, e o chamemos na view, acessando suas propriedades através do `.Propriedade` (onde o "`.`" representa o objeto passado).
+
+    	temp.ExecuteTemplate(w, "index", produtos)
+
+        Na view:
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{.Nome}}</td>
+                <td>{{.Descricao}}</td>
+                <td>{{.Preco}}</td>
+                <td>{{.Quantidade}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+
+### **Criando partials para suas views**
+No Go, quando quisermos criar fatias de um template por exemplo e os incluir dentro de outra página web, basta que façamos o mesmo que já fizemos nos demais templates, definindo seu nome no topo, e fechando a tag ao final do aquivo. Assim, quando quisermos chamar uma fatia de um template em outro arquivo HTML, basta que usemos um `{{template "_fatia"}}`.
+
+    Na fatia:
+
+    {{define "_head"}}
+        Corpo HTML
+    {{end}}
+
+    No arquivo onde queremos importar:
+
+    {{template "_head"}}
 ### **Importando o Bootstrap**
 Como nosso foco de longe não é frontend, importaremos o framework frontend bootstrap afim de facilitar nosso trabalho, dessa forma, nossa view ficará assim: 
 
@@ -87,22 +116,6 @@ Como nosso foco de longe não é frontend, importaremos o framework frontend boo
     </html>
     {{end}}
 
-## **Passando e utilizando objetos na view**
-Quando desejarmos renderizar em nossas views algum objeto de forma dinâmica, como por exemplo uma lista de produtos, basta que passemos o objeto como parâmetro na função `ExecuteTemplate`, e o chamemos na view, acessando suas propriedades através do `.Propriedade` (onde o "`.`" representa o objeto passado).
-
-    	temp.ExecuteTemplate(w, "index", produtos)
-
-        Na view:
-        <tbody>
-            {{range .}}
-            <tr>
-                <td>{{.Nome}}</td>
-                <td>{{.Descricao}}</td>
-                <td>{{.Preco}}</td>
-                <td>{{.Quantidade}}</td>
-            </tr>
-            {{end}}
-        </tbody>
 
 ## **Conectando aplicação com banco de dados**
 Antes de mais nada 1: Como não é o intuito desses estudos, vou me abster de ter que explicar sobre o banco de dados, queries entre outros.
@@ -120,7 +133,7 @@ Assim, para abrirmos uma conexão com o banco, basta usar a função `sql.Open()
 
     db, err = sql.Open("mysql", "user:senha@tcp(ip:porta)/banco")
 
-## **Inserindo registros no banco**
+### **Inserindo registros no banco**
 Para que possamos inserir registros no banco, podemos criar por exemplo uma função `insertProduto` que armazenará um produto no banco, da seguinte maneira:
 
     func insertProduto(produto Produto) error{
@@ -146,8 +159,8 @@ Caso essa execução seja bem sucedida, retornaremos `nil`, afirmando que não h
 		panic(err)
 	}
 
-## **Lendo registros do banco**
-Para lermos os registros do banco, devemos usar a função `db.Query()`, que é difere da função `db.Exec()` pois é a função que usaremos quando quisermos obter alguma resposta vinda do banco, diferente da `Exec` que só executa a query.
+### **Lendo registros do banco**
+Para lermos os registros do banco, devemos usar a função `db.Query()`, que difere da função `db.Exec()` pois é a função que usaremos quando quisermos obter alguma resposta vinda do banco, diferente da `Exec` que só executa a query.
 
     res, err := db.Query("SELECT * FROM produto")
 
@@ -174,3 +187,6 @@ Feitos os tratamentos de erro rotineiros, vamos criar um array de produtos que s
     }
 
 No código acima, temos a função `.Next()`, que é responsável por percorrer os registros e pular para o próximo, e a função `.Scan()`, que é responsável por ler registro por registro, e atribuir seus valores a variáveis que usaremos para montar nosso objeto produto.
+
+
+*Tudo aquilo o que foi visto durante o curso e a criação da plataforma Loja Go gira entorno disso, porém, com conceitos de modularização e arquitetura aplicados. Assim sendo, vou me abster de explicar tudo passo a passo, pois é apenas uma questão de lógica, e deixarei linkado [aqui](https://github.com/ropehapi/loja-go) um repositório com um projeto WEB completo para servir de referência.*
