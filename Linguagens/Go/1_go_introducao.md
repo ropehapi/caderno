@@ -1,5 +1,5 @@
 # **Go**
-Antes de mais nada: Tem um levantamento do porque eu escolhi estudar a linguagem Go no meu [Notion](https://marked-bakery-837.notion.site/An-lise-Node-x-Golang-219f881022c94a06ad11cf81e4d6a2cf)
+*Antes de mais nada: Tem um levantamento do porque eu escolhi estudar a linguagem Go no meu [Notion](https://marked-bakery-837.notion.site/An-lise-Node-x-Golang-219f881022c94a06ad11cf81e4d6a2cf)*
 
 ## **Introdução**
 A linguagem [Go](https://go.dev), também conhecida como GoLang, é uma linguagem open source que foi criada pelo Google em 2007, e desde então é utilizada para a construção de produtos e serviços de grande escala. Atualmente a linguagem é utilizada por diversas empresas, como Uber, Twitch, Medium e Mercado livre.

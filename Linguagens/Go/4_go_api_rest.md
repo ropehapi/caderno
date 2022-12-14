@@ -1,8 +1,10 @@
 # **API REST com Go**
-Antes de mais nada: Afim de documentar todo o processo da construção dessa API, que será uma API que retorna dados sobre personalidades, eu descreverei todos os detalhes pertinentes ao projeto, mesmo que sejam coisas que deveriam ser inferidas em razão de lógica de programação e todas as minhas outras anotações.
+Antes de mais nada : Afim de documentar todo o processo da construção dessa API, que será uma API que retorna dados sobre personalidades, eu descreverei todos os detalhes pertinentes ao projeto, mesmo que sejam coisas que deveriam ser inferidas em razão de lógica de programação e todas as minhas outras anotações.
+
+Caso deseje, esse repositório tem um tópico sobre APIs e o padrão REST [aqui](https://github.com/ropehapi/caderno/Teorico).
 
 ## **Preparando o ambiente**
-Antes de mais nada: Visando ter um ambiente comum para todas as ocasiões, iremos usar o Docker para conteinerizar nosso banco de dados por enquanto. Como Docker não é o alvo dessas anotações, apenas explicarei o fluxo para subir o ambiente usando o Docker.
+ Visando ter um ambiente comum para todas as ocasiões, iremos usar o Docker para conteinerizar nosso banco de dados por enquanto. Como Docker não é o alvo dessas anotações, apenas explicarei o fluxo para subir o ambiente usando o Docker.
 
 Caso deseje, esse repositório tem um tópico sobre Docker [aqui](https://github.com/ropehapi/caderno/Tecnologias/Docker).
 
@@ -66,14 +68,20 @@ Um router serve como o terminal da sua aplicação, onde todas as requisições 
 
 Nesse caso, usarei o [GorillaMux](https://github.com/gorilla/mux), que tem seu guia de instalação na documentação da lib.
 
-## **Na controller**
+## **Devolvendo Json**
+Nas outras anotações, foi visto apenas como se retorna views como response, porém, em uma API, é interessante que retornemos uma response em formato Json.
+
 Para devolvermos uma resposta esperada pela API, devemos fazer com que a nossa controller devolva os nossos dados encodados, da seguinte maneira:
+
+    Na Controller:
 
     func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
         json.NewEncoder(w).Encode(models.Personalidades)
     }
-### **Respondendo Json**
-Para encodar uma resposta de por exemplo uma struct em json, podemos fazer o seguinte:
+
+Para isso, nossa struct também deve estar configurada para responder seus campos em json, da seguinte maneira:
+
+    Na Model:
 
     type Personalidade struct {
         Nome     string `json:"nome"`

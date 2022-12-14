@@ -1,5 +1,5 @@
 # **Aplicações WEB com Go**
-Antes de mais nada: Por eu vir da WEB (PHP), vou me abster de explicar alguns conceitos da WEB como roteamento, servidores http, páginas HTML entre outros.
+*Antes de mais nada: Por eu vir da WEB (PHP), vou me abster de explicar alguns conceitos da WEB como roteamento, servidores http, páginas HTML entre outros.*
 
 ## **Subindo um servidor**
 Para subirmos um servidor em Go, basta que chamemos dentro da função main uma função que seja responsável por ouvir e responder requisições. Essa função é a função `ListenAndServe` do pacote `Http`, que recebe como parâmetros a porta do servidor e o handler (Geralmente nil)
@@ -118,9 +118,9 @@ Como nosso foco de longe não é frontend, importaremos o framework frontend boo
 
 
 ## **Conectando aplicação com banco de dados**
-Antes de mais nada 1: Como não é o intuito desses estudos, vou me abster de ter que explicar sobre o banco de dados, queries entre outros.
+*Antes de mais nada 1: Como não é o intuito desses estudos, vou me abster de ter que explicar sobre o banco de dados, queries entre outros.*
 
-Antes de mais nada 2: Encontrei no youtube [esse vídeo](https://www.youtube.com/watch?v=ngv64-mN1Hw) do HunCoding explicando como conectar a aplicação a um banco MySQL.
+*Antes de mais nada 2: Encontrei no youtube [esse vídeo](https://www.youtube.com/watch?v=ngv64-mN1Hw) do HunCoding explicando como conectar a aplicação a um banco MySQL.*
 
 Para conectarmos nossa aplicação a um banco, vamos precisar importar o pacote `database/sql`, e um driver para o MySQL, no caso, o pacote [go-sql-driver/mysql](https://pkg.go.dev/github.com/go-sql-driver/mysql), que tem seu guia de uso na documentação, mas ainda assim eu explicarei o básico aqui.
 
