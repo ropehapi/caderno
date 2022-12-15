@@ -81,6 +81,28 @@ As rotas dessa aplicação ficarão assim:
         log.Fatal(http.ListenAndServe(":8000", r))
     }
 
+### **Middleware de Content-Type**
+Afim de que possamos aplicar um header em comum à todas as nossas funções, faremos um middleware que interceptará todas as requisições, setando o Header como `Content-type: application/json`.
+
+    No middleware:
+
+    package middleware
+
+    import "net/http"
+
+    func ContentTypeMiddleware(next http.Handler) http.Handler {
+        return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.Header().Set("Content-type", "application/json")
+            next.ServeHTTP(w, r)
+        })
+    }
+
+    No router (Antes das rotas):
+
+    r.Use(middleware.ContentTypeMiddleware)
+
+
+
 ## **O gORM**
 Visando facilitar a manipulação de entidades, usaremos o [gORM](https://gorm.io), o ORM do Go, para estabelecer nossa conexão e manipular os registros.
 
