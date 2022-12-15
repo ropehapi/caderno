@@ -68,24 +68,107 @@ Um router serve como o terminal da sua aplicação, onde todas as requisições 
 
 Nesse caso, usarei o [GorillaMux](https://github.com/gorilla/mux), que tem seu guia de instalação na documentação da lib.
 
-## **Devolvendo Json**
-Nas outras anotações, foi visto apenas como se retorna views como response, porém, em uma API, é interessante que retornemos uma response em formato Json.
+As rotas dessa aplicação ficarão assim:
 
-Para devolvermos uma resposta esperada pela API, devemos fazer com que a nossa controller devolva os nossos dados encodados, da seguinte maneira:
-
-    Na Controller:
-
-    func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
-        json.NewEncoder(w).Encode(models.Personalidades)
+    func HandleResquest() {
+        r := mux.NewRouter()
+        r.HandleFunc("/", controllers.Home).Methods("Get")
+        r.HandleFunc("/api/personalidades", controllers.Index).Methods("Get")
+        r.HandleFunc("/api/personalidades/{id}", controllers.Show).Methods("Get")
+        r.HandleFunc("/api/personalidades", controllers.Store).Methods("Post")
+        r.HandleFunc("/api/personalidades/{id}", controllers.Update).Methods("Put")
+        r.HandleFunc("/api/personalidades/{id}", controllers.Delete).Methods("Delete")
+        log.Fatal(http.ListenAndServe(":8000", r))
     }
 
-Para isso, nossa struct também deve estar configurada para responder seus campos em json, da seguinte maneira:
+## **O gORM**
+Visando facilitar a manipulação de entidades, usaremos o [gORM](https://gorm.io), o ORM do Go, para estabelecer nossa conexão e manipular os registros.
 
-    Na Model:
+Afim de que tenhamos um objeto de conexão global para o nosso projeto, criaremos o pacote database que terá uma função que retorna uma instância da conexão com o banco.
+
+    package database
+
+    import (
+        "gorm.io/driver/postgres"
+        "gorm.io/gorm"
+    )
+
+    var (
+        DB *gorm.DB
+        err error
+    )
+
+    func GetConexao(){
+        stringDeConexao := "host=localhost user=root password=root dbname=root port=5432 sslmode=disable TimeZone=America/Sao_Paulo"
+        DB, err = gorm.Open(postgres.Open(stringDeConexao))
+
+        if err != nil{
+            panic(err.Error())
+        }
+    }
+
+## **A model**
+Afim de que possamos receber um objeto json e possamos transforma-lo em uma model, montaremos a struct com a seguinte configuração:
+
+    package models
 
     type Personalidade struct {
+        Id       int    `json:id`
         Nome     string `json:"nome"`
         Historia string `json:"historia"`
-    }   
+    }
 
     var Personalidades []Personalidade
+
+## **CRUD**
+### **Create**
+Nas ocasiões onde precisaremos ler o corpo da requisição, precisaremos decodificar o corpo da request, e atribui-lo ao endereço de uma model, previamente preparada para receber json (Como visto no módulo acima).
+
+    func Store(w http.ResponseWriter, r *http.Request) {
+        var personalidade models.Personalidade
+        json.NewDecoder(r.Body).Decode(&personalidade)
+        database.DB.Create(&personalidade)
+        json.NewEncoder(w).Encode(personalidade)
+    }
+
+### **Read**
+Nas ocasiões onde precisamos pegar variáveis passadas através da URL, basta que usemos o método `mux.Vars(r)`, e acessemos a variável que queremos através do seu nome no router, da seguinte maneira, por exemplo: `id := vars["id"]`
+
+    func Index(w http.ResponseWriter, r *http.Request) {
+        var p []models.Personalidade
+        database.DB.Find(&p)
+        json.NewEncoder(w).Encode(p)
+    }
+
+    func Show(w http.ResponseWriter, r *http.Request) {
+        vars := mux.Vars(r)
+        id := vars["id"]
+
+        var p models.Personalidade
+        database.DB.First(&p, id)
+        json.NewEncoder(w).Encode(p)
+    }
+
+### **Update**
+    func Update(w http.ResponseWriter, r *http.Request) {
+        vars := mux.Vars(r)
+        id := vars["id"]
+
+        var p models.Personalidade
+        database.DB.First(&p, id)
+        json.NewDecoder(r.Body).Decode(&p)
+        database.DB.Save(&p)
+        json.NewEncoder(w).Encode(p)
+    }
+
+### **Delete**
+    func Delete(w http.ResponseWriter, r *http.Request) {
+        vars := mux.Vars(r)
+        id := vars["id"]
+
+        var p models.Personalidade
+        database.DB.Delete(&p, id)
+        json.NewEncoder(w).Encode(p)
+    }
+
+
