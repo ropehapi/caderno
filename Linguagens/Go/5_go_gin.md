@@ -21,7 +21,7 @@ Para subirmos uma instância de um servidor Go com Gin é muito simples:
         r.Run("8000") //Se não informado, será 8080
     }
 
-## **O Router**
+b## **O Router**
 Definindo uma rota:
 
     func ExibeTodosAlunos(c *gin.Context){
@@ -64,6 +64,25 @@ Podemos fazer com que a estrutura do nosso banco seja definida logo após a obte
 
     DB.AutoMigrate(&models.Aluno{})
 
+## **Listando registros**
+    func Index(c *gin.Context) {
+        var alunos []models.Aluno
+        database.DB.Find(&alunos)
+        c.JSON(200, alunos)
+    }
+
+    func Show(c *gin.Context) {
+        var aluno models.Aluno
+        id := c.Params.ByName("id")
+        database.DB.First(&aluno, id)
+
+        if aluno.ID == 0 {
+            c.JSON(http.StatusNotFound, gin.H{
+                "Not found": "Aluno não encontrado"})
+            return
+        }
+        c.JSON(http.StatusOK, aluno)
+    }
 ## **Criando um registro**
 No gin, podemos criar um registro através de uma model de maneira muito simples, basta informar o endereço de memória da model ao método `c.ShouldBindJson()` do Gin que ele se encarrega de relacionar o json da request com os atributos da model.
 
@@ -75,5 +94,45 @@ No gin, podemos criar um registro através de uma model de maneira muito simples
             return
         }
         database.DB.Create(&aluno)
+        c.JSON(http.StatusOK, aluno)
+    }
+
+## **Alterando registros**
+    func Update(c *gin.Context) {
+        var aluno models.Aluno
+        id := c.Params.ByName("id")
+        database.DB.First(&aluno, id)
+        if err := c.ShouldBindJSON(&aluno); err != nil {
+            c.JSON(http.StatusBadRequest, gin.H{
+                "error": err.Error()})
+            return
+        }
+        database.DB.Model(&aluno).UpdateColumns(aluno)
+        c.JSON(http.StatusOK, aluno)
+    }
+
+## **Apagando registros**
+    func Delete(c *gin.Context) {
+        var aluno models.Aluno
+        id := c.Params.ByName(("id"))
+        database.DB.Delete(&aluno, id)
+        c.JSON(http.StatusOK, gin.H{
+            "message": "Aluno excluido com sucesso.",
+        })
+    }
+
+## **Usando o Where do gORM**
+    func FindByDocument(c *gin.Context) {
+        var aluno models.Aluno
+        cpf := c.Params.ByName("cpf")
+
+        database.DB.Where(&models.Aluno{CPF: cpf}).First(&aluno)
+
+        if aluno.ID == 0 {
+            c.JSON(http.StatusBadRequest, gin.H{
+                "Not found": "Aluno não encontrado"})
+            return
+        }
+
         c.JSON(http.StatusOK, aluno)
     }
