@@ -1,4 +1,4 @@
-# **Gin Framework**
+# **Go: Gin Framework**
 Gin é um framework web escrito em Go, que funciona como uma uma martini API com uma performance até 40x mais rápida graças ao httprouter.
 
 *Antes de mais nada: Para o entendimento dessas anotações, estou partindo do pressuposto de que você já leu e entendeu tudo deste outro [tópico](https://github.com/ropehapi/caderno/Linguagens/Go/4_go_api_rest.md), como a conteinerização, o ORM etc.*
