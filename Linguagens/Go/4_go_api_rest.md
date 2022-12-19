@@ -1,5 +1,5 @@
 # **API REST com Go**
-Antes de mais nada : Afim de documentar todo o processo da construção dessa API, que será uma API que retorna dados sobre personalidades, eu descreverei todos os detalhes pertinentes ao projeto, mesmo que sejam coisas que deveriam ser inferidas em razão de lógica de programação e todas as minhas outras anotações.
+*Antes de mais nada : Afim de documentar todo o processo da construção dessa API, que será uma API que retorna dados sobre personalidades, eu descreverei todos os detalhes pertinentes ao projeto, mesmo que sejam coisas que deveriam ser inferidas em razão de lógica de programação e todas as minhas outras anotações.*
 
 Caso deseje, esse repositório tem um tópico sobre APIs e o padrão REST [aqui](https://github.com/ropehapi/caderno/Teorico).
 
