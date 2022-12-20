@@ -7,16 +7,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ### Índice
 - Linguagens
-    - C#
-    - PHP
-    - JS
-    - Go
-    - SQL
-- Tecnologias
-    - GIT
-    - Docker
-    - AWS
-    - Linux
+    - [Go](https://github.com/ropehapi/caderno/Linguagens/Go) 
+- Ferramentas
+    - [Docker](https://github.com/ropehapi/caderno/Ferramentas/Go)
 
 ### Notação dos commits
 "Transcrição (Se for)" + "Mensagem do commit" + "Data"

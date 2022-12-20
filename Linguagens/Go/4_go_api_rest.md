@@ -6,7 +6,7 @@ Caso deseje, esse repositório tem um tópico sobre APIs e o padrão REST [aqui]
 ## **Preparando o ambiente**
  Visando ter um ambiente comum para todas as ocasiões, iremos usar o Docker para conteinerizar nosso banco de dados por enquanto. Como Docker não é o alvo dessas anotações, apenas explicarei o fluxo para subir o ambiente usando o Docker.
 
-Caso deseje, esse repositório tem um tópico sobre Docker [aqui](https://github.com/ropehapi/caderno/Tecnologias/Docker).
+Caso deseje, esse repositório tem um tópico sobre Docker [aqui](https://github.com/ropehapi/caderno/Ferramentas/Docker).
 
 ### **O Docker compose**
 Para subirmos um container com um banco de dados postgres, devemos subir o docker compose descrito abaixo, rodando o `docker compose up`.
