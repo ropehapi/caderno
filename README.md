@@ -9,7 +9,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Linguagens
     - [Go](https://github.com/ropehapi/caderno/Linguagens/Go) 
 - Ferramentas
-    - [Docker](https://github.com/ropehapi/caderno/Ferramentas/Go)
+    - [MySQL](https://github.com/ropehapi/caderno/Ferramentas/Database/SQL)
 
 ### Notação dos commits
 "Transcrição (Se for)" + "Mensagem do commit" + "Data"
