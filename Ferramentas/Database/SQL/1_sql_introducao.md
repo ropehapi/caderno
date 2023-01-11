@@ -42,19 +42,19 @@ Structured Query Language nada mais é que uma linguagem estruturada de consulta
     - Linguagem de transação de dados 
 
 ### **DDL**
-Essa é a linguagem responsável pela definição dos dados, que tem basicamente três comandos, o CREATE, que cria uma estrutura, o ALTER, que altera uma estrutura, e o DROP, que exclui uma estrutura.
+Essa é a linguagem responsável pela definição dos dados, que tem basicamente três comandos, o `CREATE`, que cria uma estrutura, o `ALTER`, que altera uma estrutura, e o `DROP`, que exclui uma estrutura.
 
 ### **DML**
-Enquanto a DDL é responsável pela estrutura do banco, a DML é responsável por parte do gerenciamento dos dados que irão popular as estruturas criadas com a linguagem anterior, sendo composta pelos comandos INSERT, UPDATE e DELETE.
+Enquanto a DDL é responsável pela estrutura do banco, a DML é responsável por parte do gerenciamento dos dados que irão popular as estruturas criadas com a linguagem anterior, sendo composta pelos comandos `INSERT`, `UPDATE` e `DELETE`.
 
 ### **DQL**
-É a que complementa a DML e permite recuperação e leitura dos dados inseridos nas tabelas e estruturas do seu banco de dados. Basicamente, é composta pelo comando SELECT, que é o comando que permite recuperar dados do banco. Essa mesma linguagem é a responsável por trabalhar na ordenação e agrupamento dos dados, além de poder fazer operações aritméticas.
+É a que complementa a DML e permite recuperação e leitura dos dados inseridos nas tabelas e estruturas do seu banco de dados. Basicamente, é composta pelo comando `SELECT`, que é o comando que permite recuperar dados do banco. Essa mesma linguagem é a responsável por trabalhar na ordenação e agrupamento dos dados, além de poder fazer operações aritméticas.
 
 ### **DCL**
-É a linguagem que permite gerenciar quem pode e quem não pode realizar cada uma das consultas apresentadas anteriormente pelas outras linguagens. É composta pelos comandos GRANT e REVOKE, responsáveis por habilitar acesso a dados e revogar, respectivamente.
+É a linguagem que permite gerenciar quem pode e quem não pode realizar cada uma das consultas apresentadas anteriormente pelas outras linguagens. É composta pelos comandos `GRANT` e `REVOKE`, responsáveis por habilitar acesso a dados e revogar, respectivamente.
 
 ### **DTL**
-É a linguagem de transação de dados. Uma transação é definida como um conjunto de operações. Nessa linguagem, usamos os comandos START TRANSACTION, COMMIT, e ROLLBACK, responsáveis por iniciar a transação, concretizar a transação, ou anular a transação, respectivamente.
+É a linguagem de transação de dados. Uma transação é definida como um conjunto de operações. Nessa linguagem, usamos os comandos `START TRANSACTION`, `COMMIT`, e `ROLLBACK`, responsáveis por iniciar a transação, concretizar a transação, ou anular a transação, respectivamente.
 
 ## **Chaves**
 ### **Chaves primárias (PK)**
