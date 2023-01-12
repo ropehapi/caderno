@@ -9,8 +9,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Linguagens
     - [Go](https://github.com/ropehapi/caderno/Linguagens/Go) 
 - Ferramentas
-    - [SQL](https://github.com/ropehapi/caderno/Ferramentas/Database/SQL)
-    - [Postgres](https://github.com/ropehapi/caderno/Ferramentas/Database/SQL/Postgres)
+    - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
+    - [Postgres](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/Postgres)
 
 ### **Notação dos commits**
 "Transcrição (Se for)" + "Mensagem do commit" + "Data"

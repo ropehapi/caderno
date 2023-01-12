@@ -18,8 +18,10 @@ As anotações a seguir se tratam de funcionalidades e ferramentas específicas 
 Toda tabela tem uma sequence, que é uma estrutura separada da tabela que serve como um contador. Como a propriedade de auto increment do MySQL por exemplo.
 
 ## **Consultando registros**
+### **Definindo valores padrão**
 *O `coalesce` nada mais é que um ternário onde se a coluna for null, ele atribuirá um valor default.
 
+### **Conversão de tipos**
 *Afim de que possamos converter nossos dados de saída, o Postgres oferece duas maneiras de fazermos isso, através do `cast`, passando a coluna e o tipo desejado, ou através do operador coluna`::tipo`.
 
     select id,
@@ -51,7 +53,8 @@ TODO:: Comentar o partition by
             abg(salario) filter(where salario < 1000) over(partition by 1)::numeric(11,2) media_salarial_salario_menor_10k
     from treinamento.funcionario
 
-TODO:: Comentar o rank
+### **Ranqueando registros**
+Afim de que possamos ranquear uma consulta a partir de um critério específico, podemos usar a função `rank`.
 
     select 'ID Brasil',
            id,
@@ -61,11 +64,10 @@ TODO:: Comentar o rank
            rank() over(partition by departamento order by desc, id) rank
     from treinamento.funcionario
 
-TODO:: Comentar o with
+### **Armazenando consultas em memória**
+No postgres, podemos também armazenar o resultado de uma consulta em memória e acessa-la através de uma variável com o `with` da seguinte maneira:
 
-    with t_tag(
-        id, tipo_tag_id, valor, tipo_tag_descricao
-    ) as (
+    with t_tag(id, tipo_tag_id, valor, tipo_tag_descricao) as (
         select tag.id,
                tag.tipo_tag_id,
                tag.valor,
@@ -87,15 +89,16 @@ TODO:: Comentar o with
 TODO::Pesquisar sobre recursividade
 
 ## **Manipulando dados**
-
-TODO:: Comentar inserção de dados com base em outra consulta
+### **Inserindo dados vindos de outra consulta**
+Podemos inserir dados em massa a partir de um insert seguido de um select em outra tabela onde queremos copiar os dados.
 
     insert into treinamento.funcionario(nome, departamento, salario)
     select nome, origem, 1000
     from movimentacao.pessoa
     limit 10
 
-TODO:: Comentar o on conflict, e o do
+### **Fluxos de controle do script**
+Assim como em uma linguagem de programação, podemos fazer uma validação de integridade através do `on conflict` (que valida por exemplo se um registro pode ou não ser gravado, no caso de uniques etc) e definir o que fazer a depender do resultado, como por exemplo não fazer nada com a instrução `do nothing` ou qualquer outra operação (por exemplo dar update no registro pré-existente).
 
     insert into treinamento.funcionario(nome, departamento, salario)
     values('Pedro Y', 'Dev', 400)
@@ -106,5 +109,3 @@ TODO:: Comentar o on conflict, e o do
 
     do update set salario = 800
     where treinamento.funcionario.salario <= 600
-
-TODO:: Dar um exemplo de sum
