@@ -73,5 +73,33 @@ O relacionamento onde para cada registro em uma tabela, pode haver apenas um reg
 ### **Relacionamento 1 para muitos (1:n)**
 Onde para cada registro da primeira tabela, pode existir um ou mais correspondentes na segunda tabela, mas para cada registro na segunda tabela existe apenas um registro correspondente na primeira tabela. Por exemplo, uma pessoa pode ter vários carros, mas um carro só pode estar registrado para uma pessoa.
 
-### **Relacionamente muitos para muitos (n:n)**
+### **Relacionamento muitos para muitos (n:n)**
 Para cada registro da primeira tabela, pode existir um ou mais correspondentes na segunda tabela, e vice-versa. Por exemplo, uma pessoa pode praticar uma ou mais profissões, da mesma forma como uma profissão pode ser exercida por uma ou mais pessoas.
+
+## **Tipos de dados**
+### **Booleano e numéricos**
+Dados do tipo booleano se enquadram em um tipo numérico pois serão armazenados no banco como um 0 ou 1, sendo 0 para falso e 1 para verdadeiro.
+Já os dados de tipo numérico podem variar de acordo com sua ordem de grandeza, descritas na tabela abaixo.
+![Tabela de valores dos tipos booleano e numéricos](/src/img/booleano-e-numericos.png)
+
+### **Strings**
+Em se tratando de strings, temos duas maneiras de armazena-las, sendo essas maneiras o `CHAR` e o `VARCHAR`. Enquanto o `CHAR` ocupará no banco a quantidade de caracteres informado na definição da coluna (mesmo que o registro de fato tenha menos caracteres) com caracteres vazios, o `VARCHAR` ocupará em banco apenas a quantidade necessária de caracteres do seu registro.
+
+### **Data e hora** 
+Registros que armazenem data e hora podem ser avaliados entre os tipos da tabela abaixo.
+![Tabela de intervalos e valores de date e hora](/src/img/data-e-hora.png)
+
+### **Outros tipos de dados**
+- Blob
+- Text
+- Redes
+- Monetários
+- Geométricos
+
+***Para visualizar uma tabela com todos os tipos de dados, basta acessar [esse](https://github.com/ropehapi/caderno/tree/main/src/Tabela_de_tipos_de_dados.pdf) diretório do repositório.
+
+## **Atributos**
+- Null / Not null
+- Unsigned
+- Auto-increment
+- Zerofill
