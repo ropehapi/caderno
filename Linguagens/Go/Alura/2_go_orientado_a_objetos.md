@@ -280,7 +280,7 @@ Ao fazer isso, nossa IDE vai apontar um erro, pois ele não vai mais saber ou se
 
 Porém, ao fazer isso, teremos outro erro sendo apontado. Nossa IDE vai alegar desconhecer as propriedades das quais estamos tentando manipular. Isso se deve por conta da visibilidade das propriedades do nosso struct, que podem ser definidas como públicas, privadas entre outras, como em qualquer outra linguagem de programação.
 
-No momento, as propriedades da nossa struct se encontram privadas, isso porque quando nós as criamos, elas foram definidas com suas iniciais minúsculas, que é o que define se uma propriedade pode ou não ser acessada externamente. Para resolver isso, basta alterar os nomes das propriedades para ter sua primeira letra maiúscula.
+No momento, as propriedades da nossa struct se encontram privadas, isso porque quando nós as criamos, elas foram definidas com suas iniciais minúsculas, que é o que define se uma propriedade pode ou não ser acessada externamente. Para resolver isso, basta alterar os nomes das propriedades para ter sua primeira letra maiúscula (Chamamos isso de exportar o método ou propriedade).
 
     type ContaCorrente struct {
         Titular       string
