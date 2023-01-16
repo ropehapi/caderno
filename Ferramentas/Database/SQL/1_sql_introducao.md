@@ -103,3 +103,24 @@ Registros que armazenem data e hora podem ser avaliados entre os tipos da tabela
 - Unsigned
 - Auto-increment
 - Zerofill
+
+## **DDL**
+Linguagem de definição de dados, composta pelos comandos:
+
+- CREATE: Cria uma estrutura
+- ALTER: Altera uma estrutura
+- DROP: Excluir uma estrutura
+
+    CREATE DATABASE nome_banco;
+    ALTER DATABASE nome_propriedade;
+    DROP DATABASE nome_banco;
+
+    CREATE TABLE nome_tabela (nome tipo_dado atributos, nome_1 tipo_dado atributos);
+    ALTER TABLE nome_tabela .....;
+    DROP TABLE nome_tabela;
+
+    CREATE INDEX nome ON tabela_e_coluna;
+    ALTER INDEX nome_propriedade;
+    DROP INDEX nome;
+
+###### MATAR ESSE TÓPICO SOBRE SQL AINDA HOJE ########
