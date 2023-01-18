@@ -1,4 +1,4 @@
-# **MySQL**
+# **SQL**
 ## **Introdução**
 Bancos de dados nada mais são que mecanismos de armazenamento de dados. Como por exemplo em uma padaria, onde podemos ter fichas com os dados de todos os seus clientes armazenados em uma gaveta, células de todos os seus clientes em uma planilha de excel, ou registros de todos os seus clientes em uma tabela em um servidor de banco de dados digital. Todas essas formas de registrar dados são considerados bancos de dados.
 
@@ -8,6 +8,8 @@ Os bancos de dados digitais podem ser divididos em duas categorias, os bancos de
 Os bancos de dados relacionais permitem que os dados sejam organizados em tabelas. Essas tabelas permitem que os dados de uma tabela possam se comunicar com os dados de outra tabela, como por exemplo, podemos ter uma tabela para os clientes, e uma tabela para as compras desses clientes, onde as tabelas terão uma relação. Daí, o nome banco de dados relacional.
 
 ## **A estrutura de um banco de dados**
+- Servidor de banco de dados
+    - Servidor que provê as conexões e gerencia os acessos aos bancos. (MySQL, Postgres etc)
 - Banco de dados
     - Ferramentas que permitem o armazenamento e manipulação de dados organizados em forma de tabelas.
 - Tabelas
@@ -105,22 +107,96 @@ Registros que armazenem data e hora podem ser avaliados entre os tipos da tabela
 - Zerofill
 
 ## **DDL**
-Linguagem de definição de dados, composta pelos comandos:
+Linguagem de definição de dados, responsável por manipular a estrutura do banco, através dos comandos abaixo.
 
 - CREATE: Cria uma estrutura
 - ALTER: Altera uma estrutura
 - DROP: Excluir uma estrutura
 
-    CREATE DATABASE nome_banco;
-    ALTER DATABASE nome_propriedade;
-    DROP DATABASE nome_banco;
+        CREATE DATABASE nome_banco;
+        ALTER DATABASE nome_propriedade;
+        DROP DATABASE nome_banco;
 
-    CREATE TABLE nome_tabela (nome tipo_dado atributos, nome_1 tipo_dado atributos);
-    ALTER TABLE nome_tabela .....;
-    DROP TABLE nome_tabela;
+        CREATE TABLE nome_tabela (nome tipo_dado atributos, nome_1 tipo_dado atributos);
+        ALTER TABLE nome_tabela .....;
+        DROP TABLE nome_tabela;
 
-    CREATE INDEX nome ON tabela_e_coluna;
-    ALTER INDEX nome_propriedade;
-    DROP INDEX nome;
+        CREATE INDEX nome ON tabela_e_coluna;
+        ALTER INDEX nome_propriedade;
+        DROP INDEX nome;
 
-###### MATAR ESSE TÓPICO SOBRE SQL AINDA HOJE ########
+## **DML**
+Linguagem de manipulação de dados, responsável por manipular os registros em nosso banco, composta pelos comandos abaixo:
+
+- INSERT: Insere um registro
+- UPDATE: Atualiza um registro
+- DELETE: Exclui um registro
+
+        INSERT INTO nome_tabela (nome_coluna_1, nome_coluna_2) values (valor_coluna_1, valor_coluna_2);
+        UPDATE nome_tabela set nome_coluna = valor_coluna WHERE id = 1;
+        DELETE FROM nome_tabela WHERE id = 10;
+
+## **DCL**
+Linguagem de controle de acesso, forma de garantir que somente pessoas autorizadas possam realizar ações com os dados.
+
+- Níveis de acceso:
+    - Banco de dados, tabelas, colunas, registros
+- Niveis de ação:
+    - Gerenciar estruturas, gerenciar dados, ler dados
+
+A DCL é composta pelos seguintes comandos:
+
+- CREATE: Cria um usuário
+- DROP: Deleta um usuário
+- GRANT: Habilita acessos
+- REVOKE: Revoga acessos
+
+## **DQL**
+Linguagem de consulta de dados, composta por um único comando, o select, que deve ser complementado pelos mais diversos tipos de filtragem que existem no SQL.
+
+- SELECT: Seleciona os registros a exibir
+
+        SELECT * FROM nome_tabela
+
+### **Filtros de seleção**
+- Registros selecionados: WHERE
+- Operadores relacionais: 
+     - =, !=, \>, <, \>=, <=, IS NULL, IS NOT NULL, BETWEEN, LIKE
+- Operadores lógicos:
+    - AND, OR, NOT
+
+## **Relacionamentos e visões**
+A partir de Informações relacionadas entre si, que geralmente possuem campos em comum, podemos manipular nossas consultas de forma a nos retornar os mais variados tipos de visões.
+
+### **Join**
+Usado quando queremos trazer em uma consulta os dados de registros de duas tabelas distintas, podemos usar o `JOIN` quando as tabelas possuírem um campo em comum, da seguinte maneira:
+
+    SELECT c.nome_carro,
+           m.nome_motorista 
+    FROM carro c 
+    JOIN motorista m ON c.motorista_id = m.id;
+
+### **Tipos de Join**
+Há varios tipos de join, como explicados na imagem abaixo.
+![Tipos de join](/src/img/tipos_de_join.png)
+
+## **Funções**
+- Funções de agregração
+    - COUNT, SUM, AVG, MAX, MIN
+- Funções de paginação
+    - DISTINCT, ORDER BY, LIMIT, OFFSET
+- Funções de agrupamento
+    - GROUP BY, HAVING
+
+## **Subqueries**
+Subqueries são consultas dentro do resultado de outra consulta armazenada em memória.
+
+- IN/NOT IN
+
+        SELECT nome FROM funcionarios
+        WHERE departamento in(
+            SELECT departamento FROM funcionarios
+            GROUP BY departamento HAVING AVG(salario) > 1500 
+        );
+
+***Terminar de passar as anotações do caderno para cá***
