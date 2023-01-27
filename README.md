@@ -23,14 +23,14 @@ Ex: Primeiras aulas formação Go Alura 29/11/2022 <br>
 ### **TODO**
 Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para esse repositório.
 
-- [ ] PHP `(Em breve)`
-- [ ] Laravel `(Em breve)`
+- [ ] PHP
+- [ ] Laravel
 - [ ] Golang `(Andamento)`
-- [ ] Javascript `(Em breve)`
-- [ ] SQL `(Andamento)`
-- [ ] MySQL `(Em breve)`
+- [ ] Javascript
+- [x] SQL
+- [ ] MySQL
 - [ ] Postgres `(Andamento)`
-- [ ] GIT `(Em breve)`
-- [ ] Docker `(Em breve)`
-- [ ] AWS `(Em breve)`
-- [ ] Linux `(Em breve)`
+- [ ] GIT
+- [ ] Docker
+- [ ] AWS
+- [ ] Linux
