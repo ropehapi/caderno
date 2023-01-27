@@ -7,8 +7,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ### **Índice**
 - Linguagens
-    - [Go](https://github.com/ropehapi/caderno/Linguagens/Go) 
+    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go) 
 - Ferramentas
+    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [Postgres](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/Postgres)
 
@@ -28,9 +29,7 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 - [ ] Golang `(Andamento)`
 - [ ] Javascript
 - [x] SQL
-- [ ] MySQL
-- [ ] Postgres `(Andamento)`
 - [ ] GIT
-- [ ] Docker
+- [ ] Docker `(Andamento)`
 - [ ] AWS
 - [ ] Linux
