@@ -151,6 +151,23 @@ A DCL é composta pelos seguintes comandos:
 - GRANT: Habilita acessos
 - REVOKE: Revoga acessos
 
+## **DTL**
+Data transaction language é o nome que se dá à linguagem responsável pelas transações, método utilizado para manter a consistência de um banco de dados.
+
+### **Transações ACID**
+ACID, um acrônimo para atomicidade, consistência, isolamento e durabilidade, é um padrão transacional, que permite maior confiabilidade dos registros em nosso banco. Explicando letra por letra:
+
+- Atomicidade: Ou tudo dá certo ou nada
+- Consistência: Garante as regras do banco
+- Isolamento: Fecha o acesso aos dados durante a operação
+- Durabilidade: Confirma todas as ações
+
+A DTL é composta pelos seguintes comandos:
+
+- START TRANSACTION: Inicia a transação
+- COMMIT: Concretiza a transação
+- ROLLBACK: Anula a transação
+
 ## **DQL**
 Linguagem de consulta de dados, composta por um único comando, o select, que deve ser complementado pelos mais diversos tipos de filtragem que existem no SQL.
 
@@ -199,4 +216,47 @@ Subqueries são consultas dentro do resultado de outra consulta armazenada em me
             GROUP BY departamento HAVING AVG(salario) > 1500 
         );
 
-***Terminar de passar as anotações do caderno para cá***
+## **Stored procedures**
+Recurso que possibilita armazenar no servidor de BD códigos SQL para serem executados em determinado momento.
+
+
+- CREATE PROCEDURE: Cria uma procedure
+- EXECUTE: Executa uma procedure
+- DROP PROCEDURE: Exclui uma procedure
+
+        CREATE PROCEDURE nome;
+        EXECUTE nome;
+        DROP PROCEDURE nome;
+
+### **Exemplo:**
+    CREATE PROCEDURE GetCarDesc
+
+    AS
+
+    BEGIN
+
+    SET NOCOUNT ON
+
+    SELECT C.CarID,C.CarName,CD.CarDescription  FROM 
+
+    Car C
+
+    INNER JOIN CarDescription CD ON C.CarID=CD.CarID
+
+    END
+
+
+
+## **Triggers**
+Eventos que disparam códigos SQL
+
+### **Tipos de triggers**
+- BEFORE/AFTER INSERT
+- BEFORE/AFTER UPDATE
+- BEFORE/AFTER DELETE
+
+- CREATE TRIGGER: Cria uma trigger
+- DROP TRIGGER: Exclui uma trigger
+
+        CREATE TRIGGER nome TIPO ON tabela
+        DROP TRIGGER nome
