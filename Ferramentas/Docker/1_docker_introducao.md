@@ -1,1 +1,0 @@
-***Transcrever conteúdo de Docker do caderno para cá***

@@ -105,7 +105,7 @@ Registros que armazenem data e hora podem ser avaliados entre os tipos da tabela
 - Unsigned
 - Auto-increment
 - Zerofill
-
+---
 ## **DDL**
 Linguagem de definição de dados, responsável por manipular a estrutura do banco, através dos comandos abaixo.
 
@@ -230,19 +230,12 @@ Recurso que possibilita armazenar no servidor de BD códigos SQL para serem exec
 
 ### **Exemplo:**
     CREATE PROCEDURE GetCarDesc
-
     AS
-
     BEGIN
-
     SET NOCOUNT ON
-
     SELECT C.CarID,C.CarName,CD.CarDescription  FROM 
-
     Car C
-
     INNER JOIN CarDescription CD ON C.CarID=CD.CarID
-
     END
 
 
