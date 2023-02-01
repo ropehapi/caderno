@@ -19,6 +19,7 @@ Com facilidade, podemos criar mabientes independentes e que funcionam em diverso
 ## **Instalando o Docker**
 A instalação do Docker nunca foi flor que se cheire. Dessa maneira, optei por deixar aqui o link para o tutorial de como instalar o Docker no [Linux](https://docs.docker.com/desktop/install/ubuntu/) e no [Windows](https://docs.docker.com/desktop/install/windows-install/).
 
+---
 ## **Containers**
 O que é um container? Um container é um pacote de código  que pode executar uma ação, por exemplo: rodar uma aplicação Node.Js, PHP, Python etc, ou seja, nossos projetos serão executados dentro dos containers que criarmos/utilizarmos.
 
@@ -76,3 +77,47 @@ Podemos remover um container da máquina que estamos executando o Docker, o coma
 Se o container estiver rodando ainda, podemos utilizar a flag `-f` (force).
 > docker -rm mysql
 
+---
+## **Imagens**
+Imagens são originadas de arquivos que programamos para que o Docker crie uma estrutura que execute determinadas ações em containers. Elas contém informações como: imagem base, diretorio base, comandos a serem executados, porta da aplicação etc.
+
+Ao rodar um container baseado na imagem, as instruções serão executadas em camadas.
+
+### **Escolhendo uma imagem**
+Podemos fazer download das imagens no [Hub do Docker](https://hub.docker.com)
+
+Porém, qualquer um pode fazer upload de uma imagem, o que é um problema. Dessa maneira, devemos então nos atentar às imagens oficiais. Outra parâmetro interessante, é a quantidade de downloads e de stars.
+
+### **Criando uma imagem**
+Para criar uma imagem vamos precisar de um arquivo Dockerfile em uma pasta que ficará o projeto. Esse arquivo vai precisar de algumas instruções para poder ser executado.
+
+- FROM: Imagem base
+- WORKDIR: Diretório da aplicação
+- EXPOSE: Porta da aplicação
+- COPY: Quais arquivos precisam ser copiados
+
+No Dockerfile:
+
+    FROM node
+
+    WORKDIR /app
+
+    COPY package*.json .
+
+    RUN npm install
+
+    COPY . .
+
+    EXPOSE 3000
+
+    CMD ["node", "app.js"]
+
+### **Executando uma imagem**
+Para executar a imagem primeiramente vamos precisar fazer o build, com o comando `docker build <diretorio da imagem>`, e depois, rodar o `docker run <imagem>` para executa-la.
+>docker build \<diretorio imagem>
+
+>docker run \<imagem>
+
+
+### **Alterando uma imagem**
+Sempre que alteramos o código de uma imagem vamos precisar fazer o build novamente, pois para o Docker, é como se fosse uma imagem completamente nova.
