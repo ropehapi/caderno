@@ -121,3 +121,40 @@ Para executar a imagem primeiramente vamos precisar fazer o build, com o comando
 
 ### **Alterando uma imagem**
 Sempre que alteramos o código de uma imagem vamos precisar fazer o build novamente, pois para o Docker, é como se fosse uma imagem completamente nova.
+
+### **Camadas das imagens**
+As imagens Docker são divididas em camadas.
+
+Cada instrução no Dockerfile representa uma layer. Quando algo é atualizado, apenas as layers depois da linha atualizada são refeitas, o resto permanece em cache, tornando o build mais rápido.
+
+### **Download de imagens**
+Podemos fazer o download de alguma imagem do hub e deixa-la disponível em nosso ambiente. Para isso, usamos o comando `docker pull <imagem>`.
+>docker pull python
+
+Desta maneira, caso se use em outro container, a imagem já estará pronta para ser utilizada.
+
+### **Nomeando imagem e tag**
+Podemos nomear a imagem que criamos através do comando `docker tag <id> <nome>`.
+
+Também podemos modificar a tag, que seria como uma versãoda imagem, semelhante ao GIT.
+
+Para inserir a tag utilizamos `docker tag <id> <nome>:<tag>`.
+
+### **Iniciando imagem com um nome**
+Podemos nomear a iamgem já na sua criação. Para isso, utilizaremos a flag `-t`. É possível inserir o nome e a tag, na sintaxe `nome:tag`, o que torna o processo de nomeação mais simples.
+
+### **Comando start interativo**
+A flag `-it` pode ser utilizada com o comando start também. Ou seja, não precisamos criar um novo container para utiliza-lo no terminal.
+
+Esse comando é o `docker start -it <container>`
+>docker start -it \<container>
+
+### **Removendo imagens**
+Assim como nos container, podemos remover imagens com um comando, o `docker rmi <imagem>`.
+
+Imagens que estiverem sendo utilizadas por um container, podem apresentar erro no terminal. Dessa maneira, podemos utilizar a flag `-f` para forçar a remoção.
+>docker rmi \<imagem>
+
+### **Removendo imagens e containers inutilizados**
+Com o comando `docker system prune`, podemos remover imagens, containers e networks não utilizados.
+>docker system prune
