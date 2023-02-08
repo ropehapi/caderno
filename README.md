@@ -33,3 +33,15 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 - [ ] Docker `(Andamento)`
 - [ ] AWS
 - [ ] Linux
+
+### **Roadmap**
+Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
+
+- [x] Golang
+- [x] Bancos de dados relacionais (SQL)
+- [ ] Conteinerização (Docker)
+- [ ] Computação em nuvem (AWS)
+- [ ] Formação Eng. de Sw
+- [ ] Testes unitários e de integração
+- [ ] Mensageria e Filas (Kafka, RabbitMQ)
+- [ ] Bancos de dados não relacionais (MongoDB)
