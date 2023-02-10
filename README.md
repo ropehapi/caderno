@@ -9,9 +9,13 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Linguagens
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go) 
 - Ferramentas
-    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [Postgres](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/Postgres)
+    - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento)
+    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
+    - [AWS](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Nuvem/AWS)
+    - [Linux](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Linux)
+
 
 ### **Notação dos commits**
 "Transcrição (Se for)" + "Mensagem do commit" + "Data"
