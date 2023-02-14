@@ -10,12 +10,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go) 
 - Ferramentas
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
-    - [Postgres](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/Postgres)
-    - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
-    - [AWS](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Nuvem/AWS)
-    - [Linux](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Linux)
-
+    - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
 
 ### **Notação dos commits**
 "Transcrição (Se for)" + "Mensagem do commit" + "Data"
@@ -33,18 +29,18 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 - [ ] Golang `(Andamento)`
 - [ ] Javascript
 - [x] SQL
-- [ ] GIT
 - [ ] Docker `(Andamento)`
 - [ ] AWS
+- [ ] GIT
 - [ ] Linux
 
 ### **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 
 - [x] Golang
-- [x] Bancos de dados relacionais (SQL)
-- [ ] Conteinerização (Docker)
-- [ ] Computação em nuvem (AWS)
+- [x] Revisar Bancos de dados relacionais (SQL)
+- [ ] Revisar Conteinerização (Docker)
+- [ ] Revisar Computação em nuvem (AWS)
 - [ ] Formação Eng. de Sw
 - [ ] Testes unitários e de integração
 - [ ] Mensageria e Filas (Kafka, RabbitMQ)
