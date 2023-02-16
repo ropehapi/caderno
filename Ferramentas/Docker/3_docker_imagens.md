@@ -93,3 +93,10 @@ No comando acima, primeiro definimos o nome do container, seguido de : o nome do
 
 ## **Verificar informações de processamento**
 Para verificar dados de execução de um container utilizamos o `docker top <container>`. Desta maneira, temos acesso a quando ele foi iniciado, id do processo, descrição do comando CMD entre outros.
+
+## **Inspecionando container**
+Para verificar diversas informações como id, data de criação, imagem e muito mais, usamos o comando `docker inspect <container>`. Desa maneira, conseguimos entender como o container está configurado
+
+## **Verificando processamento o Docker**
+Para verigicar os processos que estão sendo executados em um container, utilizamos o comando `docker stats`, dessa maneira, temos acesso ao andamento do processo e memória gasto pelo mesmo.
+
