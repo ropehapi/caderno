@@ -97,6 +97,28 @@ Para verificar dados de execução de um container utilizamos o `docker top <con
 ## **Inspecionando container**
 Para verificar diversas informações como id, data de criação, imagem e muito mais, usamos o comando `docker inspect <container>`. Desa maneira, conseguimos entender como o container está configurado
 
-## **Verificando processamento o Docker**
+## **Verificando processamento do Docker**
 Para verigicar os processos que estão sendo executados em um container, utilizamos o comando `docker stats`, dessa maneira, temos acesso ao andamento do processo e memória gasto pelo mesmo.
+
+# **Docker Hub**
+## **Autenticação no Docker Hub**
+Em diversos momentos, será necessário que tenhamos uma conta no [Docker Hub](https://hub.docker.com).
+
+Para que nos autentiquemos pelo terminal, utilizamos o `docker login`, e então inserimos nosso usuário e senha. Dessa maneira, poderemos enviar nossas proprias imagens pro Hub.
+
+## **Logout no Docker Hub**
+Para remover a conexão entre nossa máquina e o Docker Hub, vamos utilizar o comando `docker logout`. Dessa maneira, não podemos mais enviar imagens, pois não estamos mais autenticados.
+
+## **Enviando imagens para o Docker Hub**
+Para enviar uma imagem nossa ao Docker Hub, utilizamos o comando `docker push <imagem>`.
+
+Para isso, vamos precisar criar o repositório para a mesma no site do hub.
+
+Feito isso, rodamos o comando `docker push <repositorio>`.
+
+## **Enviando a atualização de uma imagem**
+Para enviar uma atualização, vamos primeiramente precisar fazer o build, trocar a tag da imagem para a versão atualizada e fazer um push novamente para o repositório. Assim, todas as versões estarão disponíveis para serem utilizadas.
+
+## **Baixando e utilizando imagens do hub**
+Para baixar a imagem, podemos utilizar o comando `docker pull <imagem>` e depois criar um novo container com o `docker run <imagem>`.
 
