@@ -13,20 +13,12 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
 
-### **Notação dos commits**
-"Transcrição (Se for)" + "Mensagem do commit" + "Data"
-
-Ex: (Transcrição) Factory Design Pattern com PHP 27/06/2022 <br>
-Ex: Primeiras aulas formação Go Alura 29/11/2022 <br>
-
----
-
-### **TODO**
+### **Futuro**
 Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para esse repositório.
 
 - [ ] PHP
 - [ ] Laravel
-- [ ] Golang `(Andamento)`
+- [x] Golang
 - [ ] Javascript
 - [x] SQL
 - [ ] Docker `(Andamento)`
@@ -34,11 +26,12 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 - [ ] GIT
 - [ ] Linux
 
+---
 ### **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 
 - [x] Golang
-- [x] Revisar Bancos de dados relacionais (SQL)
+- [x] Revisar Bancos de dados relacionais (MySQL)
 - [ ] Revisar Conteinerização (Docker)
 - [ ] Revisar Computação em nuvem (AWS)
 - [ ] Formação Eng. de Sw
