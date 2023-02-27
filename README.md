@@ -20,8 +20,8 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 - [ ] Laravel
 - [x] Golang
 - [ ] Javascript
-- [x] SQL
-- [ ] Docker `(Andamento)`
+- [ ] SQL
+- [ ] Docker
 - [ ] AWS
 - [ ] GIT
 - [ ] Linux
@@ -31,10 +31,10 @@ Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para 
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 
 - [x] Golang
-- [x] Revisar Bancos de dados relacionais (MySQL)
+- [ ] Formação Eng. de Sw
+- [ ] Revisar Bancos de dados relacionais (MySQL)
 - [ ] Revisar Conteinerização (Docker)
 - [ ] Revisar Computação em nuvem (AWS)
-- [ ] Formação Eng. de Sw
 - [ ] Testes unitários e de integração
 - [ ] Mensageria e Filas (Kafka, RabbitMQ)
 - [ ] Bancos de dados não relacionais (MongoDB)
