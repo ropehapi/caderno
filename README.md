@@ -16,6 +16,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **Futuro**
 Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para esse repositório.
 
+- [ ] Teórico (OO, Arquiteturas, APIs)
 - [ ] PHP
 - [ ] Laravel
 - [x] Golang
