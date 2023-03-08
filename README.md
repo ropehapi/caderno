@@ -6,8 +6,11 @@ Tudo aquilo o que eu já produzi até hoje pertinente a anotações de estudos d
 Todas as anotações e transcrições serão feitas em português visando facilitar o uso pela comunidade.
 
 ### **Índice**
+- Teorico
+    - [Engenharia de software](https://github.com/ropehapi/caderno/tree/main/Base/Eng.%20de%20Software)
 - Linguagens
-    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go) 
+    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
+    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 - Ferramentas
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
