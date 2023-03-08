@@ -1,6 +1,8 @@
 # **Clean architecture**
 ![Clean architecture](/src/img/clean_architecture.jpg)
 
+
+*Antes de mais nada, [aqui está](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) um link para um artigo do próprio uncle bob que contém uma explicação muito melhor do assunto.*
 ## **Introdução**
 A clean architecture (ou arquitetura limpa) é uma arquitetura de software que visa padronizar e organizar o código desenvolvido, favorecer a sua reusabilidade, assim como independência de tecnologia.
 
