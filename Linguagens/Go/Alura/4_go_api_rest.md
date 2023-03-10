@@ -1,12 +1,12 @@
 # **API REST com Go**
 *Antes de mais nada : Afim de documentar todo o processo da construção dessa API, que será uma API que retorna dados sobre personalidades, eu descreverei todos os detalhes pertinentes ao projeto, mesmo que sejam coisas que deveriam ser inferidas em razão de lógica de programação e todas as minhas outras anotações.*
 
-Caso deseje, esse repositório tem um tópico sobre APIs e o padrão REST [aqui](https://github.com/ropehapi/caderno/Teorico).
+Caso deseje, esse repositório tem um tópico sobre APIs e o padrão REST [aqui](https://github.com/ropehapi/caderno/tree/Main/Base).
 
 ## **Preparando o ambiente**
  Visando ter um ambiente comum para todas as ocasiões, iremos usar o Docker para conteinerizar nosso banco de dados por enquanto. Como Docker não é o alvo dessas anotações, apenas explicarei o fluxo para subir o ambiente usando o Docker.
 
-Caso deseje, esse repositório tem um tópico sobre Docker [aqui](https://github.com/ropehapi/caderno/Ferramentas/Docker).
+Caso deseje, esse repositório tem um tópico sobre Docker [aqui](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker).
 
 ### **O Docker compose**
 Para subirmos um container com um banco de dados postgres, devemos subir o docker compose descrito abaixo, rodando o `docker compose up`.

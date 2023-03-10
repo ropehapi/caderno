@@ -1,5 +1,5 @@
 # **Slices e Maps**
-***Antes de mais nada: Por se tratar de algo que já foi explicado anteriormente na [introdução à linguagem](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go/Alura/1_go_introducao.md), vou me abster de explicar a diferença entre Arrays e Slices, e explicarei apenas os Slices.***
+**Antes de mais nada: Por se tratar de algo que já foi explicado anteriormente na [introdução à linguagem](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go/Alura/1_go_introducao.md), vou me abster de explicar a diferença entre Arrays e Slices, e explicarei apenas os Slices.*
 
 ## **Slices**
 Slices em Go nada mais são que arrays por debaixo dos panos, porém otimizados para serem mais performáticos em se tratando de alocação de memória, através da manipulação dos tamanhos desses arrays por debaixo dos panos.
