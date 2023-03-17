@@ -34,6 +34,27 @@ Para instanciar uma classe, podemos faze-la de duas maneiras, preenchendo os val
     contaDaClaudia.numeroConta = 123123
     contaDaClaudia.saldo = 1000
 
+### **Composição de structs**
+Afim de termos estruturas mais consistentes, nós podemos aninhar nossas structs, como por exemplo da seguinte maneira:
+
+    type Pessoa Struct{
+        Nome string
+        Idade string
+        Endereco
+    }
+
+    type Endereco Struct{
+        Rua string
+        Numero int
+    }
+
+    pessoa := Pessoa{
+        Nome: "Yoshimura",
+        Idade: 19,
+        Rua: "Professor carlos Weiss",
+        Numero: 39
+    }
+
 ### **Inicialização zero e nil**
 Mesmo não provendo nenhum valor, o Go garante inicializar todas as variáveis. Por exemplo, um bool não definido, vira false. Um int e um float não definidos, viram 0, uma string não definida, vira uma string vazia, e assim por diante.
 
@@ -374,6 +395,48 @@ Nossa saída será:
 
 Observe que alteramos o sobrenome de `p` no método `ExibirNomeCompleto`, mas não foi alterado o valor armazenado no ponteiro. Sendo assim, quando não precisamos alterar o conteúdo de um ponteiro, podemos passar apenas uma cópia.
 
+
+## **Herança**
+Ainda que Go não seja uma linguagem orientada a objetos, podemos utilizar o conceito de herança quando quisermos reutilizar os atributos de uma struct pai.
+
+    type Pessoa struct{
+        Nome string
+        Idade uint8
+    }
+
+    type PessoaFisica struct{
+        Pessoa
+        cpf string
+    }
+
+    type PessoaJuridica struct{
+        Pessoa
+        cnpj string
+    }
+
+Para criar um objeto do tipo PessoaFisica e ler seus atributos por exemplo, podemos faze-lo da seguinte maneira:
+
+    p := PessoaFisica{
+        Pessoa{"Pedro", 19},
+        "999.999.999-99"
+    }
+
+    fmt.Sprintf("Olá, meu nome é %s", p.Nome)
+
+Podemos também ter dois atributos com o mesmo nome na struct pai e filho. Dessa forma, para acessar o valor definido na struct pai, é necessário adicionar mais uma instrução para acessar o atributo.
+
+    type PessoaFisica struct{
+        Pessoa
+        Nome, cpf string
+    }
+
+    p := PessoaFisica{
+        Pessoa{"Pedro",19},
+        "Yoshimura",
+        "999.999.999-99"
+    }
+
+    fmt.Sprintf("O nome da struct Pessoa é %s e o da struct Pessoa física é %s", p.Pessoa.Nome, p.Nome)
 
 ## **Interfaces**
 *Antes de mais nada: encontrei um [vídeo no youtube](https://www.youtube.com/watch?v=iY2xSN2_OlA) explicando muito bem como utilizar interfaces em Go.*

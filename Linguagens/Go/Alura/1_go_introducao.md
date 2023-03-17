@@ -322,6 +322,20 @@ O slice infere o seu tamanho de acordo com a sua quantidade de elementos. Podemo
     fmt.Println("O meu slice tem", len(nomes), "itens")
     fmt.Println("O meu slice tem capacidade para", cap(nomes), "itens")
 
+## **Maps**
+Mapas nada mais são que Hash tables, ou seja, tipo de dado onde passamos uma chave, que pode ser uma string, um int, um booleano, e o valor dessa chave, que não necessariamente devem ter o mesmo tipo.
+
+    idades := make(map[string]int)
+    idades["Tiago"] = 31
+    idades["Dani"] = 36
+    idades["Maria"] = 23
+
+Vale ressaltar que nos maps, a sequência dos índices, não necessariamente serão confiáveis depois para ser recuperados, pois são embaralhados.
+
+Podemos também precisar validar se determinada chave existe no nosso map, e isso geralmente é feito da seguinte maneira:
+
+    val, ok := idades["Lucas"]
+
 ## **A instrução for**
  Como no Go não existe outra estrutura de repetição além do `for`, então vamos utilizá-lo para percorrer os itens do slice de sites.
 

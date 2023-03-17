@@ -1,5 +1,5 @@
-# Observações
-Neste artigo tem o intuito de conter pequenos fragmentos de anotações sobre o curso, tendo em vista que já é um assunto que eu conheço, e pode não ser pertinente explicar todo um contexto.
+# Anotações
+Esse artigo tem o intuito de conter pequenos fragmentos de anotações sobre o curso, tendo em vista que já é um assunto que eu conheço, e pode não ser pertinente explicar todo um contexto.
 
 - Todo arquivo .go com exceção do main DEVE pertencer a um package com o nome do diretório em que o arquivo se encontra.
 
