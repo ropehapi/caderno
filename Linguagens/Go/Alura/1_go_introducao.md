@@ -330,6 +330,10 @@ Mapas nada mais são que Hash tables, ou seja, tipo de dado onde passamos uma ch
     idades["Dani"] = 36
     idades["Maria"] = 23
 
+    ou
+
+    m := map[string]int{"Wesley":1000,"Pedro":2000}
+
 Vale ressaltar que nos maps, a sequência dos índices, não necessariamente serão confiáveis depois para ser recuperados, pois são embaralhados.
 
 Podemos também precisar validar se determinada chave existe no nosso map, e isso geralmente é feito da seguinte maneira:

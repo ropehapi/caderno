@@ -489,3 +489,96 @@ Criar uma interface em Go é muito simples. Não cabe a mim entrar no mérito de
         ShowUserInfo(u)
         ShowUserInfo(adm)
     }
+
+## **Generics**
+Generics são funções que visam atender operações que aceitem trabalhar com dois ou mais tipos distintos, como por exemplo, ao envés de fazer uma função SomaInt e uma função SomaFloat que vão fazer o mesmo cálculo porém com tipos diferentes, eu posso fazer uma generic que vai resolver o meu problema em uma função.
+
+    func Soma[T int | float64](m map[string]T) T{
+        var soma T
+        for _, v := range m {
+            soma += v
+        }
+
+        return soma
+    }
+
+    func main(){
+        m1:= map[string]int{
+            "Wesley":1000,
+            "Pedro":2000
+        }
+        m2:= map[string]float{
+            "Wesley":999.50,
+            "Pedro":199.50
+        }
+
+        println(Soma(m1))
+        println(Soma(m2))
+    }
+
+Podemos também usar as constraints para criar uma variável do tipo interface contendo os tipos suportados para que usemos em uma generics da seguinte maneira:
+
+    Type Number interface {
+        int | float64
+    }
+
+    func Soma[T Number](m map[string]T) T{
+        var soma T
+        for _, v := range m {
+            soma += v
+        }
+
+        return soma
+    }
+
+Agora, podemos ter situações em que estamos usando um tipo próprio, mas que por debaixo dos panos são os mesmos tipos primitivos. Nessas ocasiões, se quisermos manter nossa generic aceitando nossos tipos customizados sem conflitos, devemos inserir um ~ na nossa interface, e assim nossa generic voltará a aceitar sua chamada com tipos diferentes.
+
+    type MyNumber int
+
+    Type Number interface {
+        ~int | ~float64
+    }
+
+    func Soma[T int | float64](m map[string]T) T{
+        var soma T
+        for _, v := range m {
+            soma += v
+        }
+
+        return soma
+    }
+
+    func main(){
+        m1:= map[string]int{
+            "Wesley":1000,
+            "Pedro":2000
+        }
+        m2:= map[string]float{
+            "Wesley":999.50,
+            "Pedro":199.50
+        }
+        m1:= map[string]MyType{
+            "Wesley":1000,
+            "Pedro":2000
+        }
+
+        println(Soma(m1))
+        println(Soma(m2))
+        println(Soma(m3))
+    }
+
+Em outras situações, podemos querer fazer uma generic que só aceite dois parametros iguais, o que nos permitiria interagi-los e fazer comparações entre eles. Dessa maneira, existe a instrução comparable. Vejamos o exemplo a seguir.
+
+    func Compara[T comparable] (a T, b T) bool{
+        if a == b {
+            return true
+        }
+        return false 
+    }
+
+    func main(){
+        println(Compara(10,10.00)) //Uma chamada assim alegará erro
+        println(Compara(10,10)) //Uma chamada assim dará certo
+    }
+
+Beleza, mas e se eu precisar fazer uma operação entre duas variáveis que não suportam tal operação? Como por exemplo ver se `string > string` ? Mais pra frente, quando estivermos um pouco mais aprofundados na liguagem, voltarei nessa abordagem.
