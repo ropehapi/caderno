@@ -15,3 +15,10 @@ Esse artigo tem o intuito de conter pequenos fragmentos de anotações sobre o c
 
         return x, errors.New("Meu erro aqui")
 
+- O Go dispõe de uma ferramenta muito útil para poupar nosso trabalho quando precisamos fechar alguma coisa que foi aberta para que não fiquemos ocupando memória desnecessáriamente, como uma conexão com o banco, um stream de dados de uma requisição etc. Essa ferramenta é o comando `defer`, um statement que faz atrasar a execução de uma instrução para quando o nosso código terminar de ser executado. Segue um exemplo, onde a primeira linha será impressa por último.
+
+        func main(){
+                defer fmt.println("Primeira linha")
+                fmt.println("Segunda linha")
+                fmt.println("Terceira linha")
+        }
