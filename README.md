@@ -8,13 +8,13 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **Índice**
 - Teorico
     - [Engenharia de software](https://github.com/ropehapi/caderno/tree/main/Base/Eng.%20de%20Software)
-- Linguagens
-    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
-    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 - Ferramentas
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
+- Linguagens
+    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
+    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 
 ### **Futuro**
 Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para esse repositório.
