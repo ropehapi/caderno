@@ -1,44 +1,53 @@
-## **Caderno**
+# **Caderno**
 Esse repositório tem o intuito de servir como caderno digital, onde eu registro todos os meus estudos visando ter documentada toda a evolução desse acervo de estudos que eu produzo, e ainda poder compartilhar com a comunidade.
 
 Tudo aquilo o que eu já produzi até hoje pertinente a anotações de estudos de programação está escrito em cadernos físicos, que serão transcritos para cá recursivamente de acordo com o tempo.
 
 Todas as anotações e transcrições serão feitas em português visando facilitar o uso pela comunidade.
 
-### **Índice**
+## **Índice**
 - Teorico
     - [Engenharia de software](https://github.com/ropehapi/caderno/tree/main/Base/Eng.%20de%20Software)
 - Ferramentas
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
-    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
+    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
+    - [Linux](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Linux)
+    - [AWS](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Cloud/AWS)
 - Linguagens
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
+    - [PHP](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP) + [Laravel](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP/Laravel)
+    - [C#](https://github.com/ropehapi/caderno/tree/main/Linguagens/C#)
     - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 
-### **Futuro**
-Abaixo, segue uma lista dos tópicos que com o tempo devem ser transcritos para esse repositório.
-
-- [ ] Teórico
-- [ ] PHP
-- [ ] Laravel
-- [x] Golang
-- [ ] Javascript
-- [ ] SQL
-- [ ] Docker
-- [ ] AWS
-- [ ] GIT
-- [ ] Linux
-
----
-### **Roadmap**
+## **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 
-- [x] Golang
+- [x] Formação Go Alura
+- [ ] Curso Go Expert
 - [ ] Formação Eng. de Sw
-- [ ] Testes unitários e de integração
 - [ ] Mensageria e Filas (Kafka, RabbitMQ)
-- [ ] Revisar Bancos de dados relacionais (MySQL)
-- [ ] Revisar Conteinerização (Docker)
-- [ ] Revisar Computação em nuvem (AWS)
 - [ ] Bancos de dados não relacionais (MongoDB)
+
+## **Projetos a desenvolver**
+- Projetos do [DevGym](https://app.devgym.com.br/challenges)
+- Comanda web
+- Api financeira
+- Blockchain
+- Punchclock
+
+## **Afazeres caderno**
+- Eng. de Software
+    - DDD
+    - Microserviços
+    - Mensageria
+- Golang
+    - Explicar que estou transcrevendo só coisas de go e ignorando arquitetura
+    - Banco de dados
+## **Jornada contratação Go**
+- Curriculos enviados
+    - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
+    - [Pic pay](https://www.linkedin.com/jobs/view/3669220450/)
+    - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
+- Enviar
+    - [Dock](https://www.linkedin.com/jobs/view/3675932102/)
