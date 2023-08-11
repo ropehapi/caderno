@@ -49,5 +49,6 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
     - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
     - [Pic pay](https://www.linkedin.com/jobs/view/3669220450/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
-- Enviar
-    - [Dock](https://www.linkedin.com/jobs/view/3675932102/)
+    - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
+    - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
+    - [Gobrax](https://www.linkedin.com/jobs/view/3678512029/)
