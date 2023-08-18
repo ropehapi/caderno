@@ -30,7 +30,9 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - [ ] Bancos de dados não relacionais (MongoDB)
 
 ## **Projetos a desenvolver**
+- Desafios Go Expert
 - Projetos do [DevGym](https://app.devgym.com.br/challenges)
+- iWear
 - Comanda web
 - Api financeira
 - Blockchain
