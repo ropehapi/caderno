@@ -46,13 +46,15 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - Golang
     - Explicar que estou transcrevendo só coisas de go e ignorando arquitetura
     - Banco de dados
+    
 ## **Jornada contratação Go**
 - Curriculos enviados
     - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
-    - [Pic pay](https://www.linkedin.com/jobs/view/3669220450/)
+    - [Pic pay Sênior](https://www.linkedin.com/jobs/view/3669220450/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
     - [Gobrax](https://www.linkedin.com/jobs/view/3678512029/)
     - [CI&T](https://www.linkedin.com/jobs/view/3689931751/)
     - [Luiza labs](https://www.linkedin.com/jobs/view/3698326787/)
+    - [Pic Pay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
