@@ -6,19 +6,19 @@ Tudo aquilo o que eu já produzi até hoje pertinente a anotações de estudos d
 Todas as anotações e transcrições serão feitas em português visando facilitar o uso pela comunidade.
 
 ## **Índice**
-- Teorico
+- Arquitetura
     - [Engenharia de software](https://github.com/ropehapi/caderno/tree/main/Base/Eng.%20de%20Software)
-- Ferramentas
+- Desenvolvimento
+    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
+    - [PHP](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP) + [Laravel](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP/Laravel)
+    - [C#](https://github.com/ropehapi/caderno/tree/main/Linguagens/C#)
+    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
+- Devops
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
     - [Linux](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Linux)
     - [AWS](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Cloud/AWS)
-- Linguagens
-    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
-    - [PHP](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP) + [Laravel](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP/Laravel)
-    - [C#](https://github.com/ropehapi/caderno/tree/main/Linguagens/C#)
-    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 
 ## **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
@@ -26,8 +26,7 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - [x] Formação Go Alura
 - [ ] Curso Go Expert
 - [ ] Formação Eng. de Sw
-- [ ] Mensageria e Filas (Kafka, RabbitMQ)
-- [ ] Bancos de dados não relacionais (MongoDB)
+- [ ] Curso Dev FullCycle
 
 ## **Projetos a desenvolver**
 - Desafios Go Expert
@@ -39,13 +38,9 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - Punchclock
 
 ## **Afazeres caderno**
-- Eng. de Software
-    - DDD
-    - Microserviços
-    - Mensageria
+- Passar tudo o que eu aprendi e não passei pro caderno
 - Golang
-    - Explicar que estou transcrevendo só coisas de go e ignorando arquitetura
-    - Banco de dados
+    -Passar tudo do GoExpert
     
 ## **Jornada contratação Go**
 - Curriculos enviados
