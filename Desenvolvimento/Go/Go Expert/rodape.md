@@ -1,3 +1,6 @@
+# Disclaimer
+Por se tratar de um curso que eu comprei no intuito de me aprofundar na linguagem, vou me abster de transcrever para cá os módulos de introdução, configuração de ambiente e fundação, que já foram previamente estudados no [curso da Alura](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go/Alura).
+
 # Anotações
 Esse artigo tem o intuito de conter pequenos fragmentos de anotações sobre o curso, tendo em vista que já é um assunto que eu conheço, e pode não ser pertinente explicar todo um contexto.
 

@@ -1,2 +1,0 @@
-# Disclaimer
-Por se tratar de um curso que eu comprei no intuito de me aprofundar na linguagem, vou me abster de transcrever para cá o básico que já foi previamente estudado no [curso da Alura](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go/Alura).
