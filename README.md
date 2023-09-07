@@ -7,7 +7,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **Índice**
 - Arquitetura
-    - [Engenharia de software](https://github.com/ropehapi/caderno/tree/main/Base/Eng.%20de%20Software)
 - Desenvolvimento
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
     - [PHP](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP) + [Laravel](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP/Laravel)
@@ -22,11 +21,17 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
-
 - [x] Formação Go Alura
 - [ ] Curso Go Expert
+    - [ ] Passar módulos com TODO pro caderno
+    - [ ] Retomar curso no módulo de Multithreading pra frente
 - [ ] Formação Eng. de Sw
 - [ ] Curso Dev FullCycle
+
+De maneira recursiva, ir fazendo as seguintes atividades:
+- Aulas de Laravel do Urnauzão
+- Aulas de Go do HunCoding
+- Desafios da DevGym
 
 ## **Projetos a desenvolver**
 - Desafios Go Expert
@@ -36,11 +41,6 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - Api financeira
 - Blockchain
 - Punchclock
-
-## **Afazeres caderno**
-- Passar tudo o que eu aprendi e não passei pro caderno
-- Golang
-    -Passar tudo do GoExpert
     
 ## **Jornada contratação Go**
 - Curriculos enviados
