@@ -53,3 +53,4 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
     - [CI&T](https://www.linkedin.com/jobs/view/3689931751/)
     - [Luiza labs](https://www.linkedin.com/jobs/view/3698326787/)
     - [Pic Pay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
+    - [Bemobi](https://www.linkedin.com/jobs/view/3711875924/)
