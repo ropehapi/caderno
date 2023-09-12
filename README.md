@@ -25,7 +25,7 @@ Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
     - [ ] Retomar curso no módulo de Multithreading pra frente
-- [ ] Formação Eng. de Sw
+- [ ] Formação Eng. de Sw (Fazer logo)
 - [ ] Curso Dev FullCycle
 
 De maneira recursiva, ir fazendo as seguintes atividades:
@@ -41,7 +41,11 @@ De maneira recursiva, ir fazendo as seguintes atividades:
 - Api financeira
 - Blockchain
 - Punchclock
-    
+
+## **TODO Caderno**
+- [ ] Passar módulos com TODO do Go Expert
+- [ ] Passar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
+
 ## **Jornada contratação Go**
 - Curriculos enviados
     - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
