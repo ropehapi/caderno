@@ -22,10 +22,10 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ## **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
 - [x] Formação Go Alura
+- [ ] Formação Eng. de Sw (Fazer logo)
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
     - [ ] Retomar curso no módulo de Multithreading pra frente
-- [ ] Formação Eng. de Sw (Fazer logo)
 - [ ] Curso Dev FullCycle
 
 De maneira recursiva, ir fazendo as seguintes atividades:
