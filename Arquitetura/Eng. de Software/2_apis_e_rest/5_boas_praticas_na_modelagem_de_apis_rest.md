@@ -1,0 +1,13 @@
+# Boas práticas na modelagem de APIs REST
+- Use pronomes, não verbos
+    - Ex: GET /cars envés de /getCars
+- Não misture plural e singular
+- Utilize sub-recursos
+    - Ex: GET /cars/711/drivers/4
+- Não ignore os cabeçalhos HTTP
+    - Content-Type
+    - Accept
+    - Cache
+- Ofereça filtro, ordenação, paginação e seleção de campos
+- Versione sua API
+- Utilize os HTTP status code corretamente
