@@ -5,3 +5,5 @@ Ex: Minha aplicação durante uma contratação deve fazer o envio de emails, ma
 
 ## O padrão pub/sub
 ![O padrão pub/sub](/src/img/pub_sub.png)
+
+Nesse padrão nós temos dois papéis, o de publisher, que é o responsável por publicar eventos em um message broker (Kafka, RabbitMQ, Amazon SQS, Google Pubsub etc), e o de subscriber, que é aquele que vai receber os eventos dos quais ele estiver inscrito para receber. Esse conceito é muito importante e fundamental para a compreensão da arquitetura de microsserviços e comunicação assíncrona.
