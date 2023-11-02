@@ -9,15 +9,26 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Arquitetura
 - Desenvolvimento
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
-    - [PHP](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP) + [Laravel](https://github.com/ropehapi/caderno/tree/main/Linguagens/PHP/Laravel)
-    - [C#](https://github.com/ropehapi/caderno/tree/main/Linguagens/C#)
     - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 - Devops
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
-    - [GIT](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Versionamento/GIT)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
-    - [Linux](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Linux)
-    - [AWS](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Cloud/AWS)
+- Old (Estudos feitos na época em que eu usava cadernos)
+    - Arquitetura
+        - POO
+        - MVC
+        - APIs
+    - Desenvolvimento
+        - C# + .NET
+        - PHP + Laravel
+        - JavaScript
+    - Devops
+        - SQL
+        - GIT
+        - Linux
+        - Docker
+        - AWS
+
 
 ## **Roadmap**
 Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
