@@ -29,15 +29,18 @@ Todas as anotações e transcrições serão feitas em português visando facili
         - Docker
         - AWS
 
-
 ## **Roadmap**
-Abaixo, segue uma lista dos conteúdos que planejo estudar em 2023, em ordem.
+### **2023**
 - [x] Formação Go Alura
-- [ ] Formação Eng. de Sw (Fazer logo)
+- [ ] Formação Eng. de Sw Alura 
+- [ ] Formação Kafka Alura
+- [ ] Formação Devops Alura
+- [ ] Formação AWS Alura
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
     - [ ] Retomar curso no módulo de Multithreading pra frente
 - [ ] Curso Dev FullCycle
+- [ ] Cursos DIO de Rails
 
 De maneira recursiva, ir fazendo as seguintes atividades:
 - Aulas de Laravel do Urnauzão
