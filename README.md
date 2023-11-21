@@ -7,6 +7,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **Índice**
 - Arquitetura
+    - [Eng. de Software](https://github.com/ropehapi/caderno/tree/main/Arquitetura/Eng.%20de%20Software)
 - Desenvolvimento
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
     - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
@@ -51,14 +52,17 @@ De maneira recursiva, ir fazendo as seguintes atividades:
 - Desafios Go Expert
 - Projetos do [DevGym](https://app.devgym.com.br/challenges)
 - iWear
+- RestFácil
 - Comanda web
 - Api financeira
 - Blockchain
-- Punchclock
+- Punchclock (CLI)
+- Password Vault (CLI)
 
 ## **TODO Caderno**
-- [ ] Passar módulos com TODO do Go Expert
-- [ ] Passar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
+- [ ] Escrever conteúdos das formações da alura
+- [ ] Escrever conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
+- [ ] Escrever módulos com TODO do Go Expert
 
 ## **Jornada contratação Go**
 - Curriculos enviados
