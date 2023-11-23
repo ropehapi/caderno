@@ -3,6 +3,8 @@ Esse repositório tem o intuito de servir como caderno digital, onde eu registro
 
 Tudo aquilo o que eu já produzi até hoje pertinente a anotações de estudos de programação está escrito em cadernos físicos, que serão transcritos para cá recursivamente de acordo com o tempo.
 
+Note que esse caderno é apenas um satélite que visa documentar toda a parte teórica que eu aprendo. Assim sendo, meus repositórios contendo projetos continuam sendo a cereja do bolo dos meus estudos.
+
 Todas as anotações e transcrições serão feitas em português visando facilitar o uso pela comunidade.
 
 ## **Índice**
@@ -32,9 +34,25 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - AWS
 
 ## **Roadmap**
+### **2020**
+- [x] Curso de desenvolvimento WEB e Desktop WMBarros
+- [x] Curso de desenvolvimento WEB Avançado PHP WMBarros
+### **2021**
+- [x] Curso de desenvolvimento WEB com Laravel Udemy
+- [x] Curso de SQL  Softblue
+- [x] Formação de GIT e GitHub DIO
+- [x] Curso de Docker Udemy
+- [x] Curso de AWS Udemy
+### **2022**
+- [x] REST APIs
+- [x] Arquiteturas (Clean, Ports & Adapters)
+- [x] TDD, DDD
+- [x] SOLID, DRY, KISS
+- [x] Qualidade de código
+- [x] Testes automatizados
 ### **2023**
 - [x] Formação Go Alura
-- [ ] Formação Eng. de Sw Alura 
+- [x] Formação Eng. de Sw Alura 
 - [ ] Formação Kafka Alura
 - [ ] Formação Devops Alura
 - [ ] Formação AWS Alura
@@ -43,11 +61,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [ ] Retomar curso no módulo de Multithreading pra frente
 - [ ] Curso Dev FullCycle
 - [ ] Cursos DIO de Rails
-
-De maneira recursiva, ir fazendo as seguintes atividades:
-- Aulas de Laravel do Urnauzão
-- Aulas de Go do HunCoding
-- Desafios da DevGym
 
 ## **Projetos a desenvolver**
 - Desafios Go Expert
@@ -60,10 +73,12 @@ De maneira recursiva, ir fazendo as seguintes atividades:
 - Punchclock (CLI)
 - Password Vault (CLI)
 
-## **TODO Caderno**
-- [ ] Escrever conteúdos das formações da alura
-- [ ] Escrever conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
+## **TODO**
+- [ ] Terminar de passar conteúdos dos cursos de microserviços da formação da alura pra cá
+- [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
+- [ ] Retomar curso Go expert
+- [ ] Começar Dev FullCycle
 
 ## **Jornada contratação Go**
 - Curriculos enviados
