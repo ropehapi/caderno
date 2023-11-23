@@ -1,0 +1,11 @@
+# Tipos de microserviços
+- Data service
+    - Data services são um tipo de serviço que vão expor dados, como se fosse uma fina camada antes do banco de dados.
+    - Ele vai receber dados e realizar o processamento necessário para manter aquele dado consistente.
+- Bussiness service
+    - Bussiness services são um tipo de negócio que além de consumir dados, oferece operações mais complexas.
+- Translation services
+    - Forma de consumir um recurso externo mas mantendo certo controle.
+- Edge services
+    - São os serviços que entregam diretamente para o cliente, e pode ter necessidades específicas.
+    - Em um exemplo, nós podemos ter um edge service para cada cliente específico, como um para prover os dados para quem está acessando uma aplicação pelo celular, e outra para aqueles que estejam acessando pela web.

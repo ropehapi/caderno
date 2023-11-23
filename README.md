@@ -14,21 +14,22 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Devops
     - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
     - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
-- Old (Estudos feitos na época em que eu usava cadernos)
-    - Arquitetura
-        - POO
-        - MVC
-        - APIs
-    - Desenvolvimento
-        - C# + .NET
-        - PHP + Laravel
-        - JavaScript
-    - Devops
-        - SQL
-        - GIT
-        - Linux
-        - Docker
-        - AWS
+
+## **Índice legado**
+- Arquitetura
+    - POO
+    - MVC
+    - APIs
+- Desenvolvimento
+    - C# + .NET
+    - PHP + Laravel
+    - JavaScript
+- Devops
+    - SQL
+    - GIT
+    - Linux
+    - Docker
+    - AWS
 
 ## **Roadmap**
 ### **2023**
