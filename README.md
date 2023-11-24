@@ -75,6 +75,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **TODO**
 - [ ] Terminar de passar conteúdos dos cursos de microserviços da formação da alura pra cá
+- [ ] Anexar meus favoritos do navegador a esse repositorio
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
 - [ ] Retomar curso Go expert
