@@ -1,11 +1,40 @@
-# Tipos de microserviços
-- Data service
-    - Data services são um tipo de serviço que vão expor dados, como se fosse uma fina camada antes do banco de dados.
-    - Ele vai receber dados e realizar o processamento necessário para manter aquele dado consistente.
-- Bussiness service
-    - Bussiness services são um tipo de negócio que além de consumir dados, oferece operações mais complexas.
-- Translation services
-    - Forma de consumir um recurso externo mas mantendo certo controle.
-- Edge services
-    - São os serviços que entregam diretamente para o cliente, e pode ter necessidades específicas.
-    - Em um exemplo, nós podemos ter um edge service para cada cliente específico, como um para prover os dados para quem está acessando uma aplicação pelo celular, e outra para aqueles que estejam acessando pela web.
+# Tipos de Serviços - Conhecendo a Arquitetura
+
+## Introdução
+Já discutimos amplamente as vantagens e desvantagens de microsserviços, falamos sobre a web e aplicações monolíticas. Agora, vamos nos concentrar em padrões reais e tipos de microsserviços.
+
+## Data Services
+- **Definição:**
+  - Serviços que expõem dados, agindo como uma camada fina antes do banco de dados.
+  - Mantêm a consistência dos dados, realizando processamento necessário.
+
+- **Exemplo Prático:**
+  - Preenchimento de campos, como a data de atualização de um produto.
+  - Garantia de consistência e processamento de dados inválidos.
+
+## Business Services
+- **Definição:**
+  - Serviços que consomem dados e oferecem operações mais complexas.
+  - Além de consumir dados, podem acessar diretamente o banco de dados.
+
+- **Diferenciação:**
+  - Distinção entre serviços que fornecem dados e os mantêm consistentes e serviços que agregam dados, fornecendo operações complexas.
+
+## Translation Services
+- **Definição:**
+  - Facilitam o acesso a recursos externos com controle.
+  - Exemplo: Consumir um serviço de log externo com um serviço intermediário para maior controle.
+  
+## Edge Services
+- **Definição:**
+  - Serviços entregues diretamente ao cliente.
+  - Atendem a necessidades específicas de clientes, como web e mobile.
+
+- **Exemplo Prático:**
+  - Edge service para clientes web e outro para clientes mobile, atendendo a necessidades específicas de cada plataforma.
+
+## Conclusão
+Esses são os principais tipos de microsserviços, incluindo data services, business services, translation services e edge services. Nos próximos capítulos, aprofundaremos cada categoria conceptualmente e discutiremos a implementação prática. É fundamental compreender essas distinções ao explorar microsserviços.
+
+## Próximo Capítulo
+Agora que discutimos os tipos de serviços, abordaremos como categorizamos e implementamos cada serviço conceptualmente no próximo capítulo.
