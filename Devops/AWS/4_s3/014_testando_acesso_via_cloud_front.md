@@ -1,0 +1,9 @@
+<div class="formattedText" data-external-links="">
+                                <p>Agora que o <em>deploy</em> está pronto, podemos testar o acesso via <em>CloudFront</em>.</p>
+<p>Vamos acessar "CloudFront &gt; Distributions" e clicar sobre o <em>ID</em> que acabou de ser criado. Nessa página, abaixo de <em>"Distribution domain name"</em>, encontraremos a <em>URL</em> de acesso. Vamos copiá-la e, em outra aba, tentar acessá-la. </p>
+<p>Isso não será possível, porque a <em>URL</em> não tem o nome do arquivo que tentamos acessar. No vídeo, o instrutor fez o upload do arquivo "lightsaber_story.mp4". Para acessá-lo, basta adicionar essa informação após ".net/".</p>
+<p>Depois dessa simples alteração, conseguiremos reproduzir o vídeo no navegador. É importante perceber que a velocidade de entrega vai variar de acordo com o <em>cache</em>. Se criarmos uma máquina virtual em outra região e acessarmos o arquivo a partir dela, a velocidade do <em>CDN</em> irá variar.</p>
+<p>Tudo o que criamos para a distribuição ficará registrado na página do <em>CloudFront</em>, como as <em>Origin access identities (OAI)</em>, por exemplo. Agora vamos limpar nossas distribuições. Primeiro, selecionaremos a distribuição que criamos e clicaremos em <em>"Disable"</em>, para desabilitá-la.</p>
+<p>Depois que esse processo for concluído, poderemos selecionar a distribuição novamente e deletá-la, clicando em <em>"Delete"</em>. Depois, vamos acessar "Security &gt; Origin access identities" e apagar, também, a <em>OAI</em>.</p>
+<p>No próximo vídeo, vamos retomar os principais pontos abordados durante o treinamento.</p>
+                        </div>

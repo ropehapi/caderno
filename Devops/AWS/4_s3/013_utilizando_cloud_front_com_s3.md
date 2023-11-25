@@ -1,0 +1,18 @@
+<div class="formattedText" data-external-links="">
+                                <p>Agora vamos para o último ponto do nosso curso, combinar o serviço de <em>CloudFront</em> com o <em>S3</em>. </p>
+<p><em>CloudFront</em> é o serviço de <em>CDN</em> utilizado pela <em>AWS</em>. Podemos configurar o <em>bucket</em> para servir arquivos via <em>S3</em>, mas a latência, nesse caso, só será baixa se os usuários estiverem na mesma localização geográfica do repositório. Para resolver esse problema, usaremos nosso serviço de <em>CDN</em>, para entregar o conteúdo sempre na localização do cliente, via <em>cache</em>.</p>
+<p>Vamos dar uma olhada na imagem disponibilizada pelo S3 Management Console, para entender melhor o funcionamento desse serviço:</p>
+<p><img src="https://cdn1.gnarususercontent.com.br/1/1310268/00ef43f7-68ed-4c12-b587-e4188b56d5c8.png" alt="representação do mapa-mundi, com bolinhas pequenas, azuis e roxas, e grandes, amarelas, que representam pontos de presença da AWS ao redor dos continentes. o cloudfront viabiliza que um usuário na europa, por exemplo, consiga receber os arquivos com de um bucket na américa do sul com a menor latência possível">  </p>
+<blockquote>
+<p>Obs:
+O <em>CloudFront</em>, como qualquer outro serviço da <em>AWS</em>, é pago.</p>
+</blockquote>
+<p>Vamos acessar a aba "Preço", em <a href="https://aws.amazon.com/pt/cloudfront/" rel="nofollow noopener" target="_blank">https://aws.amazon.com/pt/cloudfront/</a>. Podemos lê-la com mais calma depois, para conhecer melhor o serviço. Agora, colocaremos a mão na massa. Vamos adicionar um arquivo de vídeo e aprender a disponibilizar isso para os usuários.</p>
+<p>Acessaremos "Amazon S3 &gt; Buckets &gt; Create bucket". Em "Bucket name", digitaremos "videos.rmerceslabs".A <em>"AWS Region"</em> será a mesma dos vídeos anteriores, "US East (N. Virginia) us-east-1". Vamos ignorar as outras seções e clicar em <em>"Create bucket"</em>. </p>
+<p>Vamos acessar, agora, "Buckets &gt; videos.rmerceslabs" e fazer o upload do arquivo de vídeo. De volta à página do <em>bucket</em>, vamos repetir o processo dos vídeos anteriores: vamos até "Permissions &gt; Block public access &gt; Edit". Vamos manter a opção <em>"Block all public access"</em> selecionada, porque queremos que o acesso só seja possível via <em>CloudFront</em>.</p>
+<p>Agora, na <em>AWS</em>, vamos acessar "CloudFront &gt; Create a CloudFront distribution". Em "<em>Origin domain"</em>, selecionaremos "videos.merceslabs.s3.amazonaws.com", apontando para o <em>bucket</em> que acabamos de criar.</p>
+<p>Vamos rolar a página para baixo, até a opção <em>"S3 Bucket Access"</em>. Lá, selecionaremos a opção <em>"Yes use OAI (bucket can restrict access to only CloudFront)"</em>, para que o acesso só seja liberado via <em>CloudFront</em>.</p>
+<p>Em <em>"Origin access identity"</em>, clicaremos em <em>"Create new OAI"</em>. Vamos manter o nome sugerido pela <em>AWS</em>. Em <em>"Bucket policy"</em>, vamos manter a opção <em>"Yes, update the bucket policy"</em>, para que não precisemos atualizar a <em>policy</em> manualmente. Não vamos alterar as outras seções, apenas clicaremos em <em>"Create distribution"</em>, ao fim da página.</p>
+<p>Seremos redirecionados a uma nova página, que informa nossa <em>URL</em>. O processo de <em>deploying</em> demora algum tempo para ser finalizado, e seu status também é encontrado na página. Acessando "S3 &gt; videos.rmerceslabs &gt; Properties", veremos que a <em>policy</em> foi atualizada. Agora, a ação <code>GetObject</code> só poderá ser executada via <em>CloudFront</em>.</p>
+<p>No próximo vídeo, após a finalização do <em>deploying</em>, daremos continuidade a esse processo.</p>
+                        </div>
