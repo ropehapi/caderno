@@ -1,0 +1,6 @@
+<div class="formattedText" data-external-links="">
+			<p>Quando usamos <code>ssh</code> para nos conectar a um servidor, há um serviço rodando em segundo plano que chamamos de <em>ssh agent</em>. Esse serviço guarda as chaves que nós possuímos adicionadas, prontas para serem utilizadas em alguma conexão. Em nosso caso, ao invés de utilizar o serviço, nós estamos informando manualmente (através do parâmetro <code>-i</code>) qual chave utilizar.</p>
+<p>Se executarmos o comando <code>ssh-add /caminho/da/chave.pem</code> nós vamos adicionar nossa chave ao serviço e o parâmetro <code>-i</code> deixa de ser necessário.</p>
+<p>Quando nos conectamos a um servidor, é possível encaminhar o nosso agente local para o agente do servidor ao qual estamos nos conectamos. Isso é feito através do parâmetro <code>-A</code>. Dessa forma, todas as chaves que foram adicionadas ao serviço <em>ssh agent</em>, em nossa máquina local, se tornam também disponíveis no servidor.</p>
+<p>Como esse curso não é sobre Linux e/ou SSH, não vamos nos aprofundar nesse assunto. Mas é necessário que você saiba disso para entender o que está sendo feito e para que você estabeleça conexões bem sucedidas com cada uma das instâncias que criar.</p>
+		</div>
