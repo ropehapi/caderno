@@ -1,0 +1,17 @@
+<div class="formattedText" data-external-links="">
+                                <p>Neste vídeo, citaremos rapidamente o <strong>Amazon Redshift</strong>, um serviço da AWS com foco em <em>data warehouse</em> (armazém de dados). Vou explicar o propósito do Redshift no local onde trabalho.</p>
+<p>Nós temos diversos microsserviços. O projeto em que estou trabalhando é uma aplicação de marketing de gerenciamento de redes sociais de uma empresa com várias localidades (ou franquias, se preferir).</p>
+<p>Para cada uma dessas localidades, podemos ter várias redes sociais cadastradas, criar publicações em várias dessas redes e essas publicações geram diversas métricas. Então, agrupamos todas as métricas em uma instância do Redshift para servir como nosso <em>data warehouse</em>.</p>
+<p>Vários microsserviços diferentes mandam informações para o Redshift, que tem dois usos principais:</p>
+<ul><li>uma tela de relatórios em que o cliente pode criar seus próprio relatórios, baseado em dados armazenados</li><li>uma equipe de dados que gera, através de técnicas de BI, métricas e relatórios internos para tomada de decisão e entender o uso da plataforma pelas pessoas usuárias</li></ul>
+<p>A ideia do Redshift é armazenar e centralizar uma quantidade enorme de dados, utilizando um formato relacional. Ao <a href="https://aws.amazon.com/pt/redshift/" target="_blank" rel="nofollow noopener noreferrer">acessar a página do Redshift na Amazon</a>, abaixo do título "Como funciona", temos a seguinte definição:</p>
+<blockquote>
+<p>O Amazon Redshift usa SQL para analisar dados estruturados e semiestruturados em data warehouses [...]</p>
+</blockquote>
+<p>Supondo que contratamos uma equipe de dados que conhece SQL, o uso do Redshift seria uma opção viável. Assim, não seria necessário aprender uma linguagem de consulta de um banco de dados específicos, dado que alguns bancos usam sintaxes diferenciadas.</p>
+<p>Enquanto um banco de dados relacional comum armazena dados de forma estruturada, com regras entre relacionamentos e validações, um <em>data warehouse</em> suporta um volume imenso de informações para podermos consultá-las e gerar métricas.</p>
+<p>Isso não significa que um banco de dados relacional comum não conseguiria armazenar esses dados. Eles apenas não os comprimiriam nem fariam consultas de forma tão otimizadas quanto um banco de dados de <em>data warehouse</em>. Então, se você pretende guardar um volume enorme de dados para gerar relatório, você pode cogitar o uso de um banco de dados específico para esse cenário.</p>
+<p>Existem diversas ferramentas para utilizar serviços de nuvem localmente, basta pesquisar por "CLI Serverless" ou "Local Serverless".</p>
+<p>Como o Redshift usa SQL, é bastante comum ter no seu ambiente de desenvolvimento um banco de dados relacional qualquer. A sintaxe do PostgreSQL, por exemplo, será muito semelhante à do Redshift, então podemos ter tabelas localmente com PostgreSQL e, em produção, acessar o Redshift para ter a performance e o cenário real de um <em>data warehouse</em>.</p>
+<p>Já entendemos brevemente o que são bancos de dados como serviço e fizemos uma menção honrosa ao Redshift. Na sequência, vamos para o foco do nosso curso: RDS e DunamoDB. Estudaremos mais detalhamente o que são e as facilidades que trazem para nós.</p>
+                        </div>

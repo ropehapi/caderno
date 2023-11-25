@@ -1,0 +1,46 @@
+<div class="formattedText" data-external-links="">
+                                <p>Vamos conversar resumidamente sobre a alta disponibilidade do banco de dados. Antes, realizaremos aquele processo importante que comentei para ajudar a reduzir custos, excluindo as instâncias que criamos.</p>
+<p>Começaremos pela réplica, selecionando ela na tabela e depois clicando em "Ações &gt; Excluir". Com isso, abre uma janela no centro da tela com um campo de texto onde escreveremos "delete me". Por fim, clicamos no botão laranja escrito "Excluir" no canto inferior direito da janela.</p>
+<p>A janela fecha e podemos selecionar o "database-1" na tabela, para excluirmos nossa instância principal. Para isso, clicamos novamente em "Ações &gt; Excluir".</p>
+<p>Outra janela se abre no centro da tela, onde desmarcaremos as duas primeiras caixas de seleção, a de criar um snapshot final e de reter os backups automatizados, pois não queremos nenhuma das duas. Em seguida, marcaremos a caixa de confirmação de exclusão e, no campo de texto, escreveremos "delete me". Por fim, clicaremos no botão "Excluir" no canto inferior direito da janela.</p>
+<p>Agora as duas instâncias que criamos estão sendo excluídas. Esse é um processo que leva um tempo, mas tudo bem esperarmos. Agora quero conversar com vocês sobre as opções de zona de disponibilidade.</p>
+<h3>Conhecendo a Multi-AZ</h3>
+<p>Rolando a tabela para direita até o final das colunas, a última opção será a "Multi-AZ". Essas duas instâncias que estamos excluindo agora não tinham essa opção habilitada.</p>
+<p>Isso significa iniciaremos a criação de outro banco de dados, mas talvez não precisaremos chegar ao final da criação. Então clicaremos no botão laranja "Criar bando de dados" no canto superior direito da tabela.</p>
+<p>Ao sermos direcionados para outra página, fecharemos todos os avisos da parte superior, clicando no "X" no canto superior direito de cada aviso. Em seguida, esperamos o formulário "Criar banco de dados" carregar.</p>
+<p>Na hora de criarmos um banco de dados, temos algumas opções. Na "Opção de mecanismo", selecionaremos o "MySQL", como sempre, deixando as demais configurações no padrão.</p>
+<p>Na opção "Modelos", ao invés do "Nível gratuito", que é a terceira opção, escolheremos o "Dev/Test", que é a segunda opção. Isso porque, quando selecionamos o "Nível gratuito", não podemos alterar nada da seção seguinte, que é a "Disponibilidade e durabilidade".</p>
+<p>Quando selecionamos a opção "Dev/Test", conseguimos definir as configurações de "Multi-AZ". O que temos feito até agora é criar uma instância de banco de dados única, que é a terceira opção em "Disponibilidade e durabilidade".</p>
+<p>Com isso, criamos um banco de dados sozinho, que pode ter uma zona de leitura e uma de escrita. Ele fica em apenas uma zona de disponibilidade.</p>
+<p>Agora podemos criar uma instância de banco de dados Multi-AZ, que é a segunda opção da seção. Nela temos a descrição que acredito ser a mais clara da AWS inteira.</p>
+<p>Normalmente as descrições explicam um pouco o que a opção quer dizer, mas sempre precisamos pesquisar mais, acessando a documentação externa. Nesse caso, a descrição é ótima:</p>
+<blockquote>
+<p>Instância do banco de dados Multi-AZ</p>
+<p>Cria uma instância do banco de dados primária e uma instância do banco de dados em espera em uma zona de disponibilidade diferente. Fornece alta disponibilidade de dados; mas a instância de banco de dados em espera não fornece suporte a conexões de cargas de trabalho de leitura.</p>
+</blockquote>
+<p>Então, quando selecionamos a "Instância do banco de dados Multi-AZ", estamos criando, na prática, uma instância principal e uma instância que ele chama de "em espera". Isso significa que teremos uma instância na qual iremos nos conectar e esses dados estarão replicados na instância em espera.</p>
+<p>Caso essa instância principal saia do ar por algum motivo, como a zona de disponibilidade toda caiu ou o banco de dados caiu, teremos outro banco de dados em espera, ou seja, pronto para assumir o papel do outro. Ele estará em outra zona de disponibilidade e em outra instância, pronto para assumir o papel principal.</p>
+<h3>Diferenças entre Multi-AZ e Réplica de leitura</h3>
+<p>Notem que é diferente de uma réplica de leitura, tanto que somos informados que "a instância de banco de dados em espera não fornece suporte a conexões de cargas de trabalho de leitura". Isso significa que não conseguimos ler dados da instância em espera.</p>
+<p>O que acontece é que, quando a instância principal cai, a instância em espera vira a instância principal. Isso é gerenciado pela AWS. Não precisamos acessar essa instância para promovê-la, ela é promovida automaticamente, assim que a principal cai.</p>
+<p>Portanto é diferente de uma réplica de leitura. Podemos ter instâncias com Multi-AZ, ou seja, em várias zonas de disponibilidade, e criar réplicas de leitura.</p>
+<p>Então a réplica de leitura serve para garantir uma melhor performance, evitando que o banco de dados consuma muitos recursos, então dividimos a carga de leitura descrita. Já o Multi-AZ, utilizamos para, quando uma instância se tornar indisponível, termos outra pronta para substituí-la.</p>
+<p>Então a ideia é ter uma disponibilidade maior e garantir que, caso uma zona de disponibilidade fique indisponível, tenhamos uma instância pronta em outra zona. Reparem que é bastante simples, basta selecionarmos a opção "Instância de banco de dados Multi-AZ" em "Disponibilidade e durabilidade".</p>
+<p>Nos detalhes de VPC, podemos decidir em quais zonas de disponibilidade essas instâncias ficarão. A instância em espera é o que chamamos de <strong><em>failover</em></strong>, ou seja, <em>failover</em> é a instância que assume em um caso de falha da instância principal.</p>
+<h3>Cluster de banco de dados</h3>
+<p>Além da opção "Multi-AZ", existe outra opção disponível em "Disponibilidade e durabilidade, disponível apenas para MySQL e PostgreSQL. Se selecionarmos o "Oracle", temos apenas as opções de não criar uma instância em espera ou criar uma instância em espera.</p>
+<p>Selecionando o "MySQL", na parte de durabilidade temos a opção "<strong>Cluster de banco de dados Multi-AZ</strong>", que é nova e, no momento de gravação desse curso, só está disponível para duas opções de conectividade: MySQL e PostgreSQL, inclusive com Aurora.</p>
+<p>Com a criação de um cluster, teremos a instância principal e duas instâncias em espera, cada uma em uma zona de disponibilidade diferente. Com isso, também conseguimos aumentar a redundância para aumentar as cargas de leitura, porque uma dessas instâncias ficará disponível para leitura de dados.</p>
+<p>Então podemos acessar a base principal e alguma outra para realizar a leitura, porque elas funcionam entre si. Esse é o ponto principal do cluster: aumentar a capacidade para atender a carga de trabalho de leitura.</p>
+<p>Quando nos conectamos a um cluster, temos mais de uma instância pronta para responder à query. Não significa que é uma réplica de leitura, ou seja, não nos conectamos a outro banco de dados. Temos apenas um endpoint, ao qual nos conectamos, mas na hora de recuperar dados, temos um cluster pronto para nos responder.</p>
+<p>O nome <strong>cluster</strong>, caso não conheçam, vem da astronomia. Um cluster de estrelas é um aglomerado de estrelas. Um cluster de banco de dados é um aglomerado de instâncias de banco de dados, que funcionam como um.</p>
+<p>Ao acessarmos o cluster e recuperarmos os dados, temos essa carga dividida entre vários bancos. É como se tivéssemos um <em>load balancer</em> para banco de dados sendo utilizado.</p>
+<p>Essa é a ideia de Multi-AZ: ter uma instância em espera em outra zona de disponibilidade ou ter instâncias trabalhando em conjunto, em zonas de disponibilidade diferentes. É importante lembrar que isso aumenta o custo, já que terão mais instâncias sendo criadas.</p>
+<p>Em alguns cenários, isso pode aumentar um pouco a latência, ainda que não de forma relevante. Isso porque teremos mais de uma instância em zonas de disponibilidade diferentes, e às vezes uma precisa acessar a outra.</p>
+<p>Ainda assim, a performance normalmente não será um problema, porque essa queda é imperceptível. Mesmo assim, para alguns cenários, que eu nem consigo imaginar quais, pode ser importante saber que teremos um milissegundo de latência a mais ou algo do tipo.</p>
+<h3>Revisão e próximos passos</h3>
+<p>Conversamos bastante sobre a RDS. Aprendemos sobre:</p>
+<ul><li>Cluster;</li><li>Multi-AZ;</li><li>Backups;</li><li>Snapshots;</li><li>Réplica de leitura;</li><li>Precificação;</li></ul>
+<p>Porém o RDS não é o único banco de dados que a Amazon fornece. Eu já citei vários bancos de dados, como o Redshift. Inclusive citei bancos compatíveis com outros serviços, por exemplo, compatível com o MongoDB e com o Redis.</p>
+<p>Entretanto, tem um banco de dados específico da AWS. Na próxima aula conversaremos sobre ele e começaremos a conhecer um pouco o <strong><em>DynamoDB</em></strong>.</p>
+                        </div>

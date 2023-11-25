@@ -1,0 +1,22 @@
+<div class="formattedText" data-external-links="">
+                                <p>Vamos voltar à página do DynamoDB que abrimos no navegador para entender alguns de seus conceitos.</p>
+<p>No explorador lateral esquerdo, o primeiro item, abaixo de "Painel" (nossa localização atual), se chama "Tabelas". No momento, não temos nenhuma criada.</p>
+<p>Para criar uma tabela em um banco de dados relacional como o MySQL ou Amazon Aurora, precisamos criar um banco de dados. No DynamoDB, podemos criar as tabelas sem criar o banco. A ideia é que não tenhamos múltiplas tabelas para um serviço ou domínio, por exemplo.</p>
+<p>Voltando ao cenário de e-commerce: se quiséssemos armazenar pedidos e seus itens em um banco de dados relacional, criaríamos uma tabela de pedidos e outra para os itens do pedido, relacionando-as.</p>
+<p>Já no DynamoDB <strong><em>criaríamos uma única tabela</em></strong>, onde teríamos, por exemplo, a lista de pedidos, e entre seus atributos encontraríamos os itens. Para recuperar todos os itens, buscaremos por este atributo.</p>
+<p>Neste caso, é comum que existam tabelas com atributos variáveis e com mais de uma entidade por tabela. Já que conhecemos o SQL, vamos lembrar das regras de normalização de banco de dados. Não fazemos este processo em bancos de dados NoSQL.</p>
+<p>No DynamoDB, não pensamos em formas normais e nem em ter uma única entidade para cada tabela. Existem cenários em que é possível ter uma tabela para várias entidades, por exemplo, uma tabela que possui seus pedidos e os itens desses pedidos e também os produtos ou os detalhes da pessoa usuária que fez a compra.</p>
+<p>Considerando que isso pode sair de controle, é necessário ter em mente que o banco de dados NoSQL não é aplicável em qualquer cenário. Se precisamos de regras bem definidas e várias entidades separadas para posteriormente relacioná-las, precisamos de um banco de dados relacional.</p>
+<p>Nos casos em que precisarmos alterar o esquema ou mudar a modelagem do banco de dados, também esbarraremos em problemas com os bancos não relacionais.</p>
+<p>Já que neste modelo não temos colunas ou regras de armazenamento, precisaríamos adicionar verificações no código, descobrir se cada linha faz parte do modelo novo ou do antigo, ou mesmo migrar tudo — imagine migrar vários TB de dados de um formato para outro!</p>
+<p>Se, ao invés disso, precisarmos dos itens como um simples atributo dos pedidos, conseguiremos atingir este objetivo com o DynamoDB.</p>
+<p>Resumindo, o ideal é <strong><em>utilizar o DynamoDB nos cenários para os quais ele foi criado</em></strong>.</p>
+<p>Retornando ao conceito das tabelas: cada uma delas terá um <strong><em>item</em></strong>. Vamos imaginar novamente uma tabela de pessoas. Cada item dela é uma pessoa, com sua identificação e seus atributos. O mesmo se aplica em uma tabela de carros. É como se o item fosse uma linha no banco de dados relacional.</p>
+<p>Além de tabelas e itens, outro conceito importante é o de <strong><em>atributos</em></strong>, citado anteriormente. Os atributos de um item em uma tabela do DynamoDB podem ser <strong><em>dinâmicos e variáveis</em></strong>. </p>
+<p>Por exemplo, na tabela de pessoas, o primeiro item possui nome completo, data de nascimento e profissão. Já o segundo, possui somente o primeiro nome, a idade, a cor preferida de roupa e a altura.</p>
+<p>Neste exemplo, temos dois itens na mesma tabela com atributos que possuem informações diferentes. Portanto, a ideia do atributo é simplesmente armazenar uma informação do item, seja String ou número.</p>
+<p>Resumindo, um item possui vários atributos. Um atributo faz parte de um item, e este faz parte de uma tabela.</p>
+<p>Dentro dessa estrutura, precisaremos realizar buscas. No DynamoDB, faremos isso somente pela sua <strong><em>identificação ou chave</em></strong>. Se precisarmos buscar por um atributo, nos depararemos com um problema. Para resolvê-lo, podemos criar e utilizar <strong><em>índices</em></strong>.</p>
+<p>Este e outros conceitos são mais fáceis de entender na prática, por isso, encerraremos a parte teórica por aqui. </p>
+<p>A seguir, entenderemos o que é uma chave e o que temos nos valores. Veremos como é o processo, para em seguida iniciar a prática com o DynamoDB.</p>
+                        </div>
