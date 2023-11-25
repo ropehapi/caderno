@@ -1,0 +1,31 @@
+<div class="formattedText" data-external-links="">
+                                <p>Nesta aula, vamos acessar a máquina, instalar o Nginx, fazer testes de porta e explorar mais recursos interessantes que ainda não estudamos. Podemos usar a console via Web ou da forma tradicional — neste vídeo, optaremos pela segunda.</p>
+<p>Para acessar a máquina virtual, vamos executar o seguinte comando (com o IP da nossa instância):</p>
+<pre class="prettyprint"><code class="hljs language-css">ssh -<span class="hljs-selector-tag">i</span> lightsail-rmerces<span class="hljs-selector-class">.pem</span> ubuntu<span class="hljs-keyword">@44</span>.205.17.187</code><button type="button" class="clipit">Copiar código</button></pre><p>Em seguida, faremos o <em>update</em>. Incluiremos a <em>flag</em> <code>-y</code> para não precisarmos digitar "yes" durante esse processo:</p>
+<pre class="prettyprint"><code class="hljs language-sql">sudo apt<span class="hljs-operator">-</span><span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span> <span class="hljs-operator">-</span>y</code><button type="button" class="clipit">Copiar código</button></pre><p>Na sequência, poderíamos fazer o <em>upgrade</em> para instalar pacotes e afins, porém vamos pular essa parte, porque nessa aula vamos focar no uso do Nginx.</p>
+<h2>Instalando o Nginx</h2>
+<p>Primeiramente, vamos instalar o Nginx e suas dependências:</p>
+<pre class="prettyprint"><code class="hljs language-csharp">sudo apt-<span class="hljs-keyword">get</span> install nginx</code><button type="button" class="clipit">Copiar código</button></pre><p>Uma vez instalado, vamos abrir o navegador e acessar o IP da nossa instância. Como resultado, teremos uma página com o título "<em>Welcome to nginx!</em>" seguido de um texto explicativo com alguns links. O Nginx está no ar, o que significa que acessamos o IP na <strong>porta 80</strong>.  Então, será que não há nenhum <strong><em>firewall</em></strong>? Estamos fazendo SSH e não liberamos uma <strong>regra</strong>, então, será que o acesso a todas as portas da máquina é liberado? Vamos testar, a seguir.</p>
+<h2><em>Firewall</em> e regras</h2>
+<p>O Python já vem instalado por padrão no Ubuntu, então vamos usá-lo para subir um <strong>servidor Web</strong> para testes:</p>
+<pre class="prettyprint"><code class="hljs language-undefined">python3 -m http.server</code><button type="button" class="clipit">Copiar código</button></pre><p>Repare que subimos o servidor na porta 8000:</p>
+<blockquote>
+<p>Serving HTTP on 0.0.0.0 port 8000 (<a href="http://0.0.0.0:8000/" rel="nofollow noopener" target="_blank">http://0.0.0.0:8000/</a>) ...</p>
+</blockquote>
+<p>No navegador, vamos adicionar <code>:8000</code> ao endereço para tentar acessar essa porta. Não haverá resposta na console, o que significa que não conseguimos acessar. Isso ocorre porque o <em>firewall</em> existe e ele vem com algumas portas habilitadas.</p>
+<p>Na tela inicial da Lightsail, vamos clicar nos três pontos no canto direito superior da instância Ubuntu-1 e selecionar "<em>Manage</em>" (Gerenciar). Em seguida, acessaremos a aba "<em>Networking</em>".</p>
+<blockquote>
+<p>Esta é a página em que atribuímos um IP estático a instância WordPress-1 anteriormente. No caso da Ubuntu-1, ainda não realizamos esse processo.</p>
+</blockquote>
+<p>No tópico "<strong>IPv4 Firewall</strong>", temos a seguinte tabela:</p>
+<table><thead><tr><th><strong>Application</strong></th><th><strong>Protocol</strong></th><th><strong>Port or range / Code</strong></th><th><strong>Restricted to</strong></th></tr></thead><tbody><tr><td>SSH</td><td>TCP</td><td>22</td><td>Any IPv4 address / Lightsail browser SSH/RDP</td></tr><tr><td>HTTP</td><td>TCP</td><td>80</td><td>Any IPv4 address</td></tr></tbody></table>
+<p>Por padrão, já temos as portas 22 e 80 liberadas, respectivamente SSH e HTTP. Ainda <strong>não temos a regra para a porta 8000</strong>. Para adicioná-la, vamos clicar em "<em>Add rule</em>", no canto esquerdo superior da tabela, e preencher os campos:</p>
+<ul><li><strong><em>Application:</em></strong> Custom</li><li><strong><em>Protocol:</em></strong> TCP</li><li><strong><em>Port or range:</em></strong> 8000</li></ul>
+<p>Toda vez que usamos esse <em>firewall</em>, será criada a regra para o <strong>IPv4</strong> e o <strong>IPv6</strong>. Como queremos criar apenas para o IPv4, vamos desmarcar a caixa "<em>Duplicate rule for IPv6</em>", abaixo do botão "<em>Create</em>", na parte inferior direita do formulário. Em seguida, pressionaremos "<em>Create</em>" e a regra será publicada na tabela:</p>
+<table><thead><tr><th><strong>Application</strong></th><th><strong>Protocol</strong></th><th><strong>Port or range / Code</strong></th><th><strong>Restricted to</strong></th></tr></thead><tbody><tr><td>SSH</td><td>TCP</td><td>22</td><td>Any IPv4 address / Lightsail browser SSH/RDP</td></tr><tr><td>HTTP</td><td>TCP</td><td>80</td><td>Any IPv4 address</td></tr><tr><td>Custom</td><td>TCP</td><td>8000</td><td>Any IPv4 address</td></tr></tbody></table>
+<p>No canto direito de cada linha da tabela, há ícones de edição e exclusão para cada regra.</p>
+<p>Mais abaixo nessa página, no tópico "IPv6 Networking", vamos desabilitar a rede IPv6. Na mensagem de confirmação, basta clicar em "<em>Yes, disable</em>". A habilitação ou desabilitação dessa rede ficará a critério da necessidade de cada projeto.</p>
+<p>Por fim, vamos atualizar essa página do navegador para nos certificar de que as alterações foram salvas. Em seguida, tentaremos novamente acessar a porta 8000 no IP da instância. Dessa vez, conseguiremos checar o servidor Web de teste e, na console, agora constam as requisições!</p>
+<p>Portanto, ao colocar uma porta diferente, precisamos sempre habilitar a regra correspondente. Similarmente, podemos editar e apagar regras, por meio da tabela que consultamos há pouco. Como demonstração, podemos excluir a regra da porta 8000, por exemplo. Basta clicar no ícone de lixeira à direita dessa regra.</p>
+<p>Na primeira aula deste curso, trabalhamos com um pacote pronto (WordPress). Agora, já evoluímos bastante na manipulação da máquina virtual, subindo uma instância, customizando o Nginx, criamos um servidor de teste e liberando uma porta no <em>firewall</em>.</p>
+                        </div>
