@@ -10,6 +10,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ## **Índice**
 - Arquitetura
     - [Eng. de Software](https://github.com/ropehapi/caderno/tree/main/Arquitetura/Eng.%20de%20Software)
+        - Designs e arquiteturas de código
+        - APIs e REST
+        - Microserviços
 - Desenvolvimento
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
     - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
@@ -53,8 +56,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **2023**
 - [x] Formação Go Alura
 - [x] Formação Eng. de Sw Alura 
-- [ ] Formação Kafka Alura
-- [ ] Formação Devops Alura
 - [ ] Formação AWS Alura
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
