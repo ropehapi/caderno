@@ -1,0 +1,15 @@
+<div class="formattedText" data-external-links="">
+                                <p>Criamos duas instâncias, um <em>load balancer</em> e um grupo de destino que balanceia a carga entre as duas instâncias. Tudo isso está funcionando.</p>
+<p>Agora vamos configurar o seguinte: caso uma instância, por qualquer motivo, seja desligada, outra será ligada automaticamente. E, caso vários requisições cheguem ao mesmo tempo, queremos que mais instâncias sejam criadas também automaticamente.</p>
+<p>No menu lateral, vamos acessar "Auto Scaling &gt; Grupos Auto Scaling &gt; Criar grupo do Auto Scaling". Antes de criar o grupo, porém, precisamos de um modelo. O nome do grupo será "sistema-web". Vamos manter o padrão de Modelo de execução, clicando em "Criar um modelo de execução".</p>
+<p>O nome do modelo será "modelo-nginx". Mais abaixo, em "Imagens de aplicação e de sistema operacional", vamos selecionar "Minhas AMIs" e, na sequência, "De minha propriedade". Assim, utilizaremos a imagem que criamos, "my-bitnami-nginx".</p>
+<p>O tipo da instância será "t2.micro", para que continuemos no nível gratuito. O par de chaves será "ec2". Vamos selecionar, entre os grupos de segurança existentes, "launch-wizard-1". O grupo "acesso-web" não é mais necessário.</p>
+<p>Agora é só clicar em "Criar modelo de execução".</p>
+<p>Vamos atualizar a aba do "Criar grupo de Auto Scaling" e selecionar nosso modelo <em>NGINX</em>. Agora vamos entender onde o <em>Auto Scaling</em> criará as instâncias. Em "Zonas de disponibilidade e sub-redes", vamos selecionar as zonas "a" e "d".</p>
+<p>Na próxima página, vamos configurar o balanceamento de carga. Vamos anexar o grupo de <em>Auto Scaling</em> ao balanceador que já criamos, "tg-principal | HTTP". Vamos clicar em "Pular para revisão". Depois, vamos clicar em "Criar grupo de Auto Scaling".</p>
+<p>A capacidade desejada de instâncias do grupo é de 1, mas vamos modificá-la, clicando em "Editar". Vamos alterar "Capacidade desejada" e "Capacidade mínima" para 2. "Capacidade máxima" será alterada para 3. Com isso, teremos sempre no mínimo 2 instâncias e no máximo 3. Agora basta clicar em "Atualizar".</p>
+<p>Além disso, já que se trata de um <em>auto scaling</em>, duas novas instâncias serão criadas automaticamente. Vamos voltar a "Balanceamento de carga &gt; Grupos de destino". Veremos que, agora, nosso <em>target group</em> principal tem 3 <em>targets</em> agora: a instancia da "nginx-2", a da "nginx" e um terceiro.</p>
+<p>Quando clicamos no terceiro, descobrimos que se trata do grupo de <em>auto scaling</em>.</p>
+<p>Vamos manter apenas esse terceiro target e remover os outros dois, que criamos manualmente, selecionando-os e clicando em "Deregister". Agora vamos excluir as intâncias, em "Instâncias &gt; Estado de Instância &gt; Encerrar instância".</p>
+<p>No próximo vídeo, executaremos alguns testes e aprenderemos a criar a terceira instância.</p>
+                        </div>

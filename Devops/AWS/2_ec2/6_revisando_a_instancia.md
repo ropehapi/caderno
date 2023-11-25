@@ -1,0 +1,16 @@
+<div class="formattedText" data-external-links="">
+                                <p>Agora vamos testar a instância.</p>
+<p>Duas verificações foram feitas. A máquina virtual está funcionando. Quando clicamos na linha de "nginx", abre-se um menu com vários detalhes na parte inferior da tela. O detalhe no qual estamos interessado é o "Endereço IPv4 público".</p>
+<p>Além disso, há o <em>DNS</em> público, o nome que aponta para o IP. Se clicarmos em algum deles, esperamos ver uma página do <em>nginx</em>. Porém, quando clicamos, recebemos uma mensagem de erro. Isso acontece porque tentamos acessar usando <em>HTTPS</em> sem termos configurado certificados <em>SSL</em>.</p>
+<p>Para acessarmos, precisaremos substituir o "https" do link do "http" na barra de endereço e acessar novamente. Agora receberemos uma mensagem de sucesso, porque conseguimos executar a imagem "Bitnami NGINX Open Source 1.23.1" via <em>Cloud</em>.</p>
+<p>Na página, também encontramos detalhes de documentação. Basta clicar no botão "Documentation". Com isso, seremos redirecionados para a página de documentação. Na página "Get Started" há várias informações úteis.</p>
+<p>Isso servirá para que compreendamos como utilizar essa imagem e configurá-la, com a ajuda de alguns exemplos. Vamos voltar à página "Instâncias" e clicar em "nginx &gt; Conectar &gt; Cliente SSH". Lá, veremos que o usuário exibido é o "admin".</p>
+<p>Já na imagem padrão da <em>Amazon</em> que acabamos de utilizar, o usuário é "ec2-user". É comum que imagens diferentes configurem usuários diferentes. </p>
+<p>Porém, se copiarmos o link no final da página e tentarmos acessar a instância via console, vamos nos deparar com um erro. Isso acontece porque o usuário correto para essa imagem não é "admin", mas "bitnami". É na documentação que nós encontramos esses detalhes.</p>
+<p>Se formos em "Conexão de instância do EC2" e definirmos o nome do usuário "bitnami", poderemos acessar a instância direto pela interface web com o usuário correto. Agora basta informar na linha de comando.</p>
+<p>Com o comando <code>whoami</code>, veremos que o usuário se chama "bitnami". Com <code>uname -a</code>, vemos que nosso sistema operacional é um <em>Debian</em>, com o <em>nginx</em> instalado. Com isso, entendemos que imagens podem ser criadas a partir da configuração de outros softwares.</p>
+<p>Vamos voltar para página "Instâncias". Lá, veremos que criamos a instância nova na mesma zona de disponibilidade, "us-east-1d". Apesar disso, ainda não fomos apresentados à área onde isso é definido.</p>
+<p>Vamos clicar em "Executar instâncias", para simular a criação de uma nova instância. Assim, vamos localizar essa informação. Vamos manter todas as opções no padrão e desce até "Configurações de rede &gt; Editar &gt; Sub-rede". Cada uma das sub-redes apresentadas na lista está uma zona de disponibilidade diferente.</p>
+<p>É aí que escolhemos, se estivermos em um cenário que exija isso.</p>
+<p>De volta ao console, acessaremos a lista de instâncias de <em>EC2</em>. Veremos que há apenas uma instância. </p>
+                        </div>

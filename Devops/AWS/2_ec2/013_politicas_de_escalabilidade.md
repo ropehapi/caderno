@@ -1,0 +1,9 @@
+<div class="formattedText" data-external-links="">
+                                <p>Vamos acessar "Instâncias &gt; Instâncias". Lá, selecionaremos a primeira das duas instâncias com o nome "-". Depois, clicaremos em "Estado da instância &gt; Encerrar instância". A partir de agora, quando atualizarmos a página, teremos apenas uma instância executando.</p>
+<p>Em pouco tempo, nosso grupo de <em>auto scaling</em> perceberá que ela não está mais funcionando. Quando isso acontecer, uma nova instância será criada.</p>
+<p>Enquanto isso, vamos lidar com políticas de escalonamento. Para preparar nosso sistema para um evento especial como a <em>black friday</em>, por exemplo, temos duas alternativas: a primeira é lidar com dados históricos, fazendo configurações preditivas.</p>
+<p>Como não temos dados históricos, ficaremos com a segunda opção, que consiste em fazer a utilização de maneira dinâmica. Essa política usa métricas variadas, como o uso da CPU, por exemplo. Em outras palavras, podemos definir que uma nova instância seja criada sempre que atingirmos 50% de uso da CPU.</p>
+<p>Acessando "Grupo Auto Scaling &gt; sistema-web &gt; Escalabilidade automática", poderemos lidar com as "Políticas de escabilidade dinâmica". Clicaremos em "Criar política de escalabilidade dinâmica". O "Tipo de política" escolhido será "Escalabilidade de monitoramento do objetivo". O nome dela será "Política de CPU".</p>
+<p>Em "Valor de destino", vamos inserir 10: isso significa que, quando atingirmos 10% da CPU, criaremos uma nova instância. Agora, quando a CPU ultrapassar 10%, teremos a criação de novas máquina virtuais, mas sempre respeitando a capacidade máxima.</p>
+<p>Agora nós já temos um bom domínio do que é possível fazer com <em>EC2</em>. No próximo vídeo, aprenderemos a utilizar a <em>AWS CLI</em>.</p>
+                        </div>
