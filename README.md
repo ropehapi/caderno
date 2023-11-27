@@ -17,8 +17,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
     - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
 - Devops
-    - [SQL](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Database/SQL/)
-    - [Docker](https://github.com/ropehapi/caderno/tree/main/Ferramentas/Docker)
+    - [AWS](https://github.com/ropehapi/caderno/tree/main/Devops/AWS)
+    - [SQL](https://github.com/ropehapi/caderno/tree/main/Devops/Database/SQL/)
+    - [Docker](https://github.com/ropehapi/caderno/tree/main/Devops/Docker)
 
 ## **Índice legado**
 - Arquitetura
@@ -56,7 +57,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **2023**
 - [x] Formação Go Alura
 - [x] Formação Eng. de Sw Alura 
-- [ ] Formação AWS Alura
+- [x] Formação AWS Alura
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
     - [ ] Retomar curso no módulo de Multithreading pra frente
@@ -75,7 +76,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - Password Vault (CLI)
 
 ## **TODO**
-- [ ] Terminar de passar conteúdos dos cursos de microserviços da formação da alura pra cá
 - [ ] Anexar meus favoritos do navegador a esse repositorio
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
