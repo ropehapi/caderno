@@ -94,3 +94,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Luiza labs](https://www.linkedin.com/jobs/view/3698326787/)
     - [Pic Pay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
     - [Bemobi](https://www.linkedin.com/jobs/view/3711875924/)
+    - [Fretebras](https://www.linkedin.com/jobs/view/3765350726/)
+    - [Liber](https://www.linkedin.com/jobs/view/3736499903/)
+    - [BRQ Digital](https://www.linkedin.com/jobs/view/3763531091/)
