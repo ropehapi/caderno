@@ -85,14 +85,15 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ## **Jornada contratação Go**
 - Curriculos enviados
     - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
-    - [Pic pay Sênior](https://www.linkedin.com/jobs/view/3669220450/)
+    - [PicPay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
+    - [PicPay PHP Pleno](https://www.linkedin.com/jobs/view/3751748232/)
+    - [PicPay Sênior](https://www.linkedin.com/jobs/view/3669220450/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
     - [Gobrax](https://www.linkedin.com/jobs/view/3678512029/)
     - [CI&T](https://www.linkedin.com/jobs/view/3689931751/)
     - [Luiza labs](https://www.linkedin.com/jobs/view/3698326787/)
-    - [Pic Pay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
     - [Bemobi](https://www.linkedin.com/jobs/view/3711875924/)
     - [Fretebras](https://www.linkedin.com/jobs/view/3765350726/)
     - [Liber](https://www.linkedin.com/jobs/view/3736499903/)
