@@ -61,19 +61,26 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
     - [ ] Retomar curso no módulo de Multithreading pra frente
+### **2024**
+- [ ] Desafios DevGym
 - [ ] Curso Dev FullCycle
 - [ ] Cursos DIO de Rails
 
-## **Projetos a desenvolver**
-- Desafios Go Expert
-- Projetos do [DevGym](https://app.devgym.com.br/challenges)
-- iWear
-- RestFácil
-- Comanda web
-- Api financeira
-- Blockchain
-- Punchclock (CLI)
-- Password Vault (CLI)
+## **Projetos**
+- Desenvolvidos
+    - Listar projetos desenvolvidos
+- A desenvolver
+    - Estudos
+        - Desafios Go Expert
+        - Desafios do [DevGym](https://app.devgym.com.br/challenges)
+        - Password Vault (CLI)
+        - Punchclock (CLI)
+        - Blockchain
+    - Pessoais
+        - RestFácil
+        - Api financeira
+        - iWear
+
 
 ## **TODO**
 - [ ] Anexar meus favoritos do navegador a esse repositorio
@@ -82,7 +89,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Retomar curso Go expert
 - [ ] Começar Dev FullCycle
 
-## **Jornada contratação Go**
+## **Jornada contratação Go e PHP**
 - Curriculos enviados
     - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
     - [PicPay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
