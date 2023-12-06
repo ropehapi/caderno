@@ -95,6 +95,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [PicPay Pleno](https://www.linkedin.com/jobs/view/3704341215/)
     - [PicPay PHP Pleno](https://www.linkedin.com/jobs/view/3751748232/)
     - [PicPay Sênior](https://www.linkedin.com/jobs/view/3669220450/)
+    - [DOT Digital Group PHP Pleno](https://www.linkedin.com/jobs/view/3745692345/)
+    - [Hostgator Backend Engineer Pleno/Senior](https://www.linkedin.com/jobs/view/3768272559/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
