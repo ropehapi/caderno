@@ -91,16 +91,17 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **Jornada contratação Go e PHP**
 - Curriculos enviados
-    - [Studio Sol](https://www.linkedin.com/jobs/view/3636382087/)
+    - [Studio Sol Go Pleno](https://www.linkedin.com/jobs/view/3636382087/) (Reprovado)
     - [PicPay Go Pleno](https://www.linkedin.com/jobs/view/3704341215/)
     - [PicPay PHP Pleno](https://www.linkedin.com/jobs/view/3751748232/)
     - [PicPay PHP Pleno](https://www.linkedin.com/jobs/view/3777114176/)
     - [PicPay PHP Sênior](https://www.linkedin.com/jobs/view/3669220450/)
-    - [DOT Digital Group PHP Pleno](https://www.linkedin.com/jobs/view/3745692345/)
+    - [DOT Digital Group PHP Pleno](https://www.linkedin.com/jobs/view/3745692345/) (Entrevista técnica)
     - [Hostgator PHP/Go Pleno/Senior](https://www.linkedin.com/jobs/view/3768272559/)
     - [Avenue Go Junior](https://www.linkedin.com/jobs/view/3737701589/)
     - [Avenue Go Pleno](https://www.linkedin.com/jobs/view/3736976949/)
     - [Digital Republic Golang Senior](https://www.linkedin.com/jobs/view/3777311148/)
+    - [FullStack Labs GO Pleno](https://www.linkedin.com/jobs/view/3755911004/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
