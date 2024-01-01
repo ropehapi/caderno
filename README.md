@@ -58,13 +58,12 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação Go Alura
 - [x] Formação Eng. de Sw Alura 
 - [x] Formação AWS Alura
+- [x] Curso Go Expert
+### **2024**
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
-    - [ ] Retomar curso no módulo de Multithreading pra frente
-### **2024**
-- [ ] Desafios DevGym
 - [ ] Curso Dev FullCycle
-- [ ] Cursos DIO de Rails
+- [ ] Desafios DevGym
 
 ## **Projetos**
 - Desenvolvidos
