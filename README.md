@@ -60,6 +60,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação AWS Alura
 - [x] Curso Go Expert
 ### **2024**
+- [ ] Aprender Ruby
+- [ ] Aprender Rails
 - [ ] Curso Go Expert
     - [ ] Passar módulos com TODO pro caderno
 - [ ] Curso Dev FullCycle
