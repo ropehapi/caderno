@@ -60,10 +60,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação AWS Alura
 - [x] Curso Go Expert
 ### **2024**
-- [ ] Aprender Ruby
+- [x] Aprender Ruby
 - [ ] Aprender Rails
 - [ ] Curso Go Expert
-    - [ ] Passar módulos com TODO pro caderno
 - [ ] Curso Dev FullCycle
 - [ ] Desafios DevGym
 
@@ -72,16 +71,15 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - Listar projetos desenvolvidos
 - A desenvolver
     - Estudos
+        - RPHP CLI
+            - Ferramentas para me ajudar no dia dia
+            - Password vault cli
+            - Whatsapp cli
         - Desafios Go Expert
         - Desafios do [DevGym](https://app.devgym.com.br/challenges)
-        - Password Vault (CLI)
-        - Punchclock (CLI)
         - Blockchain
-    - Pessoais
+    - Comerciais
         - RestFácil
-        - Api financeira
-        - iWear
-
 
 ## **TODO**
 - [ ] Anexar meus favoritos do navegador a esse repositorio
