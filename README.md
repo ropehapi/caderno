@@ -71,10 +71,12 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - Listar projetos desenvolvidos
 - A desenvolver
     - Estudos
-        - RPHP CLI
-            - Ferramentas para me ajudar no dia dia
-            - Password vault cli
-            - Whatsapp cli
+        - Ropehapi Hub
+            - Ecossistema que visa substituir minha dependência do notion
+            - TODO List + calendário
+            - Financeiro
+            - Password vault
+            - Anotações como: Animes, MMOs etc
         - Desafios Go Expert
         - Desafios do [DevGym](https://app.devgym.com.br/challenges)
         - Blockchain
