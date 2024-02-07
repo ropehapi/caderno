@@ -114,6 +114,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [CI&T](https://www.linkedin.com/jobs/view/3689931751/)
     - [Luiza labs](https://www.linkedin.com/jobs/view/3698326787/)
     - [Bemobi](https://www.linkedin.com/jobs/view/3711875924/)
-    - [Fretebras](https://www.linkedin.com/jobs/view/3765350726/)
+    - [Fretebras Golang Junior](https://www.linkedin.com/jobs/view/3765350726/)
+    - [Fretebras Golang Junior](https://www.linkedin.com/jobs/view/3809910888/)
     - [Liber](https://www.linkedin.com/jobs/view/3736499903/)
     - [BRQ Digital](https://www.linkedin.com/jobs/view/3763531091/)
