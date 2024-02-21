@@ -103,6 +103,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [PicPay PHP Sênior Swoole](https://picpay.com/oportunidades-de-emprego-e-carreiras/central-de-vagas/4359390005)
     - [PicPay PHP Pleno Laravel](https://picpay.com/oportunidades-de-emprego-e-carreiras/central-de-vagas/4361681005)
     - [Maitha Tech Go Pleno/Senior](https://www.linkedin.com/jobs/view/3823858294/)
+    - [WEPayments Backend Sênior](https://www.linkedin.com/jobs/view/3832489948/)
     - [Hostgator PHP/Go Pleno/Senior](https://www.linkedin.com/jobs/view/3768272559/)
     - [Avenue Go Junior](https://www.linkedin.com/jobs/view/3737701589/)
     - [Avenue Go Pleno](https://www.linkedin.com/jobs/view/3736976949/)
