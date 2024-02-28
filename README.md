@@ -102,6 +102,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [PicPay PHP Sênior Swoole](https://picpay.com/oportunidades-de-emprego-e-carreiras/central-de-vagas/4360671005)
     - [PicPay PHP Sênior Swoole](https://picpay.com/oportunidades-de-emprego-e-carreiras/central-de-vagas/4359390005)
     - [PicPay PHP Pleno Laravel](https://picpay.com/oportunidades-de-emprego-e-carreiras/central-de-vagas/4361681005)
+    - [Serasa Golang Sênior](https://www.linkedin.com/jobs/view/3824130048/)
     - [SysManager PHP Sênior](https://www.linkedin.com/jobs/view/3836229081/)
     - [Luizalabs Go Pleno](https://www.linkedin.com/jobs/view/3817682514/)
     - [Sandbox Group PHP Senior](https://www.linkedin.com/jobs/view/3817017858/)
