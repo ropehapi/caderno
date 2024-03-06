@@ -117,6 +117,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Workling PHP Sênior](https://www.linkedin.com/jobs/view/3831803396/)
     - [Digital Republic Golang Senior](https://www.linkedin.com/jobs/view/3777311148/)
     - [FullStack Labs GO Pleno](https://www.linkedin.com/jobs/view/3755911004/)
+    - [Bemobi Golang Pleno](https://www.linkedin.com/jobs/view/3843565681/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
