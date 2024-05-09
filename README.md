@@ -60,8 +60,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação AWS Alura
 - [x] Curso Go Expert
 ### **2024**
-- [x] Aprender Ruby
-- [ ] Aprender Rails
 - [ ] Curso Go Expert
 - [ ] Curso Dev FullCycle
 - [ ] Desafios DevGym
@@ -87,7 +85,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Anexar meus favoritos do navegador a esse repositorio
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
-- [ ] Retomar curso Go expert
+- [ ] Retomar e terminar curso Go expert
 - [ ] Começar Dev FullCycle
 
 ## **Jornada contratação Go e PHP**
