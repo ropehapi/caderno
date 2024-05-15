@@ -63,6 +63,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Aprender Ruby
 - [ ] Aprender Rails
 - [ ] Curso Go Expert
+- [ ] Curso Aprenda Golang
 - [ ] Curso Dev FullCycle
 - [ ] Desafios DevGym
 
@@ -87,8 +88,9 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Anexar meus favoritos do navegador a esse repositorio
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
-- [ ] Retomar curso Go expert
-- [ ] Começar Dev FullCycle
+- [ ] Terminar curso Go expert
+- [ ] Fazer imersão Aprenda Golang
+- [ ] Fazer Dev FullCycle
 
 ## **Jornada contratação Go e PHP**
 - Curriculos enviados
@@ -118,6 +120,10 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - [Digital Republic Golang Senior](https://www.linkedin.com/jobs/view/3777311148/)
     - [FullStack Labs GO Pleno](https://www.linkedin.com/jobs/view/3755911004/)
     - [Bemobi Golang Pleno](https://www.linkedin.com/jobs/view/3843565681/)
+    - [Magazine Luiza Go Pleno](https://www.linkedin.com/jobs/view/3909168756/)
+    - [TCS Pleno](https://www.linkedin.com/jobs/view/3886959086/)
+    - [GFT Technologies Golang](https://www.linkedin.com/jobs/view/3909198224/)
+    - [DataArt Golang](https://www.linkedin.com/jobs/view/3916827297/)
     - [Globo](https://www.linkedin.com/jobs/view/3321432738/)
     - [Grupo FCamara](https://www.linkedin.com/jobs/view/3689161767/)
     - [Dock](https://www.linkedin.com/jobs/view/3684702841/)
