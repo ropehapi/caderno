@@ -93,7 +93,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ## **Jornada contratação Go e PHP**
 - Curriculos enviados
     - [Studio Sol Go Pleno](https://www.linkedin.com/jobs/view/3636382087/)
-    - [DOT Digital Group PHP Pleno](https://www.linkedin.com/jobs/view/3745692345/) 
+    - [DOT Digital Group PHP Pleno](https://www.linkedin.com/jobs/view/3745692345/)
+    - [DOT Digital Group PHP 2024](https://www.linkedin.com/jobs/view/3921151463/) 
     - [Dito CRM Go Pleno](https://www.linkedin.com/jobs/view/3775807043/)
     - [PicPay Go Pleno](https://www.linkedin.com/jobs/view/3704341215/)
     - [PicPay PHP Pleno](https://www.linkedin.com/jobs/view/3751748232/)
