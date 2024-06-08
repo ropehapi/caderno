@@ -87,6 +87,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever módulos com TODO do Go Expert
 - [ ] Terminar curso Go expert
+    - [ ] Passar tudo pro caderno
 - [ ] Fazer imersão Aprenda Golang
 - [ ] Fazer Dev FullCycle
 
