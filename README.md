@@ -93,6 +93,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Estudar web3
 
 ## **Jornada contratação Go e PHP**
+- [Stone Go Pleno (Deu certo)]() 
 - [Studio Sol Go Pleno](https://www.linkedin.com/jobs/view/3636382087/)
 - [DOT Digital Group PHP Pleno 2023](https://www.linkedin.com/jobs/view/3745692345/)
 - [DOT Digital Group PHP 2024](https://www.linkedin.com/jobs/view/3921151463/) 
