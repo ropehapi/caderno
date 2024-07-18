@@ -73,7 +73,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
         - Ropehapi Hub
             - Ecossistema que visa substituir minha dependência do notion
             - TODO List + calendário
-            - Financeiro
+            - Financeiro!!!
             - Password vault
             - Anotações como: Animes, MMOs etc
         - Desafios Go Expert
