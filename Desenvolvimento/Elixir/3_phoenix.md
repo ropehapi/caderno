@@ -12,3 +12,9 @@ O Phoenix é um framework de desenvolvimento web com elixir semelhante a framewo
 
 ## Servindo um projeto phoenix
 > mix phx.server
+
+## Criando uma migration
+> mix ecto.create.migration <nome>
+
+## Rodando migrations
+> mix ecto.migrate
