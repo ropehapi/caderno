@@ -9,17 +9,21 @@ Todas as anotações e transcrições serão feitas em português visando facili
 
 ## **Índice**
 - Arquitetura
-    - [Eng. de Software](https://github.com/ropehapi/caderno/tree/main/Arquitetura/Eng.%20de%20Software)
+    - Eng. de Software
         - Designs e arquiteturas de código
         - APIs e REST
         - Microserviços
+    - Testes e qualidade
 - Desenvolvimento
-    - [Go](https://github.com/ropehapi/caderno/tree/main/Linguagens/Go)
-    - [Javascript](https://github.com/ropehapi/caderno/tree/main/Linguagens/Javascript)
+    - Go
+    - Elixir
+    - Javascript
 - Devops
-    - [AWS](https://github.com/ropehapi/caderno/tree/main/Devops/AWS)
-    - [SQL](https://github.com/ropehapi/caderno/tree/main/Devops/Database/SQL/)
-    - [Docker](https://github.com/ropehapi/caderno/tree/main/Devops/Docker)
+    - AWS
+    - SQL
+    - Docker
+    - ASDF
+    - Makefile
 
 ## **Índice legado**
 - Arquitetura
@@ -63,33 +67,16 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [ ] Curso Go Expert
 - [ ] Curso Aprenda Golang
 - [ ] Curso Dev FullCycle
-- [ ] Desafios DevGym
 
 ## **Projetos**
-- Desenvolvidos
-    - Listar projetos desenvolvidos
-- A desenvolver
-    - Estudos
-        - Ropehapi Hub
-            - Ecossistema que visa substituir minha dependência do notion
-            - TODO List + calendário
-            - Financeiro!!!
-            - Password vault
-            - Anotações como: Animes, MMOs etc
-        - Desafios Go Expert
-        - Desafios do [DevGym](https://app.devgym.com.br/challenges)
-        - Blockchain
-    - Comerciais
-        - RestFácil
+Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
 
 ## **TODO**
-- [ ] Anexar meus favoritos do navegador a esse repositorio
-- [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
-- [ ] Escrever módulos com TODO do Go Expert
 - [ ] Terminar curso Go expert
-    - [ ] Passar tudo pro caderno
+- [ ] Escrever módulos com TODO do Go Expert
 - [ ] Fazer imersão Aprenda Golang
 - [ ] Fazer Dev FullCycle
+- [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Estudar web3
 
 ## **Jornada contratação Go e PHP**
