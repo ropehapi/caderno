@@ -1,3 +1,9 @@
+# Makefile
+O makefile é uma ferramenta nativa instalada em quase todo sistema UNIX que tem como intuito facilitar nossa vida através de automações por comandos.
+
+Abaixo, deixarei um exemplo de um arquivo makefile completo, que realiza todas as operações mais triviais, e as comentarei caso necessário.
+
+```
 PATH ?= /cmd/
 
 include othermakefiletobeextended
@@ -34,3 +40,4 @@ api-%:
 front-%:
 	@make -C src/front $*
 #Vai manipular o makefile de dentro da pasta front
+```

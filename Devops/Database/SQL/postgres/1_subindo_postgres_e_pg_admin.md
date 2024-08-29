@@ -31,5 +31,5 @@ Para acessar o pgadmin: http://127.0.0.1:54321
 Para configurar o host no pgadmin: 
 
 - Fazer acesso com as credenciais do docker-compose
-- Pegar o ip do container do postgres com `sudo docker inspect <nome_container> | grep IPAddress
+- Pegar o ip do container do postgres com `sudo docker inspect <nome_container> | grep IPAddress`
 - Passar as credenciais do banco na tela de adicionar servidor
