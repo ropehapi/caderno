@@ -65,7 +65,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação Eng. de Sw Alura 
 - [x] Formação AWS Alura
 ### **2024**
-- [ ] Curso Go Expert
+- [x] Curso Go Expert
 - [ ] Curso Dev FullCycle
 
 ## **Projetos**
