@@ -68,6 +68,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Curso Elixir Phoenix Udemy
 - [x] Curso Go Expert
 - [ ] Curso Dev FullCycle
+### **2025**
+- [x] Lalala
 
 ## **Projetos**
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
