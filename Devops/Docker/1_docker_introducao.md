@@ -4,6 +4,11 @@ Docker é um software que reduz a complexidade de setup de aplicações, onde co
 
 Com facilidade, podemos criar mabientes independentes e que funcionam em diversos SO's, e ainda deixa os projetos performáticos.
 
+### Por debaixo dos panos...
+O docker é um host que monta um pacote de soluções em cima de conteiners e virtualização como o cache de images registry, network entre os conteiners e volumes para persistência de dados, disponibilizando tudo isso através do docker client, que é a interface pela qual o usuario interage com o docker (daemon API em vermelho na imagem abaixo).
+
+![alt text](/src/img/docker-debaixo-dos-panos.png)
+
 ## **Por que Docker?**
 - O Docker proporciona mais velocidade na configuração do ambiente de um dev.
 - Pouco tempo gasto em manutenção, containers são executados como configurados.
