@@ -74,6 +74,5 @@ Todas as anotações e transcrições serão feitas em português visando facili
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
 
 ## **TODO**
-- [ ] Escrever módulos com TODO do Go Expert
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 
