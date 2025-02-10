@@ -22,4 +22,4 @@ O docker é um host que monta um pacote de soluções em cima de conteiners e vi
 - VMs gastam mais recursos, porém podem exercer mais funções.
 
 ## **Instalando o Docker**
-A instalação do Docker nunca foi flor que se cheire. Dessa maneira, optei por deixar aqui o link para o tutorial de como instalar o Docker no [Linux](https://docs.docker.com/desktop/install/ubuntu/) e no [Windows](https://docs.docker.com/desktop/install/windows-install/).
+A instalação do Docker nunca foi flor que se cheire. Dessa maneira, optei por deixar aqui o link para o tutorial de como instalar o Docker no [Linux](https://docs.docker.com/desktop/install/ubuntu/) e no [Windows](https://docs.docker.com/desktop/install/windows-install/).jj
