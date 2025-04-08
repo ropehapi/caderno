@@ -69,6 +69,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Curso Elixir Phoenix Udemy
 ### **2025**
 - [ ] Curso Dev FullCycle
+- [ ] Curso Aprenda Golang
 - [ ] Ultimate Go Blockchain
 - [ ] Curso de MongoDB Udemy
 - [ ] Curso de Flutter Udemy
