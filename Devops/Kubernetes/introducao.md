@@ -11,6 +11,7 @@ Dentro dos vários tipos de arquivo de configuração yaml que podemos criar par
 Um arquivo descreevendo um pod fará exatamente isso, descreverá um a ser criado. Um arquivo descrevendo um replicaset deverá especificar quantas réplicas do pod (que será descrito no mesmo arquivo) deverão ser instanciadas, enquanto o arquivo de deployment, idêntico ao do replicasets (apenas com a mudança no kind), erguerá pods de um determinado replicaset x para cada versão. Nesse cenário, não é necessário matar os pods do replicaset para aplicar as alterações, pois o deployment se encarrega de substituir por outro replicaset mais atual.
 
 ## Comandos kind e kubectl
+### Primeiros passos na prática
 > kind create cluster
 
 > kind get cluster
@@ -36,6 +37,9 @@ Um arquivo descreevendo um pod fará exatamente isso, descreverá um a ser criad
 > kubectl rollout undo \<tipo> \<nome> (ex: deployment goserver)
 
 > kubectl rollout undo \<tipo> \<nome> --to-revision=2
+
+### Services
+> kubectl get services
 
 
 ### Para caso dê errado adicionar o contexto:
