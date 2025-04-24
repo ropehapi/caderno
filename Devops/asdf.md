@@ -21,4 +21,6 @@ Lista todas as versões de um plugin para instalar: `asdf plugin list all <lingu
 
 Instala uma determinada versão do plugin: `asdf install <linguagem/tecnologia> \<versao>`
 
+Instala os plugins determinados no arquivo .tool-versions: `asdf install <linguagem/tecnologia> \<versao>`
+
 Seta uma versão como a desejada: `asdf global <linguagem/tecnologia> \<versao>`
