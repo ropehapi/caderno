@@ -1,4 +1,7 @@
-# Anotações Kubernetes (k8s)
+# Kubernetes (k8s)
+Kubernetes, frequentemente referido como K8s, é uma plataforma de código aberto que automatiza a implantação, escalonamento e gerenciamento de aplicativos em contêineres. Abaixo, elucidarei como se criam configurações para um cluster kubernetes e como essa ferramenta funciona.
+
+### Observações iniciais
 *kind*: Ferramenta para instalar e usar o kubernetes rodando containers docker, sem precisar de VM ou um cloud provider
 
 *Minikube*: Parecido com o Kind porém instala uma VM na sua máquina para provisionar esses containers
@@ -10,8 +13,21 @@ Dentro dos vários tipos de arquivo de configuração yaml que podemos criar par
 
 Um arquivo descreevendo um pod fará exatamente isso, descreverá um a ser criado. Um arquivo descrevendo um replicaset deverá especificar quantas réplicas do pod (que será descrito no mesmo arquivo) deverão ser instanciadas, enquanto o arquivo de deployment, idêntico ao do replicasets (apenas com a mudança no kind), erguerá pods de um determinado replicaset x para cada versão. Nesse cenário, não é necessário matar os pods do replicaset para aplicar as alterações, pois o deployment se encarrega de substituir por outro replicaset mais atual.
 
-## Comandos kind e kubectl
-### Primeiros passos na prática
+Dentro desse diretório, deixei uma pasta contendo vários arquivos de configuração e um ambiente preparado para você explorar o kubernetes.
+Deixando claro, eu não pretendo explicar detalhadamente a definição de cada um dos arquivos de configuração, apenas deixa-los de exemplo.
+
+### Services
+As services nada mais são do que a porta de entrada para a nossa aplicação. Subir 10 pods da nossa aplicação de nada adiantaria sem que os expusessemos através de uma service, que nesse contexto além de atuar como porta de entrada das requisições, atua como load balancer.
+
+As services podem ser definidas em alguns tipos:
+- ClusterIP: Esse tipo de service define um ip fixo que pode ser chamado de dentro desse cluster (Possui dns com o nome do service).
+- NodePort: Tipo de serviço mais arcaico do kubernetes, permite a exposição dos seus nodes através de uma porta única (desde que >30000 e < 32767).
+- LoadBalancer: Esse tipo de serviço deve ser usado apenas em um provedor de nuvem, pois assim ele irá expor sua aplicação para a web através de um ip público.
+
+*Fique atento, port é a porta do seu service, enquanto a target port é a porta do seu container.*
+
+## Comandos
+### Comandos básicos de gerenciamento de clusters e afins
 > kind create cluster
 
 > kind get cluster
@@ -38,7 +54,9 @@ Um arquivo descreevendo um pod fará exatamente isso, descreverá um a ser criad
 
 > kubectl rollout undo \<tipo> \<nome> --to-revision=2
 
-### Services
+> kubectl proxy --port=8080 //Permite acessar a api do kubernetes
+
+### Comandos para manipular services
 > kubectl get services
 
 
