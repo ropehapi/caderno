@@ -26,6 +26,23 @@ As services podem ser definidas em alguns tipos:
 
 *Fique atento, port é a porta do seu service, enquanto a target port é a porta do seu container.*
 
+### Objetos de configuração
+Há alguns tipos de objetos de configuração que foram definidos no deployment da aplicação. Eles não serão estritamente abordados aqui porém estão exemplificados no `deployment.yaml`.
+
+- Variaveis de ambiente
+- Config map
+- Secrets
+
+### Probes
+Probes são um instrumento do kubernetes que nos permitem verificar o estado de nossos conteiners para utiliza-los. Esses probes podem ser feitos tanto como um health-check durante a vida do nosso container como um readiness-check feito durante o startup do nosso container.
+
+Há alguns tipos de probes:
+- Liveness probe
+- Readiness probe
+- Startup probe
+
+O uso dos probes acima podem ser encontrados no `deployment.yaml`.
+
 ## Comandos
 ### Comandos básicos de gerenciamento de clusters e afins
 > kind create cluster
