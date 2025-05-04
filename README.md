@@ -66,13 +66,13 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Formação AWS Alura
 ### **2024**
 - [x] Curso Go Expert
+- [x] Curso Dev FullCycle
 - [x] Curso Elixir Phoenix Udemy
 ### **2025**
-- [ ] Curso Dev FullCycle
+- [x] Curso Dev FullCycle
+- [ ] Ultimate Go Blockchain (Ardan Labs)
+- [ ] Workshop Bill Kennedy
 - [ ] Curso Aprenda Golang
-- [ ] Ultimate Go Blockchain
-- [ ] Curso de MongoDB Udemy
-- [ ] Curso de Flutter Udemy
 
 ## **Projetos**
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).

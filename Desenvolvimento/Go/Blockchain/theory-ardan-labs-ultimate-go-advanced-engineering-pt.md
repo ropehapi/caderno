@@ -73,3 +73,37 @@ Notemos que independente do modelo acima, nossa entrada de dados na rede é baix
 A mempool (abreviação de memory pool) é como uma fila de espera onde ficam as transações que ainda não foram incluídas em um bloco da rede. Sempre que um nó recebe uma nova transação, ela é validada e, se for considerada válida, é colocada nessa fila. Essa estrutura é essencial para todos os algoritmos de consenso citados, já que o bloco seguinte da rede será formado a partir das transações contidas nessa mempool.
 
 No PoW, por exemplo, os mineradores observam essa fila e escolhem as transações que mais pagam taxa para compor o bloco que estão tentando minerar. Já no PoS ou PoA, o nó validador ou autoridade selecionada também usa a mempool como base para montar o próximo bloco, priorizando geralmente aquelas transações que dão maior retorno econômico ou obedecem alguma política de ordenação.
+
+## The genesis block 
+O bloco gênese é o bloco raíz que origina toda a cadeia de blocos de uma blockchain, e nele devem ser definidas algumas regras do funcionamento da nossa blockchain, como as configurações abaixo:
+
+```
+{
+    "date": "2021-12-17T00:00:00.000000000Z",
+    "chain_id": 1,
+    "trans_per_block": 10,
+    "difficulty": 6,
+	"mining_reward": 700,
+	"gas_price": 15,
+    "balances": {
+        "0xF01813E4B85e178A83e29B8E7bF26BD830a25f32": 1000000,
+        "0xdd6B972ffcc631a62CAE1BB9d80b7ff429c8ebA4": 1000000
+    } // Carteira e escrow
+}
+```
+
+## Stamping x Signing a transaction
+Todo bloco contendo transações há de ser "stamped" ou "selado" pela aplicação. Esse selo é uma representação de uma assinatura confirmando que aquela transação passou por dentro da blockchain. Nessa etapa, o "selo" é colocado dentro do payload da transação, hasheado novamente e passado adiante, para marcar a presença do blockchain na transação.
+
+## Hashing
+Não podemos nos esquecer que o funcionamento de uma blockchain acontece em cima de hashing. Hashing, muito constantemente confundido com criptografia, é o mecanismo matemático capaz de transformar qualquer dado em uma chave como uma string da seguinte forma:
+
+> data -> fn(hash) -> string 
+
+Sobre o hashing, há algumas característica que temos que observar:
+
+- Se nós hashearmos o mesmo dado 10x, as 10x devem retornar o mesmo valor. 
+- Se um mísero byte mudar, o hash deve ser completamente diferente.
+- No collisions. Se um hash bater com o outro sem ser do mesmo dado, nós estamos com um problema sério.
+
+Para uma melhor compreensão e exemplo, recomendo pesquisar sobre o algoritmo sha256; um ótimo exemplo de hashing function.
