@@ -43,6 +43,9 @@ Há alguns tipos de probes:
 
 O uso dos probes acima podem ser encontrados no `deployment.yaml`.
 
+### Resources e HPA (Horizontal pod autoscaling)
+Para usar esse cara nós p
+
 ## Comandos
 ### Comandos básicos de gerenciamento de clusters e afins
 > kind create cluster

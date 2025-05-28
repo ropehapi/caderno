@@ -14,15 +14,16 @@ Todas as anotações e transcrições serão feitas em português visando facili
     - Microserviços
     - Testes e qualidade
 - Desenvolvimento
-    - Go
     - Elixir
+    - Go
     - Javascript
 - Devops
-    - AWS
     - API Gateway (Kong)
+    - AWS
     - SQL
     - Docker
     - Keycloak
+    - Kubernetes
     - ASDF
     - Makefile
 
@@ -71,8 +72,6 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **2025**
 - [x] Curso Dev FullCycle
 - [ ] Ultimate Go Blockchain (Ardan Labs)
-- [ ] Workshop Bill Kennedy
-- [ ] Curso Aprenda Golang
 
 ## **Projetos**
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
@@ -80,4 +79,5 @@ Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao 
 ## **TODO**
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever sobre kong
-
+- [ ] Escrever sobre girus
+- [ ] Escrever sobre ngrok
