@@ -72,6 +72,7 @@ Todas as anotações e transcrições serão feitas em português visando facili
 ### **2025**
 - [x] Curso Dev FullCycle
 - [ ] Ultimate Go Blockchain (Ardan Labs)
+- [ ] Roadmap.sh blockchain
 
 ## **Projetos**
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
@@ -79,5 +80,4 @@ Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao 
 ## **TODO**
 - [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
 - [ ] Escrever sobre kong
-- [ ] Escrever sobre girus
 - [ ] Escrever sobre ngrok
