@@ -32,6 +32,8 @@ No Dockerfile:
 
     CMD ["node", "app.js"]
 
+*Pra ficar esperto:* Diferença entre CMD e Entrypoint: A diferença entre o CMD e o entrypoint é que o CMD é um comando que pode ser substituível na execução do container, enquanto o entrypoint é um comando fixo na execução do container.
+
 ## **Executando uma imagem**
 Para executar a imagem primeiramente vamos precisar fazer o build, com o comando `docker build <diretorio da imagem>`, e depois, rodar o `docker run <imagem>` para executa-la.
 >docker build \<diretorio imagem>
