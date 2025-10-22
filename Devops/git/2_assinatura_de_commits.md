@@ -31,3 +31,13 @@ Configure seu git para sempre assinar por padrão um commit com sua chave GPG
 git config --global commit.gpgsign true
 git config --global tag.gpgSign
 ```
+
+## Adicionando mais de um email à uma chave GPG
+Muitas vezes nós podemos precisar adicionar mais de um email para uma chave GPG, e fazer isso é fácil, saca só:
+```
+gpg --edit-key <id da sua chave>
+> adduid
+> <Seu novo user>
+> <Seu novo email>
+> trust
+> save
