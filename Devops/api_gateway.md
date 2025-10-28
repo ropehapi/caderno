@@ -5,7 +5,7 @@ Agora, imagina que mágico seria se tivéssemos uma porta de entrada unificada p
 
 Pois bem, essa solução existe, e ela se chama API gateway.
 
-![alt text](image.png)
+![alt text](/src/img/api-gateway-fullcycle.png)
 
 ## API Gateway pattern
 Em um modelo que implementa um padrão de arquitetura de microsserviços, como os clientes vão poder identificar o serviço que contém as informações que ele necessita? Em geral, a granularidade das informações do microsserviço é diferente da qual gostaríamos de expor para o cliente. A solução para isso se chama API gateway pattern
