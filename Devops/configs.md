@@ -1,6 +1,6 @@
 # Configs
 Sempre que eu formato meu computador preciso ficar configurando minhas variáveis de ambiente no linux.
-Para evitar dor de cabeça, segue os exports necessários a incluir no `.bashrc`
+Para evitar dor de cabeça, segue os exports necessários a incluir no `.bashrc` ou `.zshrc`.
 
 ```
 export PATH="$PATH:/opt/GoLand-2024.3.2.1/bin"
