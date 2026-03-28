@@ -8,7 +8,7 @@ Abaixo, segue alguns guias de configuração de servidores MCP úteis.
 Antes de fazer a "instalação" do servidor MCP da atlassian, é necessário instalar o [uv](https://docs.astral.sh/uv/getting-started/installation/), gerenciador de pacotes pyton (visto que o MCP da atlassian é um MCP local e não na nuvem).
 
 Após isso, basta seguir o passo a passo definido [nesse repositório](https://github.com/sooperset/mcp-atlassian):
-- Criar uma chave de API para o seu agente.
+- Criar uma [chave de API](https://id.atlassian.com/manage-profile/security/api-tokens) para o seu agente.
 - Adicionar a seguinte configuração do MCP ao seu ~/.claude.json:
 ```json
 {
@@ -30,7 +30,7 @@ Após isso, basta seguir o passo a passo definido [nesse repositório](https://g
 ```
 - Reiniciar o claude, e começar a usar.
 
-### Exemplos de uso
+#### Exemplos de uso
 No seu prompt:
 - "Find issues assigned to me in PROJ project"
 - "Search Confluence for onboarding docs"
