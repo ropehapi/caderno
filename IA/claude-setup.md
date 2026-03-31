@@ -10,24 +10,18 @@ curl -fsSL https://claude.ai/install.sh | bash
 claude # Opens claude code CLI  
 /login 
 ```
-3. [Uv](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer) installation (useful python package manager to handle some MCP servers)
-```
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-4. Install [Plannotator](https://github.com/backnotprop/plannotator) (plugin)
-```sh
-curl -fsSL https://plannotator.ai/install.sh | bash
+3. Tools installation
+- [Uv](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer) (useful python package manager to handle some MCP servers)
+- [Node and npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (useful for downloading skills)
 
-# Then in claude:
-/plugin marketplace add backnotprop/plannotator
-/plugin install plannotator-copilot@plannotator
-```
-Restart Copilot CLI after plugin install. Plan review activates automatically when you use plan mode (Shift+Tab to enter plan mode).
+4. Install plugins
 
-5. Install [superporwers](https://github.com/obra/superpowers) (plugin)
-```sh
-/plugin install superpowers@claude-plugins-official
-```
+- [Plannotator](https://github.com/backnotprop/plannotator)
+- [superporwers](https://github.com/obra/superpowers)
+
+5. Install skills
+- [tlc-spec-driven](https://agent-skills.techleads.club/skills/tlc-spec-driven/)
+
 6. Add MCP servers needed
 ```sh
 # This step can be deeply explained in this repository at /IA/mcp.md
