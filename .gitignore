@@ -1,1 +1,5 @@
 .idea/
+.claude/
+.cursor/
+.windsurf/
+.agents/
