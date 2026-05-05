@@ -26,6 +26,4 @@ claude # Opens claude code CLI
 ```sh
 # This step can be deeply explained in this repository at /IA/mcp.md
 ```
-7. Dica de IA
-https://www.dicadeia.com/
 
