@@ -1,20 +1,20 @@
 {
   "main": {
-    "id": "738ddc5f9a72a049",
+    "id": "081cbbb70af13e4a",
     "type": "split",
     "children": [
       {
-        "id": "1a670f8732a308dd",
+        "id": "da5f522a79f692f7",
         "type": "tabs",
         "children": [
           {
-            "id": "06b930b235c779fd",
+            "id": "9839742961a9ff34",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -23,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "5caa1a95bd7b60c3",
+    "id": "b25ac931a68d89c5",
     "type": "split",
     "children": [
       {
-        "id": "d16d3313f306190a",
+        "id": "6d9cd991a268fe2b",
         "type": "tabs",
         "children": [
           {
-            "id": "3ddeef5629b69258",
+            "id": "ba3875894557f89a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +44,7 @@
             }
           },
           {
-            "id": "f7413f33e0824598",
+            "id": "962b1fd2d9d5aeac",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,7 +61,7 @@
             }
           },
           {
-            "id": "7afe1f290f2159d5",
+            "id": "e152daf8fa4a33f9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,19 +77,20 @@
     "width": 300
   },
   "right": {
-    "id": "cb41cb95bc70e644",
+    "id": "86b9a9db24d729f6",
     "type": "split",
     "children": [
       {
-        "id": "ac8cb634e5c49916",
+        "id": "4fa90a7cf8368b00",
         "type": "tabs",
         "children": [
           {
-            "id": "6ebffddf378792d7",
+            "id": "731d3ac9e105e726",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Arquitetura/microservicos/3.1_padroes_de_projetos/010_agregando_metricas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,24 +100,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 010_agregando_metricas"
             }
           },
           {
-            "id": "851c1caec6e72ebd",
+            "id": "e4128c7c368fc827",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Arquitetura/microservicos/3.1_padroes_de_projetos/010_agregando_metricas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 010_agregando_metricas"
             }
           },
           {
-            "id": "a0de621dd55a6a85",
+            "id": "8b256d35ba029a4d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,7 +133,7 @@
             }
           },
           {
-            "id": "9137ade677d73c8b",
+            "id": "4f859135daa59776",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -145,17 +147,18 @@
             }
           },
           {
-            "id": "ca6ef67fa2e3430e",
+            "id": "57c943f3069ac720",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Arquitetura/microservicos/3.1_padroes_de_projetos/010_agregando_metricas.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 010_agregando_metricas"
             }
           }
         ]
@@ -176,18 +179,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "06b930b235c779fd",
+  "active": "9839742961a9ff34",
   "lastOpenFiles": [
-    "IA/skills/tlc-spec-driven.md",
+    "IA/workshop-tlc-ia-avancado.md",
     "IA/skills/handoff.md",
-    "IA/mcps/1-o-que-sao-mcps.md",
-    "IA/mcps/atlassian.md",
-    "IA/atlassian.md",
-    "IA/mcps",
-    "IA/mcp",
-    "IA/skills/frontend.md.tmp.79079.1777003873710",
     "IA/skills/frontend.md",
+    "IA/mcps/atlassian.md",
+    "IA/mcps/1-o-que-sao-mcps.md",
     "IA/skills",
-    "Arquitetura/design_e_arquitetura/2_design_vs_arquitetura.md"
+    "IA/mcps",
+    "IA/claude-setup.md",
+    "IA",
+    "Devops/zsh_setup.md",
+    "Devops/extension_manager_setup.md",
+    "Devops/CI/ci.yaml",
+    "Desenvolvimento/wedding-mc-backend/codigo-de-acesso-convidado.md",
+    "Desenvolvimento/wedding-mc-backend",
+    "CLAUDE.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/010_agregando_metricas.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/4-api-gateway.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/5_agregador_de_processos.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/3_servicos_de_negocio.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/2_servicos_de_dominio.md",
+    "Arquitetura/microservicos/3.1_padroes_de_projetos/1_tipos_de_microservicos.md",
+    "Arquitetura/design_e_arquitetura/6_mensageria.md",
+    "Arquitetura/design_e_arquitetura/7_event_driven_architecture.md",
+    "Arquitetura/design_e_arquitetura/5_domain_driven_design.md",
+    "Arquitetura/design_e_arquitetura/4_clean_architecture.md",
+    "Arquitetura/design_e_arquitetura/3_hexagonal_architecture.md",
+    "Arquitetura/design_e_arquitetura/2_design_vs_arquitetura.md",
+    "Arquitetura/design_e_arquitetura/1_introducao.md",
+    "Arquitetura/apis_e_rest/5_boas_praticas_na_modelagem_de_apis_rest.md",
+    "Arquitetura/apis_e_rest/4_rest_conceitos_e_fundamentos.md",
+    "Arquitetura/apis_e_rest/3_o_que_é_rest.md"
   ]
 }
