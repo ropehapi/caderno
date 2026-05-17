@@ -73,3 +73,19 @@
 - Vibe
 - Momento
 - Boneco
+
+# Dia 02
+### Bullet points
+- Como adotar IA em uma codebase
+    - A primeira coisa é montar o AGENTS.md, de preferência na mão  
+    - Pedir para a IA identificar implementações fora do padrão e anomalias
+    - Melhorar esses detalhes para melhorar a codebase. Codebase é harness
+
+### Skills
+- Modular decomposition
+- Spektor
+
+### Palvaras sorteio
+- Plano
+- Teste
+- Capacete
