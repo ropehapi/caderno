@@ -62,13 +62,6 @@
 - Depois, a escrita das tasks
 - Depois, a implementação, task a task
 
-## TODOs
-- [ ] Usar uma IDE como cursor, padrão de mercado atual
-- [ ] Pesquisar sobre como usar linear como MCP
-- [ ] Pesquisar sobre ADR, architecture decision r***?
-- [ ] Pesquisar TLC DIY
-- [ ] Pesquisar sobre uso do compozy
-
 ### Palavras do sorteio:
 - Vibe
 - Momento
@@ -81,11 +74,32 @@
     - Pedir para a IA identificar implementações fora do padrão e anomalias
     - Melhorar esses detalhes para melhorar a codebase. Codebase é harness
 
-### Skills
-- Modular decomposition
-- Spektor
-
 ### Palvaras sorteio
 - Plano
 - Teste
 - Capacete
+
+# Resumo
+### Passo a passo adoção em uma codebase
+- Definir as rules e agent do projeto
+- Identificar implementações fora do padrão e anomalias e corrigi-las
+- Passar a utilizar o padrão RPI
+- Usar de ferramentas como compozy para fazer o funil da atividade (TDD, Tech spec e Tasks)
+- Implementar usando modelos mais baratos
+- Criar pipelines de code review bem definidas. As vezes usando até a própria IA
+- Criar skills necessárias para a codebase conforme o necessário
+
+### Skills citadas
+- [Compozy](https://github.com/compozy/compozy)
+- Spektor
+- tlc-spec-driven
+- Modular decomposition
+
+### TODOs
+- [ ] Avaliar usar uma IDE como cursor, padrão de mercado atual
+- [ ] Pesquisar sobre uso do compozy
+- [ ] Pesquisar sobre como usar linear como MCP
+- [ ] Pesquisar sobre ADR, architecture decision record. PRDs e TDD
+- [ ] Pesquisar TLC DIY
+- [ ] Anexar excalidraw aqui
+
