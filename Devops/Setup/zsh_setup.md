@@ -90,3 +90,49 @@ source ~/.zshrc
 ```
 
 ------------------------------------------------------------------------
+
+## 6. Aliases úteis
+
+``` bash
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias ls="ls --color=auto"
+alias ll="ls -lah"
+
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git pull"
+```
+
+------------------------------------------------------------------------
+
+## 7. Extras recomendados
+
+### fzf
+
+``` bash
+sudo apt install fzf
+```
+
+### exa
+
+``` bash
+sudo apt install exa
+```
+
+Adicionar ao `.zshrc`:
+
+``` bash
+alias ls="exa --icons"
+alias ll="exa -lah --icons"
+```
+
+------------------------------------------------------------------------
+
+## Resultado
+
+Você terá: - Autocomplete inteligente - Sugestões em tempo real - Prompt
+avançado com Git - Melhor produtividade no terminal

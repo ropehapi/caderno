@@ -13,8 +13,13 @@
             "state": {
               "type": "empty",
               "state": {},
+<<<<<<< Updated upstream
               "icon": "lucide-file",
               "title": "New tab"
+=======
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+>>>>>>> Stashed changes
             }
           }
         ]
@@ -40,7 +45,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -170,13 +175,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
     }
   },
   "active": "9839742961a9ff34",
