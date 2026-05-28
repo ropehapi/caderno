@@ -28,3 +28,9 @@ O GH Actions funciona de acordo com a seguinte dinâmica:
 
 ### Actions
 Uma action é a ação que de fato será executada em um dos steps de um job em um workflow. Ela pode ser criada do zero ou ser reutilizada de actions pre-existentes.
+
+Ao acessar github.com/actions podemos ver todo um toolset de actions disponíveis para reutilizarmos em nossow worklfows.
+
+Exemplos: 
+- https://github.com/actions/checkout -> Fazer o git checkout pra você
+- https://github.com/actions/setup-go -> Faz o setup de um ambiente go para a execução
