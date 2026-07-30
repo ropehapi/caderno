@@ -26,3 +26,4 @@ Abaixo, segue uma lista de links para ferramentas que eu uso no meu dia dia
 - [Brew](https://brew.sh/)
 - [K9s](https://github.com/derailed/k9s)
 - [Asdf](https://asdf-vm.com/)
+- [Lazydocker](https://github.com/jesseduffield/lazydocker)
