@@ -76,13 +76,8 @@ Todas as anotações e transcrições serão feitas em português visando facili
 - [x] Curso Dev FullCycle
 - [ ] Ultimate Go Blockchain (Ardan Labs)
 ### **2026**
-- [ ] Curso Dev FullCycle
-- [ ] Workshop TLC Desenvolvimento assistido por IA avançado
+- [x] Curso Dev FullCycle
+- [x] Workshop TLC Desenvolvimento assistido por IA avançado
 
 ## **Projetos**
 Como dito anteriormente, a ideia é que essas anotações sejam um satélite ao que eu tenho produzido em meus projetos que podem ser encontrados [aqui](https://github.com/ropehapi?tab=repositories).
-
-## **TODO**
-- [ ] Anotar conteúdo de Laravel como JWT, Actions, Services, Reposittories e DTOs
-- [ ] Escrever sobre kong
-- [ ] Escrever sobre ngrok
